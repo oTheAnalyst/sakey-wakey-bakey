@@ -122,7 +122,7 @@
     #apps
     catt
     gallery-dl
-    veracrypt
+    #veracrypt
     rstudio
     discord
     obsidian
@@ -167,7 +167,7 @@
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
 
   boot = {
-    initrd.availableKernelModules = ["nvme" "xhci_pci" "ahci" "usbhid"];
+    initrd.availableKernelModules = ["nvme" "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" ];
     initrd.kernelModules = [];
     kernelModules = ["kvm-amd"];
     extraModulePackages = [];
