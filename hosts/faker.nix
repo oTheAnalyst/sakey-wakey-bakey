@@ -46,6 +46,7 @@
 
   services = {
     desktopManager.plasma6.enable = true;
+    teamspeak3.enable = true;
     displayManager.sddm = {
       enable = true;
       wayland.enable = true;
@@ -146,7 +147,7 @@
     freetube
     thunderbird
     alacritty
-    # teamspeak_client
+    #teamspeak_client
     input-remapper
     home-manager
     yazi
