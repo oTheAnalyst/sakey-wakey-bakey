@@ -14,14 +14,14 @@
     driSupport32Bit = true;
   };
 
-  programs = {
-    steam = {
-      enable = true;
-      gamescopeSession.enable = true;
-    };
-
-    gamemode.enable = true;
-  };
+##  programs = {
+##    steam = {
+##      enable = true;
+##      gamescopeSession.enable = true;
+##    };
+#
+#    gamemode.enable = true;
+#  };
 
   boot = {
     loader.systemd-boot.enable = true;
