@@ -14,14 +14,13 @@
     driSupport32Bit = true;
   };
 
-##  programs = {
-##    steam = {
-##      enable = true;
-##      gamescopeSession.enable = true;
-##    };
-#
-#    gamemode.enable = true;
-#  };
+    programs = {
+      steam = {
+        enable = true;
+        gamescopeSession.enable = true;
+      };
+      gamemode.enable = true;
+    };
 
   boot = {
     loader.systemd-boot.enable = true;
@@ -48,10 +47,15 @@
   services = {
     xserver = {
       enable = true;
+      desktopManager.plasma6.enable = true;
       xkb.layout = "us";
       xkb.variant = "";
       videoDrivers = ["amdgpu"];
-      displayManager.gdm.enable = true;
+      displayManager.sddm = {
+        enable = true;
+        wayland.enable = true;
+        theme = "Breeze Dark";
+      };
     };
 
     displayManager.autoLogin.user = username;
@@ -122,7 +126,7 @@
     #apps
     catt
     gallery-dl
-    #veracrypt
+    veracrypt
     rstudio
     discord
     obsidian
@@ -167,7 +171,7 @@
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
 
   boot = {
-    initrd.availableKernelModules = ["nvme" "xhci_pci" "ahci" "usbhid" ];
+    initrd.availableKernelModules = ["nvme" "xhci_pci" "ahci" "usbhid"];
     initrd.kernelModules = [];
     kernelModules = ["kvm-amd"];
     extraModulePackages = [];
