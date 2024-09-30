@@ -146,7 +146,7 @@
     freetube
     thunderbird
     alacritty
-    # teamspeak_client
+    teamspeak_client
     input-remapper
     home-manager
     yazi
