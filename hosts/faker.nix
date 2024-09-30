@@ -14,13 +14,13 @@
     driSupport32Bit = true;
   };
 
-    programs = {
-      steam = {
-        enable = true;
-        gamescopeSession.enable = true;
-      };
-      gamemode.enable = true;
+  programs = {
+    steam = {
+      enable = true;
+      gamescopeSession.enable = true;
     };
+    gamemode.enable = true;
+  };
 
   boot = {
     loader.systemd-boot.enable = true;
@@ -45,21 +45,21 @@
   };
 
   services = {
+    desktopManager.plasma6.enable = true;
+    displayManager.sddm = {
+      enable = true;
+      wayland.enable = true;
+      theme = "Breeze Dark";
+      autoLogin.user = username;
+      autoLogin.enable = true;
+    };
     xserver = {
       enable = true;
-      desktopManager.plasma6.enable = true;
       xkb.layout = "us";
       xkb.variant = "";
       videoDrivers = ["amdgpu"];
-      displayManager.sddm = {
-        enable = true;
-        wayland.enable = true;
-        theme = "Breeze Dark";
-      };
     };
 
-    displayManager.autoLogin.user = username;
-    displayManager.autoLogin.enable = true;
 
     printing.enable = true;
 
@@ -146,7 +146,7 @@
     freetube
     thunderbird
     alacritty
-    teamspeak_client
+    # teamspeak_client
     input-remapper
     home-manager
     yazi
