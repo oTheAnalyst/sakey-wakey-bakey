@@ -1,37 +1,32 @@
-{ pkgs, ... }:
-let
-  btop-rocm = pkgs.btop.override { rocmSupport = true; };
-in
-
-{
-
-  home.packages = [ btop-rocm ];
+{pkgs, ...}: {
+  home.packages = with pkgs; [
+    (btop.override {rocmSupport = true;})
+  ];
 
   programs.firefox.profiles.default.userChrome = ''
-  #tabbrowser-tabs {
-    visibility: collapse !important;
-  }
+    #tabbrowser-tabs {
+      visibility: collapse !important;
+    }
 
-  #titlebar {
-    appearance: none !important;
-    height: 0px;
-  }
+    #titlebar {
+      appearance: none !important;
+      height: 0px;
+    }
 
-  #titlebar > #toolbar-menubar {
-    margin-top: 0px;
-  }
+    #titlebar > #toolbar-menubar {
+      margin-top: 0px;
+    }
 
-  #TabsToolbar {
-    min-width: 0 !important;
-    min-height: 0 !important;
-  }
+    #TabsToolbar {
+      min-width: 0 !important;
+      min-height: 0 !important;
+    }
 
-  #TabsToolbar > .titlebar-buttonbox-container {
-    display: block;
-    position: absolute;
-    top: 12px;
-    left: 0px;
-  }
+    #TabsToolbar > .titlebar-buttonbox-container {
+      display: block;
+      position: absolute;
+      top: 12px;
+      left: 0px;
+    }
   '';
-
 }
