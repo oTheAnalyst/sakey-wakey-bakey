@@ -14,7 +14,7 @@
     sharedModules = [
       # shared for all users
       {
-        imports = [./shell.nix ./btop.nix];
+        imports = [./shell.nix ./btop-firefox.nix ];
         home = {
           inherit username;
           homeDirectory = "/home/${username}";
