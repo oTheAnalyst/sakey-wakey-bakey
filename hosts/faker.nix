@@ -5,7 +5,13 @@
   modulesPath,
   username,
   ...
-}: {
+}: let
+  futureTeamspeakPackage = builtins.fetchurl {
+    url = "https://raw.githubusercontent.com/NixOS/nixpkgs/fa3a54cd07014a17df3e24946c5138d5501a416c/pkgs/applications/networking/instant-messengers/teamspeak/client.nix";
+    sha256 = "";
+  };
+in
+{
   imports = [(modulesPath + "/installer/scan/not-detected.nix")];
 
   hardware.opengl = {
@@ -91,6 +97,8 @@
 
   # List packages installed in system profile
   environment.systemPackages = with pkgs; [
+    # custom utility
+    (pkgs.callPackage futureTeamspeakPackage {})
     # utility
     dmidecode
     gpart
