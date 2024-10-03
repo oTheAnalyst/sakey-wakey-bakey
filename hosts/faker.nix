@@ -8,7 +8,7 @@
 }: let
   futureTeamspeakPackage = builtins.fetchurl {
     url = "https://raw.githubusercontent.com/NixOS/nixpkgs/fa3a54cd07014a17df3e24946c5138d5501a416c/pkgs/applications/networking/instant-messengers/teamspeak/client.nix";
-    sha256 = "";
+    sha256 = "1jq0xgwr6lwnm57bgdynv2xm6ma6wp6rriim2lzb6xr6207pckd9";
   };
 in
 {
