@@ -1,7 +1,4 @@
 {pkgs, ...}: {
-  home.packages = with pkgs; [
-    (btop.override {rocmSupport = true;})
-  ];
 
   programs.firefox.profiles.default.userChrome = ''
     #tabbrowser-tabs {

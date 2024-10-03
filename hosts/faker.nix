@@ -98,7 +98,8 @@ in
   # List packages installed in system profile
   environment.systemPackages = with pkgs; [
     # custom utility
-    (pkgs.callPackage futureTeamspeakPackage {})
+    (btop.override {rocmSupport = true;})
+    (libsForQt5.callPackage futureTeamspeakPackage {})
     # utility
     dmidecode
     gpart
