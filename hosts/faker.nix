@@ -52,7 +52,7 @@ in
 
   services = {
     desktopManager.plasma6.enable = true;
-    teamspeak3.enable = true;
+   # teamspeak3.enable = true;
     displayManager.sddm = {
       enable = true;
       wayland.enable = true;
@@ -157,6 +157,8 @@ in
     thunderbird
     alacritty
     #teamspeak_client
+    kitty
+    teams-for-linux
     input-remapper
     home-manager
     yazi
