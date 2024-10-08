@@ -11,5 +11,16 @@ _: {
         background_opacity 0.5
       '';
     };
+    starship = {
+    enable = true;
+    settings = {
+      charecter = {
+        NixOS = " ";
+        rlang = "󰟔 ";
+        git_branch = " ";
+        nix_shell = " ";
+          };
+      };
+    };
   };
 }

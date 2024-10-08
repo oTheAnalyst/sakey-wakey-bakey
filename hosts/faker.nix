@@ -125,7 +125,6 @@ in
     neovim
     emacs
     # rice
-    starship
     cava
     lolcat
     pfetch
