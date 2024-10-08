@@ -14,7 +14,11 @@
     sharedModules = [
       # shared for all users
       {
-        imports = [ ./programs/firefox.nix ./programs/starship.nix ];
+        imports = [
+          ./programs/kitty.nix
+          ./programs/firefox.nix
+          ./programs/starship.nix
+        ];
         home = {
           inherit username;
           homeDirectory = "/home/${username}";
