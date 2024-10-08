@@ -1,8 +1,4 @@
-{pkgs, ...}: {
-
-  home.packages = [
-    pkgs.kitty
-  ];
+_: {
   programs = {
     home-manager = true;
     kitty = {

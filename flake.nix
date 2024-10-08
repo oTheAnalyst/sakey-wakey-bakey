@@ -12,33 +12,32 @@
   };
 
   outputs = {self, ...} @ inputs: let
-      userSettings = {
-      username = "pretender";
-      };
+    username = "pretender";
   in {
     nixosConfigurations = {
       faker = inputs.nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs userSettings;};
+        specialArgs = {inherit inputs username;};
         system = "x86_64-linux";
         modules = [
+          inputs.home-manager.nixosModules.home-manager
+          ./modules/home
           ./hosts/faker.nix # host file, hardware, unique stuff
-          ./modules/home # shared home module
           ./modules/nixos/system.nix # shared system (nixos) module
-          {
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              extraSpecialArgs = {
-                inherit inputs;
-                inherit userSettings;
-              };
-              users.${userSettings.username} = {
-              imports = [
-              ./modules/home/default.nix #home parent
-              ];
-            };
-           };
-          }
+          # {
+          #   home-manager = {
+          #     useGlobalPkgs = true;
+          #     useUserPackages = true;
+          #     extraSpecialArgs = {
+          #       inherit inputs;
+          #       inherit userSettings;
+          #     };
+          #     users.${userSettings.username} = {
+          #       imports = [
+          #         ./modules/home/default.nix #home parent
+          #       ];
+          #     };
+          #   };
+          # }
         ];
       };
     };
