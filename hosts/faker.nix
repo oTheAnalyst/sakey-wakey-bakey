@@ -10,8 +10,7 @@
     url = "https://raw.githubusercontent.com/NixOS/nixpkgs/fa3a54cd07014a17df3e24946c5138d5501a416c/pkgs/applications/networking/instant-messengers/teamspeak/client.nix";
     sha256 = "1jq0xgwr6lwnm57bgdynv2xm6ma6wp6rriim2lzb6xr6207pckd9";
   };
-in
-{
+in {
   imports = [(modulesPath + "/installer/scan/not-detected.nix")];
 
   hardware.opengl = {
@@ -52,7 +51,7 @@ in
 
   services = {
     desktopManager.plasma6.enable = true;
-   # teamspeak3.enable = true;
+    # teamspeak3.enable = true;
     displayManager.sddm = {
       enable = true;
       wayland.enable = true;
@@ -66,7 +65,6 @@ in
       xkb.variant = "";
       videoDrivers = ["amdgpu"];
     };
-
 
     printing.enable = true;
 
@@ -133,6 +131,7 @@ in
     cool-retro-term
     protonup
     #apps
+    kitty
     catt
     gallery-dl
     veracrypt
@@ -145,7 +144,6 @@ in
     zoom-us
     vlc
     cinelerra #video editing app
-    kitty
     signal-desktop
     mangareader
     sqlite
@@ -156,7 +154,6 @@ in
     thunderbird
     alacritty
     #teamspeak_client
-    kitty
     teams-for-linux
     input-remapper
     home-manager
