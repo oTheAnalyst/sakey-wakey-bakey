@@ -157,7 +157,6 @@ in {
     #teamspeak_client
     teams-for-linux
     input-remapper
-    home-manager
     yazi
     ranger
     qbittorrent

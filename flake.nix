@@ -19,25 +19,9 @@
         specialArgs = {inherit inputs username;};
         system = "x86_64-linux";
         modules = [
-          inputs.home-manager.nixosModules.home-manager
           ./modules/home
           ./hosts/faker.nix # host file, hardware, unique stuff
           ./modules/nixos/system.nix # shared system (nixos) module
-          # {
-          #   home-manager = {
-          #     useGlobalPkgs = true;
-          #     useUserPackages = true;
-          #     extraSpecialArgs = {
-          #       inherit inputs;
-          #       inherit userSettings;
-          #     };
-          #     users.${userSettings.username} = {
-          #       imports = [
-          #         ./modules/home/default.nix #home parent
-          #       ];
-          #     };
-          #   };
-          # }
         ];
       };
     };
