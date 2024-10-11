@@ -1,5 +1,6 @@
 {
   inputs,
+  pkgs,
   username,
   lib,
   config,
@@ -11,23 +12,22 @@
     useGlobalPkgs = true;
     useUserPackages = true;
     extraSpecialArgs = {inherit inputs username;};
-    sharedModules = [
-      # shared for all users
+    users.${username} =
+      # only for one user
       {
         imports = [
-          ./programs/kitty.nix
+          # ./programs/kitty.nix
           ./programs/firefox.nix
-          ./programs/starship.nix
+          ./programs/bash.nix
         ];
         home = {
           inherit username;
           homeDirectory = "/home/${username}";
           stateVersion = lib.mkDefault config.system.stateVersion;
+          packages = with pkgs; [cowsay];
         };
-
         programs.home-manager.enable = true;
         services.ssh-agent.enable = true;
-      }
-    ];
+      };
   };
 }
