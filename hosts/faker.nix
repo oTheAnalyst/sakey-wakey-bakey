@@ -131,6 +131,7 @@ in {
     cool-retro-term
     protonup
     #apps
+    brave
     kitty
     catt
     gallery-dl
