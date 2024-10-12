@@ -1,14 +1,42 @@
-{lib, ...}: {
-  add_newline = false;
-  format = lib.concatStrings [
-    "$line_break"
-    "$package"
-    "$line_break"
-    "$character"
-  ];
-  scan_timeout = 10;
-  character = {
-    success_symbol = "➜";
-    error_symbol = "➜";
+{
+  programs = {
+    fish = {
+      enable = true;
+      shellAliases = {
+        cat = "bat -p";
+        find = "fd";
+        gc = "nix store gc";
+      };
+    };
+    starship = {
+      enable = true;
+      settings = {
+        add_newline = false;
+        nix_shell = {
+          symbol = " ";
+          format = "$symbol ";
+        };
+        hostname.format = "$hostname:";
+        username.format = "$user@";
+      };
+    };
+    bat.enable = true;
+    lsd = {
+      enable = true;
+      enableAliases = true;
+    };
+    direnv = {
+      enable = true;
+      nix-direnv.enable = true;
+    };
+    fzf = {
+      enable = true;
+      fileWidgetOptions = ["--preview 'bat --color=always {}'"];
+    };
+    mcfly = {
+      enable = true;
+      fzf.enable = true;
+      enableFishIntegration = true;
+    };
   };
 }

@@ -52,13 +52,15 @@ in {
   services = {
     desktopManager.plasma6.enable = true;
     # teamspeak3.enable = true;
-    displayManager.sddm = {
+    displayManager = {
+      autoLogin.user = username;
+      autoLogin.enable = true;
+    sddm = {
       enable = true;
       wayland.enable = true;
       theme = "Breeze Dark";
-      autoLogin.user = username;
-      autoLogin.enable = true;
-    };
+        };
+      };
     xserver = {
       enable = true;
       xkb.layout = "us";
