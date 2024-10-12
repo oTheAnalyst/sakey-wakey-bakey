@@ -16,7 +16,7 @@
       # only for one user
       {
         imports = [
-          # ./programs/kitty.nix
+          ./programs/kitty.nix
           ./programs/firefox.nix
           ./programs/bash.nix
           ./programs/starship.nix

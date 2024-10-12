@@ -134,7 +134,6 @@ in {
     protonup
     #apps
     brave
-    kitty
     catt
     gallery-dl
     veracrypt
