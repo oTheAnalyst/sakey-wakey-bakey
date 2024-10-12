@@ -19,7 +19,7 @@
           # ./programs/kitty.nix
           ./programs/firefox.nix
           ./programs/bash.nix
-         # ./programs/starship.nix
+          ./programs/starship.nix
         ];
         home = {
           inherit username;
