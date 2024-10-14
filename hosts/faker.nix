@@ -55,12 +55,12 @@ in {
     displayManager = {
       autoLogin.user = username;
       autoLogin.enable = true;
-    sddm = {
-      enable = true;
-      wayland.enable = true;
-      theme = "Breeze Dark";
-        };
+      sddm = {
+        enable = true;
+        wayland.enable = true;
+        theme = "Breeze Dark";
       };
+    };
     xserver = {
       enable = true;
       xkb.layout = "us";
@@ -158,8 +158,8 @@ in {
     #teamspeak_client
     teams-for-linux
     input-remapper
-    yazi
     ranger
+    yazi
     qbittorrent
     bitwarden-desktop
     github-desktop
