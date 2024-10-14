@@ -33,10 +33,5 @@ _:{
       enable = true;
       fileWidgetOptions = ["--preview 'bat --color=always {}'"];
     };
-    mcfly = {
-      enable = true;
-      fzf.enable = true;
-      enableFishIntegration = true;
-    };
   };
 }
