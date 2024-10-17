@@ -2,6 +2,7 @@
   pkgs,
   lib,
   config,
+  agenix,
   modulesPath,
   username,
   ...
@@ -18,6 +19,8 @@ in {
     driSupport = true;
     driSupport32Bit = true;
   };
+
+age.secrets.secret1.file = ../secret1.age;
 
   programs = {
     steam = {
@@ -100,6 +103,7 @@ in {
     # custom utility
     (btop.override {rocmSupport = true;})
     (libsForQt5.callPackage futureTeamspeakPackage {})
+    agenix.packages.${pkgs.system}.default
     # utility
     bitwarden-cli
     dmidecode

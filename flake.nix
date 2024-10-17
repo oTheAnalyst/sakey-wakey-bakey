@@ -21,7 +21,7 @@
   in {
     nixosConfigurations = {
       faker = inputs.nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs username;};
+        specialArgs = {inherit inputs agenix username;};
         system = "x86_64-linux";
         modules = [
           ./modules/home
