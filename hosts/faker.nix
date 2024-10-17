@@ -101,6 +101,7 @@ in {
     (btop.override {rocmSupport = true;})
     (libsForQt5.callPackage futureTeamspeakPackage {})
     # utility
+    bitwarden-cli
     dmidecode
     gpart
     gparted
