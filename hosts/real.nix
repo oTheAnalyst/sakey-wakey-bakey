@@ -184,7 +184,7 @@ in {
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
 
   boot = {
-    initrd.availableKernelModules = ["nvme" "xhci_pci" "ahci" "usbhid"];
+    initrd.availableKernelModules = ["nvme" "xhci_pci" "ahci" "usb_storage" "sd_mod"];
     initrd.kernelModules = [];
     kernelModules = ["kvm-amd"];
     extraModulePackages = [];
@@ -192,11 +192,11 @@ in {
 
   fileSystems = {
     "/" = {
-      device = "/dev/disk/by-uuid/f273fa93-d169-4f68-8553-d573918cb15a";
+      device = "dev/disk/by-uuid/c6da761c-9f9c-4489-8b9a-b428b31e0baf";
       fsType = "ext4";
     };
     "/boot" = {
-      device = "/dev/disk/by-uuid/AA84-F650";
+      device = "/dev/disk/by-uuid/3400-3919";
       fsType = "vfat";
       options = ["fmask=0022" "dmask=0022"];
     };
