@@ -14,7 +14,7 @@
 
   outputs = {
     self,
-    agenix,
+  #  agenix,
     ...
   } @ inputs: let
     username = "pretender";
@@ -28,6 +28,16 @@
           ./hosts/faker.nix # host file, hardware, unique stuff
           ./modules/nixos/system.nix # shared system (nixos) module
           agenix.nixosModules.default
+        ];
+      };
+      real = inputs.nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs agenix username;};
+        system = "x86_64-linux";
+        modules = [
+          ./modules/home
+          ./hosts/real.nix # host file, hardware, unique stuff
+          ./modules/nixos/system.nix # shared system (nixos) module
+         # agenix.nixosModules.default
         ];
       };
     };
