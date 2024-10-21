@@ -1,5 +1,5 @@
 _: {
-
+  programs.firefox.enable = true;
   programs.firefox.profiles.default.userChrome = ''
     #tabbrowser-tabs {
       visibility: collapse !important;
