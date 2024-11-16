@@ -21,7 +21,7 @@ in {
   };
 
 age.secrets.secret1.file = ../secret1.age;
-age.identityPaths = [ "/home/pretender/.ssh/id_ed25519"]
+age.identityPaths = [ "/home/pretender/.ssh/id_ed25519"];
 
 
   programs = {
