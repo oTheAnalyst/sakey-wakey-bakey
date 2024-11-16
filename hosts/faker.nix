@@ -21,6 +21,8 @@ in {
   };
 
 age.secrets.secret1.file = ../secret1.age;
+age.identityPaths = [ "/home/pretender/.ssh/id_ed25519"]
+
 
   programs = {
     steam = {
@@ -126,7 +128,6 @@ age.secrets.secret1.file = ../secret1.age;
     gnumake #depedency for r.nvim
     libgcc #depedency for r.nvim
     gccgo #depedency for r.nvim
-    R
     neovim
     emacs
     # rice
