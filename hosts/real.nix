@@ -96,6 +96,7 @@ in {
     extraGroups = ["networkmanager" "wheel"];
   };
 
+services.emacs.enable = true;
 
   # List packages installed in system profile
   environment.systemPackages = with pkgs; [
@@ -126,7 +127,6 @@ in {
     libgcc #depedency for r.nvim
     gccgo #depedency for r.nvim
     neovim
-    emacs
     # rice
     cava
     lolcat
