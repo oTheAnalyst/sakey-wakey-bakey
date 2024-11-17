@@ -125,7 +125,6 @@ in {
     gnumake #depedency for r.nvim
     libgcc #depedency for r.nvim
     gccgo #depedency for r.nvim
-    R
     neovim
     emacs
     # rice
