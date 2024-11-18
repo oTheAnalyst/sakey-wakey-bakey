@@ -20,9 +20,8 @@ in {
     driSupport32Bit = true;
   };
 
-age.secrets.secret1.file = ../secret1.age;
-age.identityPaths = [ "/home/pretender/.ssh/id_ed25519"];
-
+  age.secrets.secret1.file = ../secret1.age;
+  age.identityPaths = ["/home/pretender/.ssh/id_ed25519"];
 
   programs = {
     steam = {
@@ -55,6 +54,7 @@ age.identityPaths = [ "/home/pretender/.ssh/id_ed25519"];
   };
 
   services = {
+    emacs.enable = true;
     desktopManager.plasma6.enable = true;
     # teamspeak3.enable = true;
     displayManager = {

@@ -53,6 +53,7 @@ in {
   };
 
   services = {
+    emacs.enable =true;
     desktopManager.plasma6.enable = true;
     # teamspeak3.enable = true;
     displayManager = {
@@ -96,7 +97,6 @@ in {
     extraGroups = ["networkmanager" "wheel"];
   };
 
-services.emacs.enable = true;
 
   # List packages installed in system profile
   environment.systemPackages = with pkgs; [
