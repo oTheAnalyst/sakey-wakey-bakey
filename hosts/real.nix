@@ -153,6 +153,8 @@ in {
     mangareader
     sqlite
     sqlitebrowser
+    postgresql
+    pgadmin4
     xclip
     qpwgraph
     freetube

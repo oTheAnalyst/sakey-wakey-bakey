@@ -155,7 +155,9 @@ in {
     signal-desktop
     mangareader
     sqlite
+    postgresql
     sqlitebrowser
+    pgadmin4
     xclip
     qpwgraph
     freetube
