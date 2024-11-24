@@ -23,6 +23,8 @@ in {
   #age.secrets.secret1.file = ../secret1.age;
 
   programs = {
+    hyprland.enable = true;
+    virt-manager.enable = true;
     steam = {
       enable = true;
       gamescopeSession.enable = true;
@@ -41,7 +43,6 @@ in {
   };
 
   virtualisation.libvirtd.enable = true;
-  programs.virt-manager.enable = true;
 
   hardware = {
     bluetooth = {
@@ -53,7 +54,7 @@ in {
   };
 
   services = {
-    emacs.enable =true;
+    emacs.enable = true;
     desktopManager.plasma6.enable = true;
     # teamspeak3.enable = true;
     displayManager = {
@@ -97,13 +98,12 @@ in {
     extraGroups = ["networkmanager" "wheel"];
   };
 
-
   # List packages installed in system profile
   environment.systemPackages = with pkgs; [
     # custom utility
     (btop.override {rocmSupport = true;})
     (libsForQt5.callPackage futureTeamspeakPackage {})
-   # agenix.packages.${pkgs.system}.default
+    # agenix.packages.${pkgs.system}.default
     # utility
     bitwarden-cli
     dmidecode
@@ -170,9 +170,13 @@ in {
     github-desktop
     rofi
     # hyprland
+    dunst
+    libnotify
     waybar # hyprland plugin
+    hyprpaper
     swww # hyprland plugin
     mako #hyprland plugin
+    rofi-wayland
   ];
 
   fonts.packages = with pkgs; [
