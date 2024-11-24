@@ -168,8 +168,12 @@ in {
     qbittorrent
     bitwarden-desktop
     github-desktop
-    rofi
     # hyprland
+    gammastep
+    pavucontrol
+    wlogout
+    gnome.gnome-calender
+    rofi
     dunst
     libnotify
     waybar # hyprland plugin
