@@ -169,18 +169,21 @@ in {
     bitwarden-desktop
     github-desktop
     # hyprland
+    playerctl
+    grim
+    slurp
+    swappy
+    light
     gammastep
     pavucontrol
     wlogout
-    gnome.gnome-calender
-    rofi
     dunst
     libnotify
+    wofi
     waybar # hyprland plugin
     hyprpaper
     swww # hyprland plugin
     mako #hyprland plugin
-    rofi-wayland
   ];
 
   fonts.packages = with pkgs; [
