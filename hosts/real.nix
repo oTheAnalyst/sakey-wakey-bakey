@@ -63,7 +63,7 @@ in {
       sddm = {
         enable = true;
         wayland.enable = true;
-        theme = "Breeze Dark";
+        theme = "breeze";
       };
     };
     xserver = {
@@ -177,11 +177,12 @@ in {
     gammastep
     pavucontrol
     wlogout
-    dunst
     libnotify
+    swaynotificationcenter
     wofi
     waybar # hyprland plugin
     hyprpaper
+    hyprlock
     swww # hyprland plugin
     mako #hyprland plugin
   ];
