@@ -184,7 +184,6 @@ in {
     hyprpaper
     hyprlock
     swww # hyprland plugin
-    mako #hyprland plugin
   ];
 
   fonts.packages = with pkgs; [
