@@ -136,6 +136,7 @@ in {
     cool-retro-term
     protonup
     #apps
+    libreoffice
     brave
     catt
     gallery-dl
