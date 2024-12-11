@@ -10,7 +10,7 @@ _:
 
     shellAliases = {
       # Add useful shell aliases
-    vflake="nix run github:oTheAnalyst/neovim-flake";
+    vflake="nix run --no-write-lock-file github:oTheAnalyst/neovim-flake";
     gst = builtins.trace "hello world" "git status";
     gp = "git pull";
     };

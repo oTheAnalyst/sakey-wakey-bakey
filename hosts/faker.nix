@@ -14,10 +14,9 @@
 in {
   imports = [(modulesPath + "/installer/scan/not-detected.nix")];
 
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
+    enable32Bit = true;
   };
 
   age.secrets.secret1.file = ../secret1.age;
