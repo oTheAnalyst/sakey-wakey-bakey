@@ -169,6 +169,7 @@ in {
     bitwarden-desktop
     github-desktop
     # hyprland
+    bluetui
     playerctl
     grim
     slurp
