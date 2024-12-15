@@ -161,6 +161,7 @@ in {
     thunderbird
     alacritty
     #teamspeak_client
+    mov-cli
     teams-for-linux
     input-remapper
     ranger
