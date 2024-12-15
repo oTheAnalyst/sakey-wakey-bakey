@@ -161,7 +161,7 @@ in {
     thunderbird
     alacritty
     #teamspeak_client
-    mov-cli
+    delfin
     teams-for-linux
     input-remapper
     ranger
@@ -169,6 +169,7 @@ in {
     qbittorrent
     bitwarden-desktop
     github-desktop
+    mov-cli
     # hyprland
     bluetui
     playerctl
