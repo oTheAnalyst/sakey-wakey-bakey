@@ -57,8 +57,11 @@ in {
     desktopManager.plasma6.enable = true;
     # teamspeak3.enable = true;
     displayManager = {
-      autoLogin.user = username;
-      autoLogin.enable = true;
+      autoLogin = {
+        Session = "hyprland";
+        user = username;
+        enable = true;
+      };
       sddm = {
         enable = true;
         wayland.enable = true;
@@ -170,6 +173,7 @@ in {
     bitwarden-desktop
     github-desktop
     mov-cli
+    pipx
     # hyprland
     bluetui
     playerctl
