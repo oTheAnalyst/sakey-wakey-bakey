@@ -58,7 +58,6 @@ in {
     # teamspeak3.enable = true;
     displayManager = {
       autoLogin = {
-        Session = "hyprland";
         user = username;
         enable = true;
       };
@@ -66,6 +65,9 @@ in {
         enable = true;
         wayland.enable = true;
         theme = "breeze";
+      };
+      setting = {
+        AutoLogin.Session = "hyprland";
       };
     };
     xserver = {
