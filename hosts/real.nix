@@ -65,9 +65,7 @@ in {
         enable = true;
         wayland.enable = true;
         theme = "breeze";
-      };
-      setting = {
-        Autologin.Session = "hyprland";
+        setting.Autologin.Session = "hyprland";
       };
     };
     xserver = {
