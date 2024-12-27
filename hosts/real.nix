@@ -67,7 +67,7 @@ in {
         theme = "breeze";
       };
       setting = {
-        AutoLogin.Session = "hyprland";
+        Autologin.Session = "hyprland";
       };
     };
     xserver = {
