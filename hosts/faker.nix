@@ -106,6 +106,7 @@ in {
     (libsForQt5.callPackage futureTeamspeakPackage {})
     agenix.packages.${pkgs.system}.default
     # utility
+    protonvpn-cli
     bitwarden-cli
     dmidecode
     gpart
