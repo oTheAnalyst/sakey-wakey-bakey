@@ -58,7 +58,7 @@ in {
     # teamspeak3.enable = true;
     postgresql = {
       enable = true;
-      ensureDatabases = ["general"];
+      ensureDatabases = [ "nixcloud" ];
       authentication = pkgs.lib.mkOverride 10 ''
         #...
         #type database DBuser origin-address auth-method
