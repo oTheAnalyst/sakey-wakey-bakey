@@ -56,6 +56,14 @@ in {
     emacs.enable = true;
     desktopManager.plasma6.enable = true;
     # teamspeak3.enable = true;
+    postgresql = {
+      enable = true;
+      ensureDatabases = ["general"];
+      authentication = pkgs.lib.mkOverride 10 ''
+        #type database  DBuser  auth-method
+        local all       all     trust
+      '';
+    };
     displayManager = {
       autoLogin = {
         user = username;
