@@ -2,6 +2,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
     agenix.url = "github:ryantm/agenix";
+    lobster.url = "github:justchokingaround/lobster";
     home-manager = {
       url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -14,6 +15,7 @@
 
   outputs = {
     self,
+    lobster,
     agenix,
     ...
   } @ inputs: let
@@ -31,13 +33,14 @@
         ];
       };
       real = inputs.nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs username;};
+        specialArgs = {inherit inputs lobster username;};
         system = "x86_64-linux";
         modules = [
           ./modules/home
           ./hosts/real.nix # host file, hardware, unique stuff
           ./modules/nixos/system.nix # shared system (nixos) module
-         # agenix.nixosModules.default
+          # agenix.nixosModules.default
+          lobster.nixosModules.default
         ];
       };
     };
