@@ -177,7 +177,7 @@ in {
     thunderbird
     alacritty
     #teamspeak_client
-    zenllij
+    zellij
     delfin
     teams-for-linux
     input-remapper
