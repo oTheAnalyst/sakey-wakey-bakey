@@ -2,6 +2,7 @@
   pkgs,
   lib,
   config,
+  lobster,
   #  agenix,
   modulesPath,
   username,
