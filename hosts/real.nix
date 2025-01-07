@@ -117,7 +117,7 @@ in {
     # custom utility
     (btop.override {rocmSupport = true;})
     (libsForQt5.callPackage futureTeamspeakPackage {})
-    lobster.packages."x86_64-linux".lobster
+    lobster.packages.${pkg.system}."x86_64-linux"
     # agenix.packages.${pkgs.system}.default
     # utility
     #cli tools
