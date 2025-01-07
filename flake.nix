@@ -33,7 +33,7 @@
         ];
       };
       real = inputs.nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs username;};
+        specialArgs = {inherit inputs lobster username;};
         system = "x86_64-linux";
         modules = [
           ./modules/home
