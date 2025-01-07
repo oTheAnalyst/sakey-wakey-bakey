@@ -15,7 +15,6 @@
 
   outputs = {
     self,
-    lobster,
     agenix,
     ...
   } @ inputs: let
@@ -39,8 +38,7 @@
           ./modules/home
           ./hosts/real.nix # host file, hardware, unique stuff
           ./modules/nixos/system.nix # shared system (nixos) module
-          # agenix.nixosModules.default
-          lobster.nixosModules.default
+         # agenix.nixosModules.default
         ];
       };
     };
