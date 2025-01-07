@@ -2,7 +2,6 @@
   pkgs,
   lib,
   config,
-  lobster,
   #  agenix,
   modulesPath,
   username,
@@ -118,7 +117,6 @@ in {
     # custom utility
     (btop.override {rocmSupport = true;})
     (libsForQt5.callPackage futureTeamspeakPackage {})
-    lobster.packages.${pkgs.system}.lobster
     # agenix.packages.${pkgs.system}.default
     # utility
     #cli tools
@@ -146,7 +144,6 @@ in {
     gccgo #depedency for r.nvim
     neovim
     # rice
-    cmatrix
     cava
     lolcat
     pfetch
