@@ -13,7 +13,7 @@ _:
     vflake="nix run --no-write-lock-file github:oTheAnalyst/neovim-flake";
     gst = builtins.trace "hello world" "git status";
     gp = "git pull";
-    bfu = "sudo nixos-rebuild switch --flake";
+    buildnix = "sudo nixos-rebuild switch --flake";
     };
    };
   }
