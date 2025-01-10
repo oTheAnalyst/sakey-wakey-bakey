@@ -198,6 +198,7 @@ in {
     mov-cli
     pipx
     # hyprland
+    hyprshot
     bluetui
     playerctl
     grim
