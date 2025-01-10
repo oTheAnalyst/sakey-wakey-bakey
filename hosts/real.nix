@@ -74,6 +74,7 @@ in {
       initialScript = pkgs.writeText "backend-initScript" ''
         CREATE ROLE nixcloud WITH LOGIN PASSWORD 'nixcloud' CREATEDB;
         CREATE DATABASE nixcloud;
+        CREATE USER 'nixcloud'@'localhost' WITH ENCRYPYED PASSWORD 'testerac';
         GRANT ALL PRIVILEGES ON DATABASE nixcloud TO nixcloud;
       '';
     };
