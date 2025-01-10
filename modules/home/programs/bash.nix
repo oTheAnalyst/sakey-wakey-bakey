@@ -11,7 +11,7 @@ _: {
       gst = builtins.trace "hello world" "git status";
       gp = "git pull";
       buildnix = "sudo nixos-rebuild switch --flake";
-      vpn-connect = "sudo protonvpn --cc US";
+      vpn-connect = "sudo protonvpn connect --cc US";
     };
   };
 }
