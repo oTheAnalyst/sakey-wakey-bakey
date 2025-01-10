@@ -1,19 +1,17 @@
-_:
-
-{
-
+_: {
   programs.bash = {
-    enable = true;              # Enable bash
-    enableCompletion = true;    # Enable bash completion
-    historyFileSize = 50000;    # Set the size of bash history
+    enable = true; # Enable bash
+    enableCompletion = true; # Enable bash completion
+    historyFileSize = 50000; # Set the size of bash history
     historyFile = ".bash_history";
 
     shellAliases = {
       # Add useful shell aliases
-    vflake="nix run --no-write-lock-file github:oTheAnalyst/neovim-flake";
-    gst = builtins.trace "hello world" "git status";
-    gp = "git pull";
-    buildnix = "sudo nixos-rebuild switch --flake";
+      vflake = "nix run --no-write-lock-file github:oTheAnalyst/neovim-flake";
+      gst = builtins.trace "hello world" "git status";
+      gp = "git pull";
+      buildnix = "sudo nixos-rebuild switch --flake";
+      vpn-connect = "sudo protonvpn --cc US";
     };
-   };
-  }
+  };
+}
