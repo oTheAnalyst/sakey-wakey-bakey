@@ -139,6 +139,7 @@ in {
     cool-retro-term
     protonup
     #apps
+    shadps4
     brave
     catt
     gallery-dl
