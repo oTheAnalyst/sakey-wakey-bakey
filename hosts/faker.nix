@@ -106,8 +106,8 @@ in {
     (btop.override {rocmSupport = true;})
     (libsForQt5.callPackage futureTeamspeakPackage {})
     agenix.packages.${pkgs.system}.default
-    shadps4
-    #inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.shadps4
+    #shadps4
+    inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.shadps4
     # utility
     protonvpn-cli_2
     bitwarden-cli
