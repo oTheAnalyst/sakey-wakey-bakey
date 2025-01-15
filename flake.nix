@@ -29,8 +29,6 @@
           ./hosts/faker.nix # host file, hardware, unique stuff
           ./modules/nixos/system.nix # shared system (nixos) module
           agenix.nixosModules.default
-     ({ pkgs, ... }: {
-        environment.systemPackages = [ inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.shadps4 ]; })
         ];
       };
       real = inputs.nixpkgs.lib.nixosSystem {

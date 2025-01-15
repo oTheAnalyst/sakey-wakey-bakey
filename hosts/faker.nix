@@ -1,6 +1,7 @@
 {
   pkgs,
   lib,
+  inputs,
   config,
   agenix,
   modulesPath,
@@ -105,6 +106,7 @@ in {
     (btop.override {rocmSupport = true;})
     (libsForQt5.callPackage futureTeamspeakPackage {})
     agenix.packages.${pkgs.system}.default
+    inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.shadps4
     # utility
     protonvpn-cli_2
     bitwarden-cli
