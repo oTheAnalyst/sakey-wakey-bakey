@@ -130,6 +130,7 @@ in {
     # agenix.packages.${pkgs.system}.default
     # utility
     #cli tools
+    inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.freetube
     zellij
     delfin
     protonvpn-cli_2
@@ -175,8 +176,6 @@ in {
     pgadmin4
     xclip
     qpwgraph
-    freetube
-    thunderbird
     alacritty
     teams-for-linux
     yazi
