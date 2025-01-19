@@ -55,7 +55,7 @@ in {
   services = {
     emacs.enable = true;
     desktopManager.plasma6.enable = true;
-    # teamspeak3.enable = true;
+    teamspeak3.enable = true;
     postgresql = {
       enable = true;
       ensureDatabases = ["mydatabase"];
@@ -126,21 +126,16 @@ in {
   environment.systemPackages = with pkgs; [
     # custom utility
     (btop.override {rocmSupport = true;})
-    (libsForQt5.callPackage futureTeamspeakPackage {})
+    #(libsForQt5.callPackage futureTeamspeakPackage {})
     # agenix.packages.${pkgs.system}.default
     # utility
     #cli tools
+    zellij
+    delfin
     protonvpn-cli_2
     bitwarden-cli
     dmidecode
-    gpart
-    gparted
-    rocmPackages.rocm-smi
     wget
-    system-config-printer
-    nix-prefetch-git
-    statix
-    hplip
     tree
     btop
     wine
@@ -149,11 +144,9 @@ in {
     mangohud
     libratbag
     nerdfonts
-    gnumake #depedency for r.nvim
-    libgcc #depedency for r.nvim
-    gccgo #depedency for r.nvim
     neovim
     # rice
+    cmatrix
     cava
     lolcat
     pfetch
@@ -172,7 +165,6 @@ in {
     obsidian
     obs-studio
     vesktop
-    zoom
     zoom-us
     vlc
     cinelerra #video editing app
@@ -186,19 +178,11 @@ in {
     freetube
     thunderbird
     alacritty
-    #teamspeak_client
-    zellij
-    delfin
     teams-for-linux
-    input-remapper
-    ranger
     yazi
     qbittorrent
     bitwarden-desktop
-    github-desktop
-    mov-cli
-    pipx
-    # hyprland
+    # hyprland apps
     hyprshot
     bluetui
     playerctl
