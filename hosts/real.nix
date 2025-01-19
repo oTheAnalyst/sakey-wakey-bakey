@@ -130,7 +130,7 @@ in {
     # agenix.packages.${pkgs.system}.default
     # utility
     #cli tools
-    inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.freetube
+    #inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.freetube
     zellij
     delfin
     protonvpn-cli_2
