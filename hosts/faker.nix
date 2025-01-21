@@ -109,6 +109,7 @@ in {
     shadps4
     #inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.shadps4
     # utility
+    lyx
     protonvpn-cli_2
     bitwarden-cli
     dmidecode
