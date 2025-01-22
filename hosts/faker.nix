@@ -110,10 +110,10 @@ in {
     #shadps4
     inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.shadps4
     #shadps4 depedency
+    SDL2
     sndio
     jack2
     openal
-    sdl2
     vulkan-validation-layers
     # utility
     texliveFull # another latex thing
