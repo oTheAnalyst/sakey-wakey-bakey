@@ -45,6 +45,7 @@ in {
   programs.virt-manager.enable = true;
 
   hardware = {
+    amdgpu.amdvlk.enable = true;
     bluetooth = {
       enable = true;
       powerOnBoot = true;
@@ -106,13 +107,19 @@ in {
     (btop.override {rocmSupport = true;})
     (libsForQt5.callPackage futureTeamspeakPackage {})
     agenix.packages.${pkgs.system}.default
-    shadps4
-    #inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.shadps4
+    #shadps4
+    inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.shadps4
+    #shadps4 depedency
+    sndio
+    jack2
+    openal
+    sdl2
+    vulkan-validation-layers
     # utility
     texliveFull # another latex thing
     texliveTeTeX
     texstudio
-    texlivePackages.enumitem #for latex to work 
+    texlivePackages.enumitem #for latex to work
     protonvpn-cli_2
     bitwarden-cli
     dmidecode
