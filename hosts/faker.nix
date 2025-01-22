@@ -107,8 +107,20 @@ in {
     (btop.override {rocmSupport = true;})
     (libsForQt5.callPackage futureTeamspeakPackage {})
     agenix.packages.${pkgs.system}.default
-    shadps4
+    #shadps4
     #inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.shadps4
+      (
+        pkgs.shadps4.overrideAttrs {
+          version = "0.5.0";
+          src = pkgs.fetchFromGitHub {
+            owner = "shadps4-emu";
+            repo = "shadPS4";
+            rev = "v0.5.0";
+            hash = ""; # TODO
+            fetchSubmodules = true;
+          };
+        }
+      )
     #shadps4 depedency
     SDL2
     sndio
