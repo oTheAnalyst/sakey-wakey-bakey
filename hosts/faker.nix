@@ -108,19 +108,7 @@ in {
     (libsForQt5.callPackage futureTeamspeakPackage {})
     agenix.packages.${pkgs.system}.default
     #shadps4
-    #inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.shadps4
-      (
-        pkgs.shadps4.overrideAttrs {
-          version = "0.5.0";
-          src = pkgs.fetchFromGitHub {
-            owner = "shadps4-emu";
-            repo = "shadPS4";
-            rev = "v0.5.0";
-            hash = "a1a98966eee07e7ecf3a5e3836b5f2ecde5664b0"; # TODO
-            fetchSubmodules = true;
-          };
-        }
-      )
+    inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.shadps4
     #shadps4 depedency
     SDL2
     sndio
