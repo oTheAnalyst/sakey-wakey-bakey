@@ -116,7 +116,7 @@ in {
             owner = "shadps4-emu";
             repo = "shadPS4";
             rev = "v0.5.0";
-            hash = ""; # TODO
+            hash = "a1a98966eee07e7ecf3a5e3836b5f2ecde5664b0"; # TODO
             fetchSubmodules = true;
           };
         }
