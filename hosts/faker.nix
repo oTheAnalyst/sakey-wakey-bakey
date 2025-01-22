@@ -111,6 +111,7 @@ in {
     #inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.shadps4
     (
       pkgs.shadps4.overrideAttrs {
+        patches = [];
         version = "0.5.0";
         src = pkgs.fetchFromGitHub {
           owner = "shadps4-emu";
