@@ -110,7 +110,9 @@ in {
     #inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.shadps4
     # utility
     lyx
-    texliveFull
+    texliveFull # another latex thing
+    textliveTeTeX
+    texlivePackages.enumitem #for latex to work 
     protonvpn-cli_2
     bitwarden-cli
     dmidecode
