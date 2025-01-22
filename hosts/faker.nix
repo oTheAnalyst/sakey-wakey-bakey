@@ -111,7 +111,7 @@ in {
     # utility
     lyx
     texliveTeTeX #for latex
-    texliveFull #for latex
+    tetex #for latex
     texlivePackages.enumitem #for latex to work 
     protonvpn-cli_2
     bitwarden-cli
