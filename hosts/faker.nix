@@ -116,6 +116,7 @@ in {
     openal
     vulkan-validation-layers
     # utility
+    unrar
     texliveFull # another latex thing
     texliveTeTeX
     texstudio
