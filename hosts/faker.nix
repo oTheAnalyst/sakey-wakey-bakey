@@ -121,7 +121,7 @@ in {
     texstudio
     texlivePackages.enumitem #for latex to work
     protonvpn-cli_2
-    youtube-dl
+    yt-dlp
     bitwarden-cli
     dmidecode
     gpart
