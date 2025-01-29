@@ -106,8 +106,8 @@ in {
     (btop.override {rocmSupport = true;})
     (libsForQt5.callPackage futureTeamspeakPackage {})
     agenix.packages.${pkgs.system}.default
-    #shadps4
-    inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.shadps4
+    shadps4
+    #inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.shadps4
     #shadps4 depedency
     SDL2
     sndio
