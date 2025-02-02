@@ -154,6 +154,7 @@ in {
     cool-retro-term
     protonup
     #apps
+    zellij
     brave
     catt
     gallery-dl
