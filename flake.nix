@@ -41,6 +41,16 @@
           # agenix.nixosModules.default
         ];
       };
+      underblade = inputs.nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs username;};
+        system = "x86_64-linux";
+        modules = [
+          ./modules/home
+          ./hosts/underblade.nix # host file, hardware, unique stuff
+          ./modules/nixos/system.nix # shared system (nixos) module
+          # agenix.nixosModules.default
+        ];
+      };
     };
   };
 }
