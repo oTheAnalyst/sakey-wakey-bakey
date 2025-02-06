@@ -182,6 +182,7 @@ in {
     qbittorrent
     bitwarden-desktop
     # hyprland apps
+    brightnessctl
     hyprshot
     bluetui
     playerctl
