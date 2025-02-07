@@ -182,6 +182,10 @@ in {
     qbittorrent
     bitwarden-desktop
     # hyprland apps
+    texliveFull # another latex thing
+    texliveTeTeX
+    texstudio
+    texlivePackages.enumitem #for latex to work
     brightnessctl
     hyprshot
     bluetui
