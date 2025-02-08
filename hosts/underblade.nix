@@ -158,7 +158,6 @@ in {
     #apps
     libreoffice
     brave
-    catt
     gallery-dl
     veracrypt
     rstudio
@@ -178,14 +177,12 @@ in {
     qpwgraph
     alacritty
     teams-for-linux
-    yazi
     qbittorrent
     bitwarden-desktop
     # hyprland apps
+    ranger
     texliveFull # another latex thing
-    texliveTeTeX
     texstudio
-    texlivePackages.enumitem #for latex to work
     brightnessctl
     hyprshot
     bluetui
