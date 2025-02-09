@@ -187,8 +187,8 @@ in {
     brightnessctl
     hyprshot
     bluetui
-    youtube-tui
     playerctl
+    yt-dlp
     grim
     slurp
     swappy
