@@ -180,12 +180,14 @@ in {
     qbittorrent
     bitwarden-desktop
     # hyprland apps
+    wttrbar
     ranger
     texliveFull # another latex thing
     texstudio
     brightnessctl
     hyprshot
     bluetui
+    youtube-tui
     playerctl
     grim
     slurp
