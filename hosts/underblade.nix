@@ -180,6 +180,7 @@ in {
     qbittorrent
     bitwarden-desktop
     # hyprland apps
+    rainfrog
     wttrbar
     ranger
     texliveFull # another latex thing
