@@ -134,6 +134,7 @@ in {
     zellij
     delfin
     protonvpn-cli_2
+    protonvpn-gui
     bitwarden-cli
     dmidecode
     wget
