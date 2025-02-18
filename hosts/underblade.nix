@@ -178,6 +178,7 @@ in {
     qpwgraph
     alacritty
     teams-for-linux
+    teamspeak3
     qbittorrent
     bitwarden-desktop
     # hyprland apps
