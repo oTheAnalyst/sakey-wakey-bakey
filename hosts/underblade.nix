@@ -126,7 +126,7 @@ in {
   environment.systemPackages = with pkgs; [
     # custom utility
     (btop.override {rocmSupport = true;})
-    #(libsForQt5.callPackage futureTeamspeakPackage {})
+    (libsForQt5.callPackage futureTeamspeakPackage {})
     # agenix.packages.${pkgs.system}.default
     # utility
     #cli tools
