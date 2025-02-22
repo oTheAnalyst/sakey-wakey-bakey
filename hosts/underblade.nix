@@ -14,11 +14,6 @@
 in {
   imports = [(modulesPath + "/installer/scan/not-detected.nix")];
 
-  hardware.graphics = {
-    enable = true;
-    enable32Bit = true;
-  };
-
   #age.secrets.secret1.file = ../secret1.age;
 
   programs = {
@@ -44,6 +39,10 @@ in {
   virtualisation.libvirtd.enable = true;
 
   hardware = {
+    graphics = {
+      enable = true;
+      enable32Bit = true;
+    };
     bluetooth = {
       enable = true;
       powerOnBoot = true;
