@@ -148,13 +148,14 @@ in {
     nerdfonts
     neovim
     # rice
+    tor
+    tor-browser
     cmatrix
     cava
     lolcat
     pfetch
     hyfetch
     ani-cli
-    cool-retro-term
     protonup
     #apps
     libreoffice
@@ -174,9 +175,7 @@ in {
     sqlite
     sqlitebrowser
     pgadmin4
-    xclip
     qpwgraph
-    alacritty
     teams-for-linux
     teamspeak3
     qbittorrent
