@@ -173,6 +173,7 @@ in {
     mangareader
     sqlite
     sqlitebrowser
+    libgcc
     pgadmin4
     qpwgraph
     teams-for-linux
