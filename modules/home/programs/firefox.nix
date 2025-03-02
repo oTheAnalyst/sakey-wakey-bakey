@@ -1,5 +1,17 @@
 _: {
-  programs.firefox.enable = true;
+  programs = {
+    firefox.enable = false;
+    chromium = {
+    enable = true;
+    extensions = [
+      { id = "cjpalhdlnbpafiamejdnhcphjbkeiagm"; } # ublock origin
+      ];
+    commandLineArgs = [
+      "--disable-features=WebRtcAllowInputVolumeAdjustment"
+    ];
+  };
+};
+ 
   programs.firefox.profiles.default.userChrome = ''
     #tabbrowser-tabs {
       visibility: collapse !important;
