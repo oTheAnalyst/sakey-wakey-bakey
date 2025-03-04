@@ -115,6 +115,9 @@ in {
     openal
     vulkan-validation-layers
     # utility
+    nix-output-monitor
+    nvd
+    nh
     unrar
     texliveFull # another latex thing
     texliveTeTeX
