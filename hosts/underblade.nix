@@ -32,7 +32,7 @@ in {
   };
 
   networking = {
-    hostName = "faker";
+    hostName = "underblade";
     networkmanager.enable = true;
   };
 
@@ -121,6 +121,9 @@ in {
     extraGroups = ["networkmanager" "wheel"];
   };
 
+  environment.sessionVariables = {
+    FLAKE = "/home/pretender/sakey-wakey-bakey/";
+  };
   # List packages installed in system profile
   environment.systemPackages = with pkgs; [
     # custom utility
