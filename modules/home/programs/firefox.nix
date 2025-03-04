@@ -2,7 +2,7 @@ _: {
   programs = {
     firefox.enable = false;
     chromium = {
-    enable = true;
+    enable = false;
     extensions = [
       { id = "cjpalhdlnbpafiamejdnhcphjbkeiagm"; } # ublock origin
       ];
