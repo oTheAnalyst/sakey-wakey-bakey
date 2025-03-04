@@ -100,6 +100,10 @@ in {
 
   programs.firefox.enable = true;
 
+  environment.sessionVariables = {
+    FLAKE = "/home/pretender/sakey-wakey-bakey/";
+  };
+
   # List packages installed in system profile
   environment.systemPackages = with pkgs; [
     # custom utility
