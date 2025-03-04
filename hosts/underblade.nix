@@ -129,6 +129,9 @@ in {
     # agenix.packages.${pkgs.system}.default
     # utility
     #cli tools
+    nix-output-monitor
+    nvd
+    nh
     #inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.freetube
     zellij
     delfin
