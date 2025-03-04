@@ -163,8 +163,8 @@ in {
     ani-cli
     protonup
     #apps
-    libreoffice
     brave
+    libreoffice
     gallery-dl
     veracrypt
     rstudio
