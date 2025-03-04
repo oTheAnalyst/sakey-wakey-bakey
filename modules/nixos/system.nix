@@ -1,6 +1,6 @@
 {lib, ...}: {
   networking.hostName = lib.mkDefault "nixos";
-  system.stateVersion = lib.mkDefault "24.05";
+  system.stateVersion = lib.mkDefault "24.11";
   time.timeZone = lib.mkDefault "America/New_York";
   i18n = lib.mkDefault {
     defaultLocale = "en_US.UTF-8";
