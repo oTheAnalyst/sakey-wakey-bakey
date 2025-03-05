@@ -125,6 +125,7 @@
     (btop.override {rocmSupport = true;})
     # agenix.packages.${pkgs.system}.default
     # utility
+    teamspeak3
     #cli tools
     nix-output-monitor
     nvd

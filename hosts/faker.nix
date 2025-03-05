@@ -113,6 +113,7 @@
     openal
     vulkan-validation-layers
     # utility
+    teamspeak3
     nix-output-monitor
     nvd
     nh
