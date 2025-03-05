@@ -6,12 +6,7 @@
   modulesPath,
   username,
   ...
-}: let
-  futureTeamspeakPackage = builtins.fetchurl {
-    url = "https://raw.githubusercontent.com/NixOS/nixpkgs/fa3a54cd07014a17df3e24946c5138d5501a416c/pkgs/applications/networking/instant-messengers/teamspeak/client.nix";
-    sha256 = "1jq0xgwr6lwnm57bgdynv2xm6ma6wp6rriim2lzb6xr6207pckd9";
-  };
-in {
+}: {
   imports = [(modulesPath + "/installer/scan/not-detected.nix")];
 
   #age.secrets.secret1.file = ../secret1.age;
@@ -128,9 +123,9 @@ in {
   environment.systemPackages = with pkgs; [
     # custom utility
     (btop.override {rocmSupport = true;})
-    (libsForQt5.callPackage futureTeamspeakPackage {})
     # agenix.packages.${pkgs.system}.default
     # utility
+    teamspeak3
     #cli tools
     nix-output-monitor
     nvd
@@ -183,7 +178,6 @@ in {
     pgadmin4
     qpwgraph
     teams-for-linux
-    teamspeak3
     qbittorrent
     bitwarden-desktop
     # hyprland apps

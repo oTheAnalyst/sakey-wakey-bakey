@@ -7,18 +7,8 @@
   modulesPath,
   username,
   ...
-}: let
-  futureTeamspeakPackage = builtins.fetchurl {
-    url = "https://raw.githubusercontent.com/NixOS/nixpkgs/fa3a54cd07014a17df3e24946c5138d5501a416c/pkgs/applications/networking/instant-messengers/teamspeak/client.nix";
-    sha256 = "1jq0xgwr6lwnm57bgdynv2xm6ma6wp6rriim2lzb6xr6207pckd9";
-  };
-in {
+}: {
   imports = [(modulesPath + "/installer/scan/not-detected.nix")];
-
-  hardware.graphics = {
-    enable = true;
-    enable32Bit = true;
-  };
 
   age.secrets.secret1.file = ../secret1.age;
   age.identityPaths = ["/home/pretender/.ssh/id_ed25519"];
@@ -45,6 +35,10 @@ in {
   programs.virt-manager.enable = true;
 
   hardware = {
+    graphics = {
+      enable = true;
+      enable32Bit = true;
+    };
     bluetooth = {
       enable = true;
       powerOnBoot = true;
@@ -56,7 +50,7 @@ in {
   services = {
     emacs.enable = true;
     desktopManager.plasma6.enable = true;
-    # teamspeak3.enable = true;
+    teamspeak3.enable = true;
     displayManager = {
       autoLogin.user = username;
       autoLogin.enable = true;
@@ -119,6 +113,7 @@ in {
     openal
     vulkan-validation-layers
     # utility
+    teamspeak3
     nix-output-monitor
     nvd
     nh
@@ -186,7 +181,6 @@ in {
     freetube
     thunderbird
     alacritty
-    #teamspeak_client
     teams-for-linux
     input-remapper
     ranger
