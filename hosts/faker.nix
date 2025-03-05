@@ -91,8 +91,6 @@
     extraGroups = ["networkmanager" "wheel"];
   };
 
-  programs.firefox.enable = true;
-
   environment.sessionVariables = {
     FLAKE = "/home/pretender/sakey-wakey-bakey/";
   };
