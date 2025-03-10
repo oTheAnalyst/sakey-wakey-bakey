@@ -2,6 +2,7 @@
   pkgs,
   lib,
   config,
+  inputs,
   #  agenix,
   modulesPath,
   username,
@@ -127,10 +128,12 @@
     # utility
     teamspeak3
     #cli tools
+    nix-prefetch-github
     nix-output-monitor
     nvd
     nh
     #inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.freetube
+    inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.signal-desktop
     zellij
     delfin
     protonvpn-cli_2
@@ -170,7 +173,6 @@
     zoom-us
     vlc
     cinelerra #video editing app
-    signal-desktop
     mangareader
     sqlite
     sqlitebrowser
