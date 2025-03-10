@@ -132,7 +132,7 @@
     nix-output-monitor
     nvd
     nh
-    #inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.freetube
+    inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.shadps4
     inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.signal-desktop
     zellij
     delfin
