@@ -101,7 +101,7 @@
     (btop.override {rocmSupport = true;})
     agenix.packages.${pkgs.system}.default
     shadps4
-    #inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.shadps4
+    inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.shadps4
     #shadps4 depedency
     SDL2
     sndio
