@@ -1,6 +1,7 @@
 {
   pkgs,
   lib,
+  inputs,
   config,
   agenix,
   modulesPath,
@@ -100,8 +101,8 @@
     # custom utility
     (btop.override {rocmSupport = true;})
     agenix.packages.${pkgs.system}.default
-    shadps4
     inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.shadps4
+    inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.yazi
     #shadps4 depedency
     SDL2
     sndio
