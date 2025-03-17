@@ -186,6 +186,7 @@
     rainfrog
     wttrbar
     ranger
+    ueberzugpp # image previewer for ranger
     texliveFull # another latex thing
     texstudio
     brightnessctl
