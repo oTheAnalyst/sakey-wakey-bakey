@@ -103,6 +103,7 @@
     agenix.packages.${pkgs.system}.default
     inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.shadps4
     inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.yazi
+    inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.signal-desktop
     #shadps4 depedency
     SDL2
     sndio
@@ -167,7 +168,6 @@
     zoom-us
     vlc
     cinelerra #video editing app
-    signal-desktop
     mangareader
     sqlite
     postgresql
