@@ -10,7 +10,8 @@
 }: {
   imports = [(modulesPath + "/installer/scan/not-detected.nix")];
 
-  #age.secrets.secret1.file = ../secret1.age;
+  age.secrets.secret1.file = ../secret2.age;
+  age.identityPaths = ["/home/pretender/.ssh/manager"];
 
   programs = {
     hyprland.enable = true;
