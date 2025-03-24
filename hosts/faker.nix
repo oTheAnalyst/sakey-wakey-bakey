@@ -184,7 +184,6 @@
     yazi
     qbittorrent
     bitwarden-desktop
-    github-desktop
     rofi
     # hyprland
     waybar # hyprland plugin
