@@ -10,8 +10,11 @@
 }: {
   imports = [(modulesPath + "/installer/scan/not-detected.nix")];
 
-  age.secrets.secret1.file = ../secret2.age;
-  age.identityPaths = ["/home/pretender/.ssh/manager"];
+  age.secrets = {
+    secret1.file = ../secret1.age;
+    secret2.file = ../secret2.age;
+  };
+  age.identityPaths = ["/home/pretender/.ssh/manager" "/home/pretender/.ssh/id_ed25519"];
 
   programs = {
     hyprland.enable = true;
@@ -125,7 +128,7 @@
   environment.systemPackages = with pkgs; [
     # custom utility
     (btop.override {rocmSupport = true;})
-    inputs.agenix.packages."${system}".default
+    agenix.packages.${pkgs.system}.default
     # utility
     teamspeak3
     #cli tools
