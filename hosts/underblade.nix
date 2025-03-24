@@ -12,10 +12,10 @@
 
   age.secrets = {
     secret1.file = ../secret1.age;
-    secret2.file = ../secret2.age;
+    secret2.file = ../s2.age;
   };
 
-  age.identityPaths = ["/home/pretender/.ssh/manager" "/home/pretender/.ssh/id_ed25519"];
+  age.identityPaths = ["/home/pretender/.ssh/ed123" "/home/pretender/.ssh/id_ed25519"];
 
   programs = {
     hyprland.enable = true;
