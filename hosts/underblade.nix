@@ -172,7 +172,7 @@
     ani-cli
     protonup
     #apps
-    brave
+    mullvad-browser
     libreoffice
     gallery-dl
     veracrypt
