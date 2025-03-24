@@ -11,9 +11,9 @@
   imports = [(modulesPath + "/installer/scan/not-detected.nix")];
 
   age.secrets = {
-    secret1.file = ../secret1.age;
-    s2.file = ../s2.age;
-    s3.file = ../s3.age;
+    secret1.file = ../secret/secret1.age;
+    s2.file = ../secret/s2.age;
+    s3.file = ../secret/s3.age;
   };
 
   age.identityPaths = [
