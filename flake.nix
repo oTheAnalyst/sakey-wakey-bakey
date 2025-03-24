@@ -48,7 +48,7 @@
           ./modules/home
           ./hosts/underblade.nix # host file, hardware, unique stuff
           ./modules/nixos/system.nix # shared system (nixos) module
-          # agenix.nixosModules.default
+           agenix.nixosModules.default
         ];
       };
     };

@@ -3,7 +3,7 @@
   lib,
   config,
   inputs,
-  #  agenix,
+  agenix,
   modulesPath,
   username,
   ...
@@ -124,7 +124,7 @@
   environment.systemPackages = with pkgs; [
     # custom utility
     (btop.override {rocmSupport = true;})
-    # agenix.packages.${pkgs.system}.default
+    inputs.agenix.packages."${system}".default
     # utility
     teamspeak3
     #cli tools
