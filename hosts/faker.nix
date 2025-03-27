@@ -156,7 +156,6 @@
     protonup
     #apps
     zellij
-    brave
     catt
     gallery-dl
     veracrypt
