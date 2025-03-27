@@ -145,6 +145,7 @@
     nh
     inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.shadps4
     inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.signal-desktop
+    inputs.zen-browser.packages.${pkgs.system}.default
     zellij
     delfin
     protonvpn-cli_2
