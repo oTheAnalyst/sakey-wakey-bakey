@@ -2,6 +2,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
     agenix.url = "github:ryantm/agenix";
+    zen-browser.url = "github:0xc000022070/zen-browser-flake";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     home-manager = {
       url = "github:nix-community/home-manager/release-24.11";
@@ -16,6 +17,7 @@
   outputs = {
     self,
     agenix,
+    zen-browser,
     ...
   } @ inputs: let
     username = "pretender";
@@ -48,7 +50,7 @@
           ./modules/home
           ./hosts/underblade.nix # host file, hardware, unique stuff
           ./modules/nixos/system.nix # shared system (nixos) module
-           agenix.nixosModules.default
+          agenix.nixosModules.default
         ];
       };
     };

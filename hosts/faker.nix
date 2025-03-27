@@ -10,7 +10,7 @@
 }: {
   imports = [(modulesPath + "/installer/scan/not-detected.nix")];
 
-  age.secrets.secret1.file = ../secret1.age;
+  age.secrets.secret1.file = ../secret/secret1.age;
   age.identityPaths = ["/home/pretender/.ssh/id_ed25519"];
 
   programs = {
@@ -104,6 +104,7 @@
     inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.shadps4
     inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.yazi
     inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.signal-desktop
+    inputs.zen-browser.packages.${pkgs.system}.default
     #shadps4 depedency
     SDL2
     sndio
