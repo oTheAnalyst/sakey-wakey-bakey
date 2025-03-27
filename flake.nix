@@ -17,7 +17,6 @@
   outputs = {
     self,
     agenix,
-    zen-browser,
     ...
   } @ inputs: let
     username = "pretender";
