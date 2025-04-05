@@ -9,6 +9,7 @@ _: {
       # Add useful shell aliases
       PATH = "$PATH :/home/pretender/.cargo/bin/";
       vflake = "nix run --no-write-lock-file github:oTheAnalyst/neovim-flake";
+      ovim = "nix run --no-write-lock-file github:oTheAnalyst/nobbz-vim";
       gst = builtins.trace "hello world" "git status";
       gp = "git pull";
       buildnix = "sudo nixos-rebuild switch --flake";
