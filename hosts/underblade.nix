@@ -139,6 +139,7 @@
     # utility
     teamspeak3
     #cli tools
+    gnumeric
     nix-prefetch-github
     nix-output-monitor
     nvd
@@ -158,34 +159,36 @@
     wine
     piper
     git
+    ## graphics
     mangohud
     libratbag
     nerdfonts
     neovim
     # rice
-    tor
-    tor-browser
     cmatrix
     cava
     lolcat
     pfetch
     hyfetch
+    #apps coms & privacy
+    tor
+    tor-browser
     ani-cli
     protonup
-    #apps
-    mullvad-browser
     libreoffice
     gallery-dl
     veracrypt
     rstudio
     discord
+    ### test framework
+    zathura
+    snakemake
+    nextflow
     obsidian
     obs-studio
     vesktop
-    zoom-us
     vlc
     cinelerra #video editing app
-    mangareader
     sqlite
     sqlitebrowser
     gcc14
