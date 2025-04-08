@@ -139,6 +139,7 @@
     # utility
     teamspeak3
     #cli tools
+    unzip
     gnumeric
     nix-prefetch-github
     nix-output-monitor
