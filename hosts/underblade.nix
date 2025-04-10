@@ -138,6 +138,7 @@
     #    agenix.packages.${pkgs.system}.default
     # utility
     teamspeak3
+    cups
     #cli tools
     unzip
     gnumeric
