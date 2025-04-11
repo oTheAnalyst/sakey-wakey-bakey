@@ -150,10 +150,12 @@
     inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.signal-desktop
     inputs.zen-browser.packages.${pkgs.system}.default
     zellij
-    delfin
-    protonvpn-cli_2
+    openvpn3
+    openresolv
+    openvpn
     protonvpn-gui
-    bitwarden-cli
+    delfin
+    wireguard-tools
     dmidecode
     wget
     tree
