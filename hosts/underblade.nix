@@ -23,6 +23,7 @@
   ];
 
   programs = {
+    openvpn3.enable = true;
     hyprland.enable = true;
     virt-manager.enable = true;
     steam = {
@@ -150,9 +151,7 @@
     inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.signal-desktop
     inputs.zen-browser.packages.${pkgs.system}.default
     zellij
-    openvpn3
     openresolv
-    openvpn
     protonvpn-gui
     delfin
     wireguard-tools
@@ -175,6 +174,7 @@
     pfetch
     hyfetch
     #apps coms & privacy
+    citrix_workspace
     tor
     tor-browser
     ani-cli
