@@ -152,6 +152,7 @@
     inputs.zen-browser.packages.${pkgs.system}.default
     zellij
     openresolv
+    openvpn
     protonvpn-gui
     delfin
     wireguard-tools
