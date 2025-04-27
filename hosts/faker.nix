@@ -112,6 +112,7 @@
     openal
     vulkan-validation-layers
     # utility
+    syncthing
     teamspeak3
     nix-output-monitor
     nvd
