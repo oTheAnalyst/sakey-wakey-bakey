@@ -175,6 +175,7 @@
     pfetch
     hyfetch
     #apps coms & privacy
+    syncthing
     citrix_workspace
     tor
     tor-browser
