@@ -112,6 +112,9 @@
     openal
     vulkan-validation-layers
     # utility
+    fswebcam
+    cameractrls
+    cups
     syncthing
     teamspeak3
     nix-output-monitor
@@ -156,6 +159,7 @@
     cool-retro-term
     protonup
     #apps
+    zip
     zellij
     catt
     gallery-dl
