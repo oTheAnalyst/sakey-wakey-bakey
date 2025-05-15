@@ -33,10 +33,48 @@
     gamemode.enable = true;
   };
 
+
   boot = {
     loader.systemd-boot.enable = true;
     loader.efi.canTouchEfiVariables = true;
   };
+
+
+  boot.loader.efi = {
+  efiSysMountPoint = "/boot/efi";
+    };
+  boot.loader.grub = {
+    enable = true;
+    device = "nodev";
+    version = 2;
+    efiSupport = true;
+    enableCryptodisk = true;
+  };
+  
+  boot.initrd = {
+    luks.devices."root" = {
+      device = "/dev/disk/by-uuid/a8b302cf-5296-4a2e-a7ba-707e6fa75123"; # UUID for /dev/nvme01np2 
+      preLVM = true;
+      keyFile = "/keyfile0.bin";
+      allowDiscards = true;
+    };
+    secrets = {
+      # Create /mnt/etc/secrets/initrd directory and copy keys to it
+      "keyfile0.bin" = "/etc/secrets/initrd/keyfile0.bin";
+      "keyfile1.bin" = "/etc/secrets/initrd/keyfile1.bin";
+    };
+};
+
+# Data mount
+fileSystems."/data" = {
+  device = "/dev/disk/by-uuid/79630267-5766-4c7d-85a5-1d5f1dcd58ad"; # UUID for /dev/mapper/crypted-data
+  encrypted = {
+    enable = true;
+    label = "crypted-data";
+    blkDev = "/dev/disk/by-uuid/3476cb09-b3c4-4301-9ec9-84f60f32828a"; # UUID for /dev/sda1
+    keyFile = "/keyfile1.bin";
+  };
+};
 
   networking = {
     hostName = "underblade";
