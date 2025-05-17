@@ -105,6 +105,7 @@
     inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.yazi
     inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.signal-desktop
     inputs.zen-browser.packages.${pkgs.system}.default
+    inputs.nixos-unstable.legacyPackages.${pkgs.system}.mesa
     #shadps4 depedency
     SDL2
     sndio
