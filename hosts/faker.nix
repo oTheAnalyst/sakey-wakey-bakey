@@ -104,6 +104,7 @@
     inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.shadps4
     inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.yazi
     inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.signal-desktop
+    inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.vesktop
     inputs.zen-browser.packages.${pkgs.system}.default
     inputs.nixos-unstable.legacyPackages.${pkgs.system}.mesa
     #shadps4 depedency
@@ -169,7 +170,6 @@
     discord
     obsidian
     obs-studio
-    vesktop
     zoom
     zoom-us
     vlc
