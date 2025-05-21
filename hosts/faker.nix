@@ -35,9 +35,13 @@
   programs.virt-manager.enable = true;
 
   hardware = {
+    amdgpu.amdvlk.enable = true;
     graphics = {
       enable = true;
       enable32Bit = true;
+      extraPackages = with pkgs; [
+          amdvlk
+      ];
     };
     bluetooth = {
       enable = true;
