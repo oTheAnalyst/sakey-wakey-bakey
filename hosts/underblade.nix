@@ -164,6 +164,7 @@
     piper
     git
     ## graphics
+    vim
     mangohud
     libratbag
     nerdfonts
@@ -175,6 +176,7 @@
     pfetch
     hyfetch
     #apps coms & privacy
+    dbeaver-bin
     syncthing
     citrix_workspace
     tor
@@ -187,6 +189,7 @@
     rstudio
     discord
     ### test framework
+    rmpc
     zathura
     snakemake
     nextflow

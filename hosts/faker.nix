@@ -165,6 +165,7 @@
     cool-retro-term
     protonup
     #apps
+    rmpc
     zip
     zellij
     catt
