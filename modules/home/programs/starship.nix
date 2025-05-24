@@ -23,7 +23,6 @@ _:{
     bat.enable = true;
     lsd = {
       enable = true;
-      enableAliases = true;
     };
     direnv = {
       enable = true;
