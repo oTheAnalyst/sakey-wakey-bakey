@@ -13,6 +13,7 @@
   age.secrets.secret1.file = ../secret/secret1.age;
   age.identityPaths = ["/home/pretender/.ssh/id_ed25519"];
 
+
   programs = {
     steam = {
       enable = true;
@@ -48,7 +49,6 @@
       powerOnBoot = true;
     };
 
-    pulseaudio.enable = false;
   };
 
   services = {
@@ -97,8 +97,12 @@
   };
 
   environment.sessionVariables = {
-    FLAKE = "/home/pretender/sakey-wakey-bakey/";
+    NH_FLAKE = "/home/pretender/sakey-wakey-bakey/";
   };
+
+  fonts.packages = [
+  pkgs.nerd-fonts
+  ];
 
   # List packages installed in system profile
   environment.systemPackages = with pkgs; [
@@ -150,7 +154,7 @@
     git
     mangohud
     libratbag
-    nerdfonts
+  ##  nerd-fonts
     gnumake #depedency for r.nvim
     libgcc #depedency for r.nvim
     gccgo #depedency for r.nvim
