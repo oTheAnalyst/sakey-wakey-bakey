@@ -26,6 +26,18 @@
     openvpn3.enable = true;
     hyprland.enable = true;
     virt-manager.enable = true;
+    starship = {
+      enable = true;
+      settings = {
+        add_newline = false;
+        nix_shell = {
+          symbol = " ";
+          format = "$symbol ";
+        };
+        hostname.format = "$hostname:";
+        username.format = "$user@";
+      };
+    };
     steam = {
       enable = true;
       gamescopeSession.enable = true;
