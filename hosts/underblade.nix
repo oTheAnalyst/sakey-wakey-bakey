@@ -247,8 +247,9 @@
   ];
 
   fonts.packages = with pkgs; [
-    fira-code
+    nerd-fonts.fira-code
     fira-code-symbols
+    nerd-fonts.droid-sans-mono
   ];
 
   # hardware-configuration.nix
