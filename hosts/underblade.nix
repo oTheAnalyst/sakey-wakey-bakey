@@ -140,7 +140,7 @@
   };
 
   environment.sessionVariables = {
-    FLAKE = "/home/pretender/sakey-wakey-bakey/";
+    NH_FLAKE = "/home/pretender/sakey-wakey-bakey/";
   };
   # List packages installed in system profile
   environment.systemPackages = with pkgs; [
@@ -189,7 +189,6 @@
     #apps coms & privacy
     dbeaver-bin
     syncthing
-    citrix_workspace
     tor
     tor-browser
     ani-cli
