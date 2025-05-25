@@ -66,11 +66,10 @@
       enable = true;
       powerOnBoot = true;
     };
-
-    pulseaudio.enable = false;
   };
 
   services = {
+    pulseaudio.enable = false;
     emacs.enable = true;
     desktopManager.plasma6.enable = true;
     teamspeak3.enable = true;
@@ -179,7 +178,7 @@
     vim
     mangohud
     libratbag
-    nerdfonts
+   # nerdfonts
     neovim
     # rice
     cmatrix
