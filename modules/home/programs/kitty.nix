@@ -1,7 +1,8 @@
-_: {
+{
   programs = {
     kitty = {
       enable = true;
+      font.name = "nerd-fonts-fira-code";
       extraConfig = ''
         cremember_window_size  no
         initial_window_width  640
