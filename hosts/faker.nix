@@ -178,6 +178,7 @@
     protonup
     #apps
     rmpc
+    mpd
     zip
     zellij
     catt
