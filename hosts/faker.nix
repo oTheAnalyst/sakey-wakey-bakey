@@ -86,6 +86,7 @@
     printing.enable = true;
 
     pipewire = {
+      wireplumber.enable = true;
       enable = true;
       alsa = {
         enable = true;
