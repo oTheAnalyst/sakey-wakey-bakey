@@ -208,11 +208,32 @@
     yazi
     qbittorrent
     bitwarden-desktop
-    rofi
-    # hyprland
+    # hyprland apps
+    rainfrog
+    wttrbar
+    ranger
+    ueberzugpp # image previewer for ranger
+    texliveFull # another latex thing
+    texstudio
+    brightnessctl
+    hyprshot
+    bluetui
+    playerctl
+    yt-dlp
+    grim
+    slurp
+    swappy
+    light
+    gammastep
+    pavucontrol
+    wlogout
+    libnotify
+    swaynotificationcenter
+    wofi
     waybar # hyprland plugin
+    hyprpaper
+    hyprlock
     swww # hyprland plugin
-    mako #hyprland plugin
   ];
 
   fonts.packages = with pkgs; [
