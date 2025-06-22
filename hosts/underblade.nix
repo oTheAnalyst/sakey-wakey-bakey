@@ -23,6 +23,7 @@
   ];
 
   programs = {
+    nh.enable = true;
     openvpn3.enable = true;
     hyprland.enable = true;
     virt-manager.enable = true;
@@ -157,7 +158,6 @@
     nix-prefetch-github
     nix-output-monitor
     nvd
-    nh
     inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.shadps4
     inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.signal-desktop
     inputs.zen-browser.packages.${pkgs.system}.default
@@ -184,8 +184,7 @@
     cmatrix
     cava
     lolcat
-    pfetch
-    hyfetch
+    microfetch
     #apps coms & privacy
     dbeaver-bin
     syncthing
