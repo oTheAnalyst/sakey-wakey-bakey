@@ -16,5 +16,6 @@ _: {
       vpn-connect = "sudo protonvpn connect --cc US";
       disconnect-vpn = "sudo protonvpn disconnect";
     };
+    bashrcExtra = "microfetch";
   };
 }
