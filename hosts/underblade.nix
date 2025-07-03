@@ -163,7 +163,7 @@
     nix-output-monitor
     nvd
     inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.shadps4
-    inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.signal-desktop
+    inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.signal-desktop-bin
     inputs.zen-browser.packages.${pkgs.system}.default
     zellij
     openresolv
