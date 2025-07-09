@@ -131,6 +131,7 @@
     openal
     vulkan-validation-layers
     # utility
+    microfetch
     fswebcam
     cameractrls
     cups
