@@ -14,6 +14,11 @@
   age.identityPaths = ["/home/pretender/.ssh/id_ed25519"];
 
   programs = {
+    nh = {
+      enable = true;
+      clean.enable = true;
+      clean.extraArgs = "--keep-since 4d --keep 3";
+    };
     openvpn3.enable = true;
     hyprland.enable = true;
     virt-manager.enable = true;
@@ -139,7 +144,6 @@
     teamspeak3
     nix-output-monitor
     nvd
-    nh
     unrar
     texliveFull # another latex thing
     texliveTeTeX
