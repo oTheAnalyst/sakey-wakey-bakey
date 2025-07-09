@@ -15,7 +15,7 @@
 
   programs = {
     openvpn3.enable = true;
-    hyprland.enable = false;
+    hyprland.enable = true;
     virt-manager.enable = true;
     starship = {
       enable = true;
