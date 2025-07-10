@@ -79,6 +79,7 @@
         enable = true;
         wayland.enable = true;
         theme = "Breeze Dark";
+        settings.Autologin.Session = "hyprland";
       };
     };
     xserver = {
@@ -125,16 +126,10 @@
     agenix.packages.${pkgs.system}.default
     inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.shadps4
     inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.yazi
-    inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.signal-desktop
     inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.vesktop
     inputs.zen-browser.packages.${pkgs.system}.default
     inputs.nixos-unstable.legacyPackages.${pkgs.system}.mesa
-    #shadps4 depedency
-    SDL2
-    sndio
-    jack2
-    openal
-    vulkan-validation-layers
+    signal-desktop-bin
     # utility
     microfetch
     fswebcam
