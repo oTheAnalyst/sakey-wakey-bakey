@@ -124,35 +124,31 @@
     # custom utility
     (btop.override {rocmSupport = true;})
     agenix.packages.${pkgs.system}.default
-    inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.shadps4
+    shadps4
     inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.yazi
     inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.vesktop
     inputs.zen-browser.packages.${pkgs.system}.default
     inputs.nixos-unstable.legacyPackages.${pkgs.system}.mesa
-    signal-desktop-bin
     # utility
     microfetch
-    fswebcam
-    cameractrls
-    cups
     syncthing
     teamspeak3
+    #### depedency for NH
     nix-output-monitor
     nvd
     unrar
+    ####
     texliveFull # another latex thing
     texliveTeTeX
     texstudio
     texlivePackages.enumitem #for latex to work
+    #####
     protonvpn-cli_2
     yt-dlp
     bitwarden-cli
     dmidecode
     gpart
-    gparted
-    rocmPackages.rocm-smi
     wget
-    system-config-printer
     nix-prefetch-git
     statix
     hplip
@@ -161,7 +157,6 @@
     wine
     piper
     git
-    mangohud
     libratbag
     ##  nerd-fonts
     gnumake #depedency for r.nvim
@@ -178,14 +173,14 @@
     cool-retro-term
     protonup
     #apps
+    signal-desktop-bin
     rmpc
     mpd
     zip
     zellij
-    catt
+    mangohud
     gallery-dl
     veracrypt
-    rstudio
     discord
     obsidian
     obs-studio
@@ -195,13 +190,8 @@
     cinelerra #video editing app
     mangareader
     sqlite
-    postgresql
     sqlitebrowser
-    pgadmin4
-    xclip
     qpwgraph
-    freetube
-    thunderbird
     alacritty
     teams-for-linux
     input-remapper
