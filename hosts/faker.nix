@@ -72,13 +72,24 @@
     emacs.enable = false;
     desktopManager.plasma6.enable = true;
     teamspeak3.enable = true;
+    mpd = {
+      enable = true;
+      musicDirectory = "/home/pretender/musicDirectory";
+      extraConfig = ''
+        audio_output {
+          type "pipewire"
+          name "My PipeWire Output"
+        }
+      '';
+      network.listenAddress = "any";
+    };
     displayManager = {
       autoLogin.user = username;
       autoLogin.enable = true;
       sddm = {
         enable = true;
         wayland.enable = true;
-        theme = "Breeze Dark";
+        theme = "breeze";
         settings.Autologin.Session = "hyprland";
       };
     };
@@ -158,6 +169,7 @@
     piper
     git
     libratbag
+    libreoffice
     ##  nerd-fonts
     gnumake #depedency for r.nvim
     libgcc #depedency for r.nvim
@@ -175,7 +187,6 @@
     #apps
     signal-desktop-bin
     rmpc
-    mpd
     zip
     zellij
     mangohud
@@ -210,7 +221,6 @@
     hyprshot
     bluetui
     playerctl
-    yt-dlp
     grim
     slurp
     swappy
