@@ -68,7 +68,20 @@
     };
   };
 
+  ### virtualisation setup
+  home.pointerCursor = {
+    gtk.enable = true;
+    package = pkgs.vanilla-dmz;
+    name = "Vanilla-DMZ";
+  };
+
+  virtualisation.libvirtd = {
+    qemu.vhostUserPackages = with pkgs; [virtiofsd];
+  };
+
   services = {
+    qemuGuest.enable = true;
+    spice-vdagentd.enable = true;
     emacs.enable = false;
     desktopManager.plasma6.enable = true;
     teamspeak3.enable = true;
@@ -123,7 +136,7 @@
   users.users.${username} = {
     isNormalUser = true;
     description = username;
-    extraGroups = ["networkmanager" "wheel"];
+    extraGroups = ["networkmanager" "libvirtd" "wheel"];
   };
 
   environment.sessionVariables = {
