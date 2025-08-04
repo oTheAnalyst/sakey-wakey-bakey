@@ -69,12 +69,6 @@
   };
 
   ### virtualisation setup
-  home.pointerCursor = {
-    gtk.enable = true;
-    package = pkgs.vanilla-dmz;
-    name = "Vanilla-DMZ";
-  };
-
   virtualisation.libvirtd = {
     qemu.vhostUserPackages = with pkgs; [virtiofsd];
   };
@@ -150,8 +144,8 @@
     agenix.packages.${pkgs.system}.default
     inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.yazi
     inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.vesktop
-    inputs.zen-browser.packages.${pkgs.system}.default
     inputs.nixos-unstable.legacyPackages.${pkgs.system}.mesa
+    qutebrowser
     shadps4
     # utility
     microfetch
