@@ -164,7 +164,7 @@
     nvd
     inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.shadps4
     signal-desktop-bin
-    inputs.zen-browser.packages.${pkgs.system}.default
+    firefox
     zellij
     openresolv
     openvpn
