@@ -14,6 +14,7 @@
   age.identityPaths = ["/home/pretender/.ssh/id_ed25519"];
 
   programs = {
+  firefox.enable = true;
     nh = {
       enable = true;
       clean.enable = true;
