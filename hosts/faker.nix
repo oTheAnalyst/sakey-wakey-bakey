@@ -14,7 +14,7 @@
   age.identityPaths = ["/home/pretender/.ssh/id_ed25519"];
 
   programs = {
-  firefox.enable = true;
+    firefox.enable = true;
     nh = {
       enable = true;
       clean.enable = true;
@@ -52,7 +52,11 @@
     networkmanager.enable = true;
   };
 
-  virtualisation.libvirtd.enable = true;
+  virtualisation = {
+    docker.enable = true;
+    libvirtd.enable = true;
+  };
+
 
   hardware = {
     amdgpu.amdvlk.enable = true;
@@ -131,7 +135,7 @@
   users.users.${username} = {
     isNormalUser = true;
     description = username;
-    extraGroups = ["networkmanager" "libvirtd" "wheel"];
+    extraGroups = ["networkmanager" "libvirtd" "wheel" "docker"];
   };
 
   environment.sessionVariables = {
@@ -169,6 +173,8 @@
     gpart
     wget
     distrobox
+    podman
+    steam-run
     nix-prefetch-git
     statix
     hplip
