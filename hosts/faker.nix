@@ -168,6 +168,7 @@
     dmidecode
     gpart
     wget
+    distrobox
     nix-prefetch-git
     statix
     hplip
