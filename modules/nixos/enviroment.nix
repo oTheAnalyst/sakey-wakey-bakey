@@ -6,7 +6,7 @@
   environment.systemPackages = with pkgs; [
     # custom utility
     (btop.override {rocmSupport = true;})
-  #  agenix.packages.${pkgs.system}.default
+    #  agenix.packages.${pkgs.system}.default
     shadps4
     #### depedency for NH
     nix-output-monitor
@@ -22,6 +22,8 @@
     # cli tools
     # general tools
     #####
+    gallery-dl
+    rmpc
     protonvpn-cli_2
     bitwarden-cli
     dmidecode
@@ -31,7 +33,6 @@
     podman
     steam-run
     nix-prefetch-git
-    hplip
     tree
     btop
     wine
@@ -45,38 +46,33 @@
     gccgo #depedency for r.nvim
     neovim
     emacs
-    # rice
+    # ricy gui cli
+    ranger
     cava
     lolcat
-    pfetch
-    hyfetch
     ani-cli
+    microfetch
     protonup
     # utility
+    syncthing
     sqlite
     sqlitebrowser
-    microfetch
     unrar
     unzip
     unrar
     zip
     #apps
-    syncthing
     teamspeak3
     signal-desktop-bin
-    rmpc
     zellij
     mangohud
-    gallery-dl
     veracrypt
     obsidian
     obs-studio
     vlc
     cinelerra #video editing app
     mangareader
-    teams-for-linux
     input-remapper
-    ranger
     qbittorrent
     bitwarden-desktop
     # hyprland apps
