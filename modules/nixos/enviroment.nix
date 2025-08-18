@@ -1,17 +1,12 @@
 {
   pkgs,
   agenix,
-  inputs,
   ...
 }: {
   environment.systemPackages = with pkgs; [
     # custom utility
     (btop.override {rocmSupport = true;})
     agenix.packages.${pkgs.system}.default
-    inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.yazi
-    inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.vesktop
-    inputs.nixos-unstable.legacyPackages.${pkgs.system}.mesa
-    qutebrowser
     shadps4
     # utility
     microfetch
@@ -22,13 +17,17 @@
     nvd
     unrar
     ####
-    texliveFull # another latex thing
+    # latex depedency
+    ###
+    texliveFull
     texliveTeTeX
     texstudio
-    texlivePackages.enumitem #for latex to work
+    texlivePackages.enumitem
+    #####
+    # cli tools
+    # general tools
     #####
     protonvpn-cli_2
-    yt-dlp
     bitwarden-cli
     dmidecode
     gpart
@@ -37,7 +36,6 @@
     podman
     steam-run
     nix-prefetch-git
-    statix
     hplip
     tree
     btop
@@ -58,7 +56,6 @@
     pfetch
     hyfetch
     ani-cli
-    cool-retro-term
     protonup
     #apps
     signal-desktop-bin
@@ -73,26 +70,22 @@
     discord
     obsidian
     obs-studio
-    zoom
-    zoom-us
     vlc
     cinelerra #video editing app
     mangareader
     sqlite
     sqlitebrowser
     qpwgraph
-    alacritty
     teams-for-linux
     input-remapper
     ranger
-    yazi
     qbittorrent
     bitwarden-desktop
     # hyprland apps
     rainfrog
     wttrbar
     ranger
-    ueberzugpp # image previewer for ranger
+    ueberzugpp  # image previewer for ranger
     texliveFull # another latex thing
     texstudio
     brightnessctl
