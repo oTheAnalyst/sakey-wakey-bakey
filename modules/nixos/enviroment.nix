@@ -8,14 +8,9 @@
     (btop.override {rocmSupport = true;})
     agenix.packages.${pkgs.system}.default
     shadps4
-    # utility
-    microfetch
-    syncthing
-    teamspeak3
     #### depedency for NH
     nix-output-monitor
     nvd
-    unrar
     ####
     # latex depedency
     ###
@@ -40,8 +35,8 @@
     tree
     btop
     wine
-    piper
     git
+    piper
     libratbag
     libreoffice
     ##  nerd-fonts
@@ -57,25 +52,28 @@
     hyfetch
     ani-cli
     protonup
-    #apps
-    signal-desktop-bin
-    rmpc
+    # utility
+    sqlite
+    sqlitebrowser
+    microfetch
+    unrar
     unzip
     unrar
     zip
+    #apps
+    syncthing
+    teamspeak3
+    signal-desktop-bin
+    rmpc
     zellij
     mangohud
     gallery-dl
     veracrypt
-    discord
     obsidian
     obs-studio
     vlc
     cinelerra #video editing app
     mangareader
-    sqlite
-    sqlitebrowser
-    qpwgraph
     teams-for-linux
     input-remapper
     ranger
@@ -85,7 +83,7 @@
     rainfrog
     wttrbar
     ranger
-    ueberzugpp  # image previewer for ranger
+    ueberzugpp # image previewer for ranger
     texliveFull # another latex thing
     texstudio
     brightnessctl
