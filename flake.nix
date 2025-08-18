@@ -14,11 +14,7 @@
     };
   };
 
-  outputs = {
-    self,
-    agenix,
-    ...
-  } @ inputs: let
+  outputs = {agenix, ...} @ inputs: let
     username = "pretender";
   in {
     nixosConfigurations = {
@@ -29,6 +25,7 @@
           ./modules/home
           ./hosts/faker.nix # host file, hardware, unique stuff
           ./modules/nixos/system.nix # shared system (nixos) module
+          ./modules/nixos/enviroment.nix
           agenix.nixosModules.default
         ];
       };
@@ -39,6 +36,7 @@
           ./modules/home
           ./hosts/real.nix # host file, hardware, unique stuff
           ./modules/nixos/system.nix # shared system (nixos) module
+          ./modules/nixos/enviroment.nix
           # agenix.nixosModules.default
         ];
       };
@@ -49,6 +47,7 @@
           ./modules/home
           ./hosts/underblade.nix # host file, hardware, unique stuff
           ./modules/nixos/system.nix # shared system (nixos) module
+          ./modules/nixos/enviroment.nix
           agenix.nixosModules.default
         ];
       };
