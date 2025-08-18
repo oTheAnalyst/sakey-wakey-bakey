@@ -1,12 +1,12 @@
 {
   pkgs,
-  agenix,
+  #agenix,
   ...
 }: {
   environment.systemPackages = with pkgs; [
     # custom utility
     (btop.override {rocmSupport = true;})
-    agenix.packages.${pkgs.system}.default
+  #  agenix.packages.${pkgs.system}.default
     shadps4
     #### depedency for NH
     nix-output-monitor
