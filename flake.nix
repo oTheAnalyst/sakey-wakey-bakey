@@ -26,6 +26,7 @@
           ./hosts/faker.nix # host file, hardware, unique stuff
           ./modules/nixos/system.nix # shared system (nixos) module
           ./modules/nixos/enviroment.nix
+	  ./modules/nixos/programs.nix
           agenix.nixosModules.default
         ];
       };
@@ -48,6 +49,7 @@
           ./hosts/underblade.nix # host file, hardware, unique stuff
           ./modules/nixos/system.nix # shared system (nixos) module
           ./modules/nixos/enviroment.nix
+	  ./modules/nixos/programs.nix
           agenix.nixosModules.default
         ];
       };
