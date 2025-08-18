@@ -2,8 +2,6 @@
   pkgs,
   lib,
   config,
-  inputs,
-  agenix,
   modulesPath,
   username,
   ...
@@ -130,106 +128,6 @@
   environment.sessionVariables = {
     NH_FLAKE = "/home/pretender/sakey-wakey-bakey/";
   };
-  # List packages installed in system profile
-  environment.systemPackages = with pkgs; [
-    # custom utility
-    (btop.override {rocmSupport = true;})
-    inputs.agenix.packages."${system}".default
-    #    agenix.packages.${pkgs.system}.default
-    # utility
-    teamspeak3
-    cups
-    #cli tools
-    unzip
-    gnumeric
-    nix-prefetch-github
-    nix-output-monitor
-    nvd
-    inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.shadps4
-    signal-desktop-bin
-    firefox
-    zellij
-    openresolv
-    openvpn
-    protonvpn-gui
-    delfin
-    wireguard-tools
-    dmidecode
-    wget
-    tree
-    btop
-    wine
-    piper
-    git
-    steam-run
-    ## graphics
-    vim
-    mangohud
-    libratbag
-    # nerdfonts
-    neovim
-    # rice
-    cmatrix
-    cava
-    lolcat
-    microfetch
-    #apps coms & privacy
-    dbeaver-bin
-    syncthing
-    tor
-    tor-browser
-    ani-cli
-    protonup
-    libreoffice
-    gallery-dl
-    veracrypt
-    rstudio
-    discord
-    ### test framework
-    rmpc
-    zathura
-    snakemake
-    nextflow
-    obsidian
-    obs-studio
-    vesktop
-    vlc
-    cinelerra #video editing app
-    sqlite
-    sqlitebrowser
-    gcc14
-    pgadmin4
-    qpwgraph
-    teams-for-linux
-    qbittorrent
-    bitwarden-desktop
-    # hyprland apps
-    rainfrog
-    wttrbar
-    ranger
-    ueberzugpp # image previewer for ranger
-    texliveFull # another latex thing
-    texstudio
-    brightnessctl
-    hyprshot
-    bluetui
-    playerctl
-    yt-dlp
-    grim
-    slurp
-    swappy
-    light
-    gammastep
-    pavucontrol
-    wlogout
-    libnotify
-    swaynotificationcenter
-    wofi
-    waybar # hyprland plugin
-    hyprpaper
-    hyprlock
-    swww # hyprland plugin
-  ];
 
   fonts.packages = with pkgs; [
     nerd-fonts.fira-code
