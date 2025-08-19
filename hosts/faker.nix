@@ -79,9 +79,7 @@
       xkb.variant = "";
       videoDrivers = ["amdgpu"];
     };
-
     printing.enable = true;
-
     pipewire = {
       enable = true;
       alsa = {
@@ -91,9 +89,7 @@
       pulse.enable = true;
       jack.enable = true;
     };
-
     hardware.openrgb.enable = true;
-
     ratbagd.enable = true;
   };
 
