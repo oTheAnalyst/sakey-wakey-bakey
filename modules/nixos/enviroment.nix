@@ -71,7 +71,7 @@
     obsidian
     obs-studio
     vlc
-    cinelerra #video editing app
+    davinci-resolve
     mangareader
     input-remapper
     qbittorrent
