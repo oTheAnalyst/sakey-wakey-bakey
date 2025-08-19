@@ -84,6 +84,7 @@
     ratbagd.enable = true;
   };
 
+  security.rtkit.enable = true;
 
   users.users.${username} = {
     isNormalUser = true;
