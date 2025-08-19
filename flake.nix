@@ -26,19 +26,9 @@
           ./hosts/faker.nix # host file, hardware, unique stuff
           ./modules/nixos/system.nix # shared system (nixos) module
           ./modules/nixos/enviroment.nix
-	  ./modules/nixos/programs.nix
+          ./modules/nixos/programs.nix
+          ./modules/nixos/amdgpu.nix
           agenix.nixosModules.default
-        ];
-      };
-      real = inputs.nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs username;};
-        system = "x86_64-linux";
-        modules = [
-          ./modules/home
-          ./hosts/real.nix # host file, hardware, unique stuff
-          ./modules/nixos/system.nix # shared system (nixos) module
-          ./modules/nixos/enviroment.nix
-          # agenix.nixosModules.default
         ];
       };
       underblade = inputs.nixpkgs.lib.nixosSystem {
@@ -49,7 +39,8 @@
           ./hosts/underblade.nix # host file, hardware, unique stuff
           ./modules/nixos/system.nix # shared system (nixos) module
           ./modules/nixos/enviroment.nix
-	  ./modules/nixos/programs.nix
+          ./modules/nixos/programs.nix
+          ./modules/nixos/amdgpu.nix
           agenix.nixosModules.default
         ];
       };
