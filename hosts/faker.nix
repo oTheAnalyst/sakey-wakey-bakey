@@ -33,6 +33,7 @@
       enable32Bit = true;
       extraPackages = with pkgs; [
         amdvlk
+        driversi686Linux.amdvlk
       ];
     };
     bluetooth = {
@@ -49,7 +50,6 @@
   services = {
     qemuGuest.enable = true;
     spice-vdagentd.enable = true;
-    emacs.enable = false;
     desktopManager.plasma6.enable = true;
     teamspeak3.enable = true;
     mpd = {
@@ -83,7 +83,6 @@
     printing.enable = true;
 
     pipewire = {
-      wireplumber.enable = true;
       enable = true;
       alsa = {
         enable = true;

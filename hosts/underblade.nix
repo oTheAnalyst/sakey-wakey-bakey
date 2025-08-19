@@ -2,7 +2,6 @@
   pkgs,
   lib,
   config,
-  agenix,
   modulesPath,
   username,
   ...
@@ -20,7 +19,6 @@
     "/home/pretender/.ssh/id_ed25519"
     "/home/pretender/.ssh/glitterknife"
   ];
-
 
   boot = {
     loader.systemd-boot.enable = true;
@@ -52,7 +50,6 @@
 
   services = {
     pulseaudio.enable = false;
-    emacs.enable = true;
     desktopManager.plasma6.enable = true;
     teamspeak3.enable = true;
     displayManager = {
@@ -73,9 +70,7 @@
       xkb.variant = "";
       videoDrivers = ["amdgpu"];
     };
-
     printing.enable = true;
-
     pipewire = {
       enable = true;
       alsa = {
@@ -85,13 +80,10 @@
       pulse.enable = true;
       jack.enable = true;
     };
-
     hardware.openrgb.enable = true;
-
     ratbagd.enable = true;
   };
 
-  security.rtkit.enable = true;
 
   users.users.${username} = {
     isNormalUser = true;
