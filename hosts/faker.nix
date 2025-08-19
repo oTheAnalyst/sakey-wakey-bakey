@@ -26,22 +26,6 @@
     libvirtd.enable = true;
   };
 
-  hardware = {
-    amdgpu.amdvlk.enable = true;
-    graphics = {
-      enable = true;
-      enable32Bit = true;
-      extraPackages = with pkgs; [
-        amdvlk
-        driversi686Linux.amdvlk
-      ];
-    };
-    bluetooth = {
-      enable = true;
-      powerOnBoot = true;
-    };
-  };
-
   ### virtualisation setup
   virtualisation.libvirtd = {
     qemu.vhostUserPackages = with pkgs; [virtiofsd];
@@ -72,12 +56,6 @@
         theme = "breeze";
         settings.Autologin.Session = "hyprland";
       };
-    };
-    xserver = {
-      enable = true;
-      xkb.layout = "us";
-      xkb.variant = "";
-      videoDrivers = ["amdgpu"];
     };
     printing.enable = true;
     pipewire = {
