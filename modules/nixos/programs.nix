@@ -1,6 +1,4 @@
-{...}:
-{
-
+{...}: {
   programs = {
     firefox.enable = true;
     nh = {
@@ -11,6 +9,7 @@
     openvpn3.enable = true;
     hyprland.enable = true;
     virt-manager.enable = true;
+    waybar.enable = true;
     starship = {
       enable = true;
       settings = {
@@ -29,7 +28,4 @@
     };
     gamemode.enable = true;
   };
-
-
-
-     }
+}

@@ -97,7 +97,6 @@
     libnotify
     swaynotificationcenter
     wofi
-    waybar # hyprland plugin
     hyprpaper
     hyprlock
     swww # hyprland plugin
