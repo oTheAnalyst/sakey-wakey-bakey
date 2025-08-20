@@ -47,7 +47,6 @@
     neovim
     emacs
     # ricy gui cli
-    ranger
     cava
     lolcat
     ani-cli
@@ -63,7 +62,6 @@
     zip
     #apps
     vesktop
-    teamspeak3
     signal-desktop-bin
     zellij
     mangohud
@@ -81,8 +79,6 @@
     wttrbar
     ranger
     ueberzugpp # image previewer for ranger
-    texliveFull # another latex thing
-    texstudio
     brightnessctl
     hyprshot
     bluetui
