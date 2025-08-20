@@ -61,6 +61,7 @@
     unrar
     zip
     #apps
+    teamspeak3 
     vesktop
     signal-desktop-bin
     zellij
