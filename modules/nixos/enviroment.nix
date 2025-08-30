@@ -4,16 +4,20 @@
   ...
 }: {
   environment.systemPackages = with pkgs; [
+    ############
     # custom utility
+    ############
     (btop.override {rocmSupport = true;})
     #  agenix.packages.${pkgs.system}.default
     shadps4
-    #### depedency for NH
+    ############
+    #depedency for NH
+    ############
     nix-output-monitor
     nvd
-    ####
+    ############
     # latex depedency
-    ###
+    ############
     texliveFull
     texliveTeTeX
     texstudio
@@ -40,19 +44,25 @@
     piper
     libratbag
     libreoffice
+    ############
     ##  nerd-fonts
+    ############
     gnumake #depedency for r.nvim
     libgcc #depedency for r.nvim
     gccgo #depedency for r.nvim
     neovim
     emacs
+    ############
     # ricy gui cli
+    ############
     cava
     lolcat
     ani-cli
     microfetch
     protonup
+    ############
     # utility
+    ############
     syncthing
     sqlite
     sqlitebrowser
@@ -60,7 +70,9 @@
     unzip
     unrar
     zip
+    ############
     #apps
+    ############
     teamspeak3 
     vesktop
     signal-desktop-bin
@@ -75,7 +87,9 @@
     input-remapper
     qbittorrent
     bitwarden-desktop
+    ############
     # hyprland apps
+    ############
     rainfrog
     wttrbar
     ranger
@@ -96,6 +110,6 @@
     wofi
     hyprpaper
     hyprlock
-    swww # hyprland plugin
+    swww 
   ];
 }
