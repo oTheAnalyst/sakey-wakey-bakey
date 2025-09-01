@@ -26,6 +26,7 @@
     # cli tools
     # general tools
     #####
+    tor
     gallery-dl
     rmpc
     protonvpn-cli_2
@@ -76,6 +77,7 @@
     teamspeak3 
     vesktop
     signal-desktop-bin
+    tor-browser
     zellij
     mangohud
     veracrypt
