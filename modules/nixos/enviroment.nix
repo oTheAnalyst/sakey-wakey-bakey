@@ -26,7 +26,10 @@
     # cli tools
     # general tools
     #####
+    pastel
     tor
+    scdl
+    ffmpeg ## dep for scdl
     gallery-dl
     rmpc
     protonvpn-cli_2
@@ -61,6 +64,12 @@
     ani-cli
     microfetch
     protonup
+    ############
+    ## lsp clients 
+    ############
+    nil
+    pyright
+    sqls
     ############
     # utility
     ############
