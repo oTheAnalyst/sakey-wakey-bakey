@@ -36,16 +36,9 @@
     spice-vdagentd.enable = true;
     desktopManager.plasma6.enable = true;
     teamspeak3.enable = true;
-    mpd = {
+    tor = {
       enable = true;
-      musicDirectory = "/home/pretender/musicDirectory";
-      extraConfig = ''
-        audio_output {
-          type "pipewire"
-          name "My PipeWire Output"
-        }
-      '';
-      network.listenAddress = "any";
+      openFirewall = true;
     };
     displayManager = {
       autoLogin.user = username;
