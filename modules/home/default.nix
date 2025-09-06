@@ -20,7 +20,7 @@
           ./programs/firefox.nix
           ./programs/bash.nix
           ./programs/starship.nix
-         # ./programs/yazi.nix
+          ./programs/walker.nix
         ];
         home = {
           inherit username;
