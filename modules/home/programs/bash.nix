@@ -12,7 +12,7 @@ _: {
       ovim = "nix run github:Nobbz/nobbz-vim";
       gst = builtins.trace "hello world" "git status";
       gp = "git pull";
-      buildnix = "sudo nixos-rebuild switch --flake";
+      mynix = "cd ~/sakey-wakey-bakey/ && tree && git status";
       vpn-connect = "sudo protonvpn connect --cc US";
       disconnect-vpn = "sudo protonvpn disconnect";
     };
