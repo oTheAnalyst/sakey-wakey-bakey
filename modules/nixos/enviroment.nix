@@ -101,9 +101,10 @@
     ############
     # hyprland apps
     ############
+    walker
     rainfrog
     wttrbar
-    ranger
+    yazi
     ueberzugpp # image previewer for ranger
     brightnessctl
     hyprshot
