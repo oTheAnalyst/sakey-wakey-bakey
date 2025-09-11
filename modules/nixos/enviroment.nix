@@ -76,6 +76,7 @@
     syncthing
     sqlite
     sqlitebrowser
+    dbeaver-bin
     unrar
     unzip
     unrar
