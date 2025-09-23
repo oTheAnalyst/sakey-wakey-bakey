@@ -33,6 +33,7 @@
     gallery-dl
     rmpc
     protonvpn-cli_2
+    protonvpn-gui
     bitwarden-cli
     dmidecode
     gpart
