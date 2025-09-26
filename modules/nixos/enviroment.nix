@@ -85,7 +85,6 @@
     ############
     #apps
     ############
-    teamspeak3 
     vesktop
     signal-desktop-bin
     tor-browser
