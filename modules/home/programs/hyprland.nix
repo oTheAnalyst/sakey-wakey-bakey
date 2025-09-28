@@ -62,8 +62,8 @@
        exec-once = [workspace 4 silent] kitty -e btop
        exec-once = hyprlock
        exec-once = hyprctl setcursor Nordzy-catppuccin-mocha-dark 30
-      # exec = gsettings set org.gnome.desktop.interface gtk-theme "A  tomOneDarkTheme-main"   # for GTK3 apps
-      # exec = gsettings set org.gnome.desktop.interface color-scheme "AtomOneDarkTheme-main"   # for GTK4 apps
+       exec = gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"   # for GTK4 apps 
+       exec = gsettings set org.gnome.desktop.interface gtk-theme "adw-gtk3"   # for GTK3 apps
 
 
 
@@ -312,7 +312,7 @@
 
       windowrulev2 = float,class:veracrypt
       windowrulev2 = size 30% 30%,class:veracrypt
-      windowrulev2 = move 100 770, class:veracrypt
+      windowrulev2 = move 100 700, class:veracrypt
 
 
       windowrulev2 = float,class:microfetch

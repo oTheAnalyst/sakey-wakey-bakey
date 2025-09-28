@@ -30,6 +30,7 @@
     enable = true;
     defaultApplications = {
       "application/pdf" = ["zathura.desktop"];
+      "directory" = ["gwenview.desktop"];
       "image/png" = [
         "sxiv.desktop"
         "gimp.desktop"
@@ -46,7 +47,7 @@
 
   services = {
     pulseaudio.enable = false;
-    desktopManager.plasma6.enable = true;
+    desktopManager.plasma6.enable = false;
     teamspeak3.enable = true;
     displayManager = {
       autoLogin = {
