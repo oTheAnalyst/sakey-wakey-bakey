@@ -7,7 +7,6 @@
       clean.extraArgs = "--keep-since 4d --keep 3";
     };
     openvpn3.enable = false;
-    hyprland.enable = true;
     virt-manager.enable = true;
     waybar.enable = true;
     starship = {
