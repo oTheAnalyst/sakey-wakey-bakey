@@ -8,21 +8,33 @@
 }: {
   imports = [(modulesPath + "/installer/scan/not-detected.nix")];
 
-#  age.secrets = {
-#    secret1.file = ../secret/secret1.age;
-#    s2.file = ../secret/s2.age;
-#    s3.file = ../secret/s3.age;
-#  };
-#
-#  age.identityPaths = [
-#    "/home/pretender/.ssh/ed123"
-#    "/home/pretender/.ssh/id_ed25519"
-#    "/home/pretender/.ssh/glitterknife"
-#  ];
-#
+  #  age.secrets = {
+  #    secret1.file = ../secret/secret1.age;
+  #    s2.file = ../secret/s2.age;
+  #    s3.file = ../secret/s3.age;
+  #  };
+  #
+  #  age.identityPaths = [
+  #    "/home/pretender/.ssh/ed123"
+  #    "/home/pretender/.ssh/id_ed25519"
+  #    "/home/pretender/.ssh/glitterknife"
+  #  ];
+  #
   boot = {
     loader.systemd-boot.enable = true;
     loader.efi.canTouchEfiVariables = true;
+  };
+
+  xdg.menus.enable = true;
+  xdg.mime = {
+    enable = true;
+    defaultApplications = {
+      "application/pdf" = ["zathura.desktop"];
+      "image/png" = [
+        "sxiv.desktop"
+        "gimp.desktop"
+      ];
+    };
   };
 
   networking = {

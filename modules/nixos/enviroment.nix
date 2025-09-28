@@ -66,7 +66,7 @@
     microfetch
     protonup
     ############
-    ## lsp clients 
+    ## lsp clients
     ############
     nil
     pyright
@@ -85,6 +85,7 @@
     ############
     #apps
     ############
+    zathura
     vesktop
     signal-desktop-bin
     tor-browser
@@ -102,6 +103,7 @@
     ############
     # hyprland apps
     ############
+    xdg-desktop-portal-gtk
     walker
     rainfrog
     wttrbar
@@ -123,6 +125,6 @@
     wofi
     hyprpaper
     hyprlock
-    swww 
+    swww
   ];
 }
