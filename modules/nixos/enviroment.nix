@@ -96,13 +96,13 @@
     obs-studio
     vlc
     davinci-resolve
-    mangareader
     input-remapper
     qbittorrent
     bitwarden-desktop
     ############
     # hyprland apps
     ############
+    kdePackages.gwenview
     xdg-desktop-portal-gtk
     walker
     rainfrog
