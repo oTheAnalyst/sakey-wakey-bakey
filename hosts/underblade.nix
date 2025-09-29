@@ -25,18 +25,6 @@
     loader.efi.canTouchEfiVariables = true;
   };
 
-  xdg.menus.enable = true;
-  xdg.mime = {
-    enable = true;
-    defaultApplications = {
-      "application/pdf" = ["zathura.desktop"];
-      "directory" = ["gwenview.desktop"];
-      "image/png" = [
-        "sxiv.desktop"
-        "gimp.desktop"
-      ];
-    };
-  };
 
   networking = {
     hostName = "underblade";
@@ -47,7 +35,7 @@
 
   services = {
     pulseaudio.enable = false;
-    desktopManager.plasma6.enable = false;
+    desktopManager.plasma6.enable = true;
     teamspeak3.enable = true;
     displayManager = {
       autoLogin = {
