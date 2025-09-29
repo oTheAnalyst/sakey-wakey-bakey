@@ -212,7 +212,7 @@
       bind = $mainMod, X, movewindow, mon:+1
       bind = $mainMod, B, exec, pkill waybar || waybar
       bind = $mainMod, Q, exec, $terminal
-      bind = $mainMod, C, killactive,
+      bind = $mainMod SHIFT, C, killactive,
       bind = $mainMod, M, exit,
       bind = $mainMod, E, exec, walker
       bind = $mainMod, V, fullscreen,
