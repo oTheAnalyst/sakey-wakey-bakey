@@ -19,7 +19,6 @@
       # Create your files separately and then link them to this file like this:
       # source = ~/.config/hypr/myColors.conf
 
-
       ################
       ### MONITORS ###
       ################
@@ -50,8 +49,7 @@
       # Autostart necessary processes (like notifications daemons, status bars, etc.)
       # Or execute your favorite apps at launch like this:
 
-       exec-once = killall waybar
-       exec-once = waybar & hyprpaper
+       exec-once = hyprpaper
        exec-once = swaync & libnotify
        exec-once = [workspace 2 silent] vesktop
        exec-once = hypridle
@@ -62,8 +60,9 @@
        exec-once = [workspace 4 silent] kitty -e btop
        exec-once = hyprlock
        exec-once = hyprctl setcursor Nordzy-catppuccin-mocha-dark 30
-       exec = gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"   # for GTK4 apps 
-       exec = gsettings set org.gnome.desktop.interface gtk-theme "adw-gtk3"   # for GTK3 apps
+       exec = gsettings set org.gnome.desktop.interface color-scheme Nordic-darker   # for GTK4 apps
+       exec = gsettings set org.gnome.desktop.interface gtk-theme Nordic-darker   # for GTK3 apps
+       exec = gsettings set org.gnome.desktop.wm.preferences theme Nordic-darker
 
 
 
@@ -75,11 +74,12 @@
 
       # See https://wiki.hyprland.org/Configuring/Environment-variables/
       env = QT_QPA_PLATFORMTHEME,qt6ct   # for Qt apps
-      env = GTK_THEME,Dark
+      env = GTK_THEME,Nordic-darker
       env = HYPRCURSOR_THEME,"Nordzy-catppuccin-mocha-dark"
       env = HYPRCURSOR_SIZE,30
       env = GDK_SCALE,1
       env = XDG_MENU_PREFIX,plasma
+
 
       xwayland {
           force_zero_scaling = true
@@ -210,7 +210,7 @@
       bind = $mainMod SHIFT, F, exec, hyprshot -m region
       bind = $mainMod SHIFT, E, exec, kitty --class=yazi -e 'yazi'
       bind = $mainMod, X, movewindow, mon:+1
-      bind = $mainMod, B, exec, firefox
+      bind = $mainMod, B, exec, pkill waybar || waybar
       bind = $mainMod, Q, exec, $terminal
       bind = $mainMod, C, killactive,
       bind = $mainMod, M, exit,
