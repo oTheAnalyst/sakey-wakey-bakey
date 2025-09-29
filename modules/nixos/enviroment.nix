@@ -66,7 +66,7 @@
     microfetch
     protonup
     ############
-    ## lsp clients 
+    ## lsp clients
     ############
     nil
     pyright
@@ -85,7 +85,7 @@
     ############
     #apps
     ############
-    teamspeak3 
+    zathura
     vesktop
     signal-desktop-bin
     tor-browser
@@ -96,13 +96,14 @@
     obs-studio
     vlc
     davinci-resolve
-    mangareader
     input-remapper
     qbittorrent
     bitwarden-desktop
     ############
     # hyprland apps
     ############
+    kdePackages.gwenview
+    xdg-desktop-portal-gtk
     walker
     rainfrog
     wttrbar
@@ -124,6 +125,6 @@
     wofi
     hyprpaper
     hyprlock
-    swww 
+    swww
   ];
 }
