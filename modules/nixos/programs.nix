@@ -1,13 +1,13 @@
-{...}: {
+{
   programs = {
     firefox.enable = true;
+    hyprland.enable = true;
     nh = {
       enable = true;
       clean.enable = true;
       clean.extraArgs = "--keep-since 4d --keep 3";
     };
     openvpn3.enable = false;
-    hyprland.enable = true;
     virt-manager.enable = true;
     waybar.enable = true;
     starship = {
@@ -27,5 +27,18 @@
       gamescopeSession.enable = true;
     };
     gamemode.enable = true;
+  };
+
+  xdg.menus.enable = true;
+  xdg.mime = {
+    enable = true;
+    defaultApplications = {
+      "application/pdf" = ["zathura.desktop"];
+      "directory" = ["gwenview.desktop"];
+      "image/png" = [
+        "sxiv.desktop"
+        "gimp.desktop"
+      ];
+    };
   };
 }
