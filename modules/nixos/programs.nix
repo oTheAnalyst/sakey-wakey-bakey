@@ -1,4 +1,4 @@
- {
+{
   programs = {
     firefox.enable = true;
     hyprland.enable = true;
@@ -27,5 +27,18 @@
       gamescopeSession.enable = true;
     };
     gamemode.enable = true;
+  };
+
+  xdg.menus.enable = true;
+  xdg.mime = {
+    enable = true;
+    defaultApplications = {
+      "application/pdf" = ["zathura.desktop"];
+      "directory" = ["gwenview.desktop"];
+      "image/png" = [
+        "sxiv.desktop"
+        "gimp.desktop"
+      ];
+    };
   };
 }
