@@ -284,7 +284,6 @@
       # windowrule = float, ^(kitty)$
       windowrule =  size 45% 45%, workspace 1, floating:0
       #windowrule =  move 900 400, workspace 1, floating:0
-      windowrule = workspace 2, class:^vesktop$
       windowrule = workspace 1, class:^firefox$
 
       # windowrule v2
