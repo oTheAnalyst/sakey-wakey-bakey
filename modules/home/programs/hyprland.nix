@@ -49,8 +49,8 @@
       # Autostart necessary processes (like notifications daemons, status bars, etc.)
       # Or execute your favorite apps at launch like this:
 
-       exec-once = hyprpaper
        exec-once = swaync & libnotify
+       exec-once = hyprpaper
        exec-once = [workspace 2 silent] vesktop
        exec-once = hypridle
        exec-once = firefox
