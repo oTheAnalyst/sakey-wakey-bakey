@@ -26,7 +26,7 @@
     # cli tools
     # general tools
     #####
-    grip-grab
+    ripgrep
     pastel
     tor
     scdl
@@ -76,8 +76,6 @@
     # utility
     ############
     syncthing
-    sqlite
-    sqlitebrowser
     dbeaver-bin
     unrar
     unzip
