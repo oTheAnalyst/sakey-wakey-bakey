@@ -26,6 +26,7 @@
     # cli tools
     # general tools
     #####
+    grip-grab
     pastel
     tor
     scdl
@@ -85,6 +86,7 @@
     ############
     #apps
     ############
+    teamspeak3
     zathura
     vesktop
     signal-desktop-bin
