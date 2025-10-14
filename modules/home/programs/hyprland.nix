@@ -300,6 +300,9 @@
       windowrulev2 = size 25% 25%,title:Volume Control
       windowrulev2 = move 1000 80, title:Volume Control
 
+      windowrulev2 = float,title:Proton VPN
+      windowrulev2 = size 25% 25%,title:Proton VPN
+      windowrulev2 = move 1400 200, title:Proton VPN
 
       windowrulev2 = float,class:yazi
       windowrulev2 = size 45% 45%,class:yazi
