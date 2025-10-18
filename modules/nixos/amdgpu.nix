@@ -1,13 +1,10 @@
 {pkgs, ...}: {
   hardware = {
-    amdgpu.amdvlk.enable = true;
     graphics = {
       enable = true;
       enable32Bit = true;
       extraPackages = with pkgs; [
         mesa.opencl
-        amdvlk
-        driversi686Linux.amdvlk
       ];
     };
     bluetooth = {

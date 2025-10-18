@@ -87,6 +87,7 @@
     teamspeak3
     zathura
     vesktop
+    discord
     signal-desktop-bin
     tor-browser
     zellij
