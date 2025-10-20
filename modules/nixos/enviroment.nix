@@ -96,7 +96,7 @@
     obsidian
     obs-studio
     vlc
-    davinci-resolve
+    shotcut #video editor
     input-remapper
     qbittorrent
     bitwarden-desktop
