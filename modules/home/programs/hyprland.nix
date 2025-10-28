@@ -38,7 +38,7 @@
 
       # Set programs that you use
       $terminal = kitty
-      $fileManager = yazi
+      $fileManager = kitty --class=yazi -e 'yazi'
       $menu = wofi --show drun
 
 
@@ -208,13 +208,13 @@
 
       # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
       bind = $mainMod SHIFT, F, exec, hyprshot -m region
-      bind = $mainMod SHIFT, E, exec, kitty --class=yazi -e 'yazi'
+      bind = $mainMod SHIFT, E, exec, $fileManager
       bind = $mainMod, X, movewindow, mon:+1
       bind = $mainMod, B, exec, pkill waybar || waybar
       bind = $mainMod, Q, exec, $terminal
+      bind = $mainMod SHIFT, Q, exec, kitty --class=flaotingkitty
       bind = $mainMod SHIFT, C, killactive,
       bind = $mainMod, M, exit,
-      bind = $mainMod, E, exec, walker
       bind = $mainMod, V, fullscreen,
       bind = $mainMod, R, exec, $menu
       bind = $mainMod, P, pseudo, # dwindle
@@ -281,9 +281,9 @@
       # See https://wiki.hyprland.org/Configuring/Workspace-Rules/ for workspace rules
 
       # Example windowrule v1
-      # windowrule = float, ^(kitty)$
-      windowrule =  size 45% 45%, workspace 1, floating:0
-      #windowrule =  move 900 400, workspace 1, floating:0
+       windowrule = float, class:flaotingkitty
+      windowrule =  size 45% 45%, class:flaotingkitty, floating:0
+      windowrule =  move 900 400, class:flaotingkitty, floating:0
       windowrule = workspace 1, class:^firefox$
 
       # windowrule v2
@@ -294,7 +294,7 @@
 
       windowrulev2 = float,class:nmtui
       windowrulev2 = size 45% 45%,class:nmtui
-      windowrulev2 = move 1000 80, class:nmtui
+      windowrulev2 = move onscreen cursor 100% 10%-, class:nmtui
 
       windowrulev2 = float,title:Volume Control
       windowrulev2 = size 25% 25%,title:Volume Control
@@ -302,7 +302,7 @@
 
       windowrulev2 = float,title:Proton VPN
       windowrulev2 = size 25% 25%,title:Proton VPN
-      windowrulev2 = move 1400 200, title:Proton VPN
+      windowrulev2 = move onscreen 100% 12%- , title:Proton VPN
 
       windowrulev2 = float,class:yazi
       windowrulev2 = size 45% 45%,class:yazi
@@ -312,9 +312,9 @@
       windowrulev2 = size 50% 40%,class:Bitwarden
       windowrulev2 = move 100 100, class:Bitwarden
 
-      windowrulev2 = float,class:veracrypt
-      windowrulev2 = size 30% 30%,class:veracrypt
-      windowrulev2 = move 100 700, class:veracrypt
+      windowrulev2 = float,title:VeraCrypt
+      windowrulev2 = size 30% 30%,title:VeraCrypt
+      windowrulev2 = move onscreen 100% 60% title:VeraCrypt
 
 
       windowrulev2 = float,class:microfetch
