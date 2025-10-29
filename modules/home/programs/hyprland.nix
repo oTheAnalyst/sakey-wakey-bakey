@@ -24,7 +24,7 @@
       ################
 
       # See https://wiki.hyprland.org/Configuring/Monitors/
-      monitor = eDP-1, 1920x1200@60, auto, 1
+      monitor = eDP-1, 2256x1504@60, auto, 1.175
       monitor = DP-1 , preferred, auto, 1
       monitor = DP-2 , preferred, auto, 1
       monitor = DP-3 , preferred, auto, 1
@@ -77,7 +77,7 @@
       env = GTK_THEME,Nordic-darker
       env = HYPRCURSOR_THEME,"Nordzy-catppuccin-mocha-dark"
       env = HYPRCURSOR_SIZE,30
-      env = GDK_SCALE,1
+      env = GDK_SCALE,2
       env = XDG_MENU_PREFIX,plasma
 
 
