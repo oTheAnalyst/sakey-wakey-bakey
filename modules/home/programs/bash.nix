@@ -13,6 +13,9 @@ _: {
       gst = builtins.trace "hello world" "git status";
       gp = "git pull --rebase";
       ga = "git pull --abort";
+      lg1 = "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)' --all";
+      lg2 = "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'";
+      lg = "lg1";
       chm = "journalctl --user -e";
       mynix = "cd ~/sakey-wakey-bakey/ && tree && git status";
       vpn-connect = "sudo protonvpn connect --cc US";
