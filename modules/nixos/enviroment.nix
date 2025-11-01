@@ -77,6 +77,7 @@
     ############
     syncthing
     dbeaver-bin
+    nix-init
     unrar
     unzip
     unrar
