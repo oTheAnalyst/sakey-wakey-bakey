@@ -1,4 +1,9 @@
 {
+
+
+nixpkgs.config.permittedInsecurePackages = [
+                "qtwebengine-5.15.19"
+              ];
   programs = {
     firefox.enable = true;
     hyprland.enable = true;
@@ -6,6 +11,24 @@
       enable = true;
       clean.enable = true;
       clean.extraArgs = "--keep-since 4d --keep 3";
+    };
+    git = {
+    config = [
+"
+[safe]
+  directory = /etc/nixos
+	directory = /etc/nixos
+[init]
+	defaultBranch = main
+[user]
+	email = michaelvcumbo21@proton.me
+	name = VtheRtech
+[maintenance]
+	repo = /home/pretender/Public/nixpkgs
+[core]
+	editor = nvim
+  "
+      ];
     };
     openvpn3.enable = false;
     virt-manager.enable = true;
