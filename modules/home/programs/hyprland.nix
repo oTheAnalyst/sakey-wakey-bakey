@@ -208,13 +208,14 @@
       $mainMod = SUPER # Sets "Windows" key as main modifier
 
       # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
-      bind = $mainMod SHIFT, F, exec, hyprshot -m region
-      bind = $mainMod SHIFT, E, exec, $fileManager
+      bind = $mainMod, F, exec, hyprshot -m region
+      bind = $mainMod, E, exec, $fileManager
+      bind = $mainMod CTRL, E, togglefloating 
       bind = $mainMod, X, movewindow, mon:+1
       bind = $mainMod, B, exec, pkill waybar || waybar
       bind = $mainMod, Q, exec, $terminal
-      bind = $mainMod SHIFT, Q, exec, kitty --class=flaotingkitty
-      bind = $mainMod SHIFT, C, killactive,
+      bind = $mainMod CTRL, Q, exec, kitty --class=flaotingkitty
+      bind = $mainMod CTRL, C, killactive,
       bind = $mainMod, M, exit,
       bind = $mainMod, V, fullscreen,
       bind = $mainMod, R, exec, $menu
@@ -222,8 +223,8 @@
       bind = $mainMod, I, togglesplit, # dwindle
 
       bindl = ,XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
-      bind =, xf86audioraisevolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
-      bind =, xf86audiolowervolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+      bind = ,xf86audioraisevolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
+      bind = ,xf86audiolowervolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
       bind = ,XF86MonBrightnessDown, exec, brightnessctl s 10%-
       bind = ,XF86MonBrightnessUp, exec, brightnessctl s +10%
 
@@ -272,7 +273,7 @@
       # Move/resize windows with mainMod + LMB/RMB and dragging
       bindm = $mainMod, mouse:272, movewindow
       bindm = $mainMod, mouse:273, resizewindow
-      bind = $mainMod, Z, fullscreen, 1
+      bind = CTRL, Z, fullscreen, 1
 
       ##############################
       ### WINDOWS AND WORKSPACES ###
