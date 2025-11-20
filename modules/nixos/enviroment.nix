@@ -75,6 +75,8 @@
     ############
     # utility
     ############
+    keymapp
+    ventoy-full
     syncthing
     dbeaver-bin
     nix-init
@@ -85,6 +87,7 @@
     ############
     #apps
     ############
+    chromium
     teamspeak3
     zathura
     vesktop
