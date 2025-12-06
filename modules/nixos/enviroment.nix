@@ -33,7 +33,7 @@
     ffmpeg ## dep for scdl
     gallery-dl
     rmpc
-    protonvpn-cli_2
+   ##` protonvpn-cli_2
     protonvpn-gui
     bitwarden-cli
     dmidecode
@@ -65,7 +65,7 @@
     lolcat
     ani-cli
     microfetch
-    protonup
+    protonup-ng
     ############
     ## lsp clients
     ############
@@ -88,7 +88,7 @@
     #apps
     ############
     chromium
-    teamspeak3
+   # teamspeak3
     zathura
     vesktop
     discord

@@ -314,9 +314,9 @@
       windowrulev2 = size 50% 40%,class:Bitwarden
       windowrulev2 = move 100 100, class:Bitwarden
 
-      windowrulev2 = float,title:VeraCrypt
-      windowrulev2 = size 30% 30%,title:VeraCrypt
-      windowrulev2 = move onscreen 100% 60% title:VeraCrypt
+##      windowrulev2 = float,title:VeraCrypt
+##      windowrulev2 = size 30% 30%,title:VeraCrypt
+##      windowrulev2 = move onscreen 100% 60% title:VeraCrypt
 
 
       windowrulev2 = float,class:microfetch
