@@ -33,7 +33,6 @@
     ffmpeg ## dep for scdl
     gallery-dl
     rmpc
-   ##` protonvpn-cli_2
     protonvpn-gui
     bitwarden-cli
     dmidecode
@@ -51,8 +50,10 @@
     libratbag
     libreoffice
     ############
-    ##  nerd-fonts
+    ## nevoim deps 
     ############
+    cargo
+    rustup
     gnumake #depedency for r.nvim
     libgcc #depedency for r.nvim
     gccgo #depedency for r.nvim
@@ -88,7 +89,7 @@
     #apps
     ############
     chromium
-   # teamspeak3
+    # teamspeak3
     zathura
     vesktop
     discord
