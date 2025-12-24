@@ -94,6 +94,7 @@
     vesktop
     discord
     signal-desktop-bin
+    wasistlos
     tor-browser
     zellij
     mangohud
