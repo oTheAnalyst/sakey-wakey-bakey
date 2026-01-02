@@ -129,7 +129,7 @@
     wlogout
     libnotify
     swaynotificationcenter
-    wofi
+    rofi
     hyprpaper
     hyprlock
     swww

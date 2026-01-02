@@ -40,7 +40,7 @@
       $terminal = kitty
       $EDITOR = nvim
       $fileManager = kitty --class=yazi -e 'yazi'
-      $menu = wofi --show drun
+      $menu = rofi  -show drun
 
 
       #################
@@ -100,7 +100,7 @@
           border_size = 2
 
           # https://wiki.hyprland.org/Configuring/Variables/#variable-types for info about colors
-          col.active_border = rgba(33ccffee) rgba(00ff99ee) 45deg
+          col.active_border = rgb(255,20,147) rgb(255,182,193) 45deg
           col.inactive_border = rgba(595959aa)
 
           # Set to true enable resizing windows by clicking and dragging on borders and gaps
@@ -290,7 +290,7 @@
         windowrule {
           name = windowrule-2
           size = (monitor_w*0.45) (monitor_h*0.45)
-          move = (900) (400)
+          move = (101) (404)
           match:class = flaotingkitty
           match:float = 0
         }
@@ -323,7 +323,7 @@
           name = windowrule-6
           float = on
           size = (monitor_w*0.45) (monitor_h*0.45)
-          move = (cursor_x+(min(max((monitor_w*1),0),monitor_w-window_w))) (cursor_y+(min(max((monitor_h*0.1)-,0),monitor_h-window_h)))
+          move = (1000) (80)
           match:class = nmtui
         }
 
@@ -341,7 +341,7 @@
           name = windowrule-8
           float = on
           size = (monitor_w*0.25) (monitor_h*0.25)
-          move = (min(max((monitor_w*1),0),monitor_w-window_w)) (min(max((monitor_h*0.12)-,0),monitor_h-window_h))
+          move = (cursor_x-(window_w*0.5)) (cursor_y-(window_h* - 0.5))
           match:title = Proton VPN
         }
 
@@ -391,6 +391,13 @@
           name = windowrule-14
           suppress_event = maximize
           match:class = .* # You'll probably like this.
+        }
+
+        windowrule {
+          name = windowrule-15
+          tile = true
+          match:class = steam
+
         }
    '';
   };
