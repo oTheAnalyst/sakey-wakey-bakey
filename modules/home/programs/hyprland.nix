@@ -51,7 +51,7 @@
       # Or execute your favorite apps at launch like this:
 
        exec-once = swaync & libnotify
-       exec-once = hyprpaper
+       exec-once = hyprpaper 
        exec-once = [workspace 2 silent] vesktop
        exec-once = hypridle
        exec-once = firefox
@@ -279,51 +279,119 @@
       ### WINDOWS AND WORKSPACES ###
       ##############################
 
-      # See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
-      # See https://wiki.hyprland.org/Configuring/Workspace-Rules/ for workspace rules
-
       # Example windowrule v1
-       windowrule = float, class:flaotingkitty
-      windowrule =  size 45% 45%, class:flaotingkitty, floating:0
-      windowrule =  move 900 400, class:flaotingkitty, floating:0
-      windowrule = workspace 1, class:^firefox$
 
-      # windowrule v2
-      windowrulev2 = float,class:org.pulseaudio.pavucontrol, title:Volume Control
-      windowrulev2 = float,class:bluetui
-      windowrulev2 = size 45% 45%,class:bluetui
-      windowrulev2 = move 1000 80, class:bluetui
+        windowrule {
+          name = windowrule-1
+          float = on
+          match:class = flaotingkitty
+        }
 
-      windowrulev2 = float,class:nmtui
-      windowrulev2 = size 45% 45%,class:nmtui
-      windowrulev2 = move onscreen cursor 100% 10%-, class:nmtui
+        windowrule {
+          name = windowrule-2
+          size = (monitor_w*0.45) (monitor_h*0.45)
+          move = (900) (400)
+          match:class = flaotingkitty
+          match:float = 0
+        }
 
-      windowrulev2 = float,title:Volume Control
-      windowrulev2 = size 25% 25%,title:Volume Control
-      windowrulev2 = move 1000 80, title:Volume Control
-
-      windowrulev2 = float,title:Proton VPN
-      windowrulev2 = size 25% 25%,title:Proton VPN
-      windowrulev2 = move onscreen 100% 12%- , title:Proton VPN
-
-      windowrulev2 = float,class:yazi
-      windowrulev2 = size 45% 45%,class:yazi
-      windowrulev2 = move 980 400, class:yazi
-
-      windowrulev2 = float,class:Bitwarden
-      windowrulev2 = size 50% 40%,class:Bitwarden
-      windowrulev2 = move 100 100, class:Bitwarden
-
-##      windowrulev2 = float,title:VeraCrypt
-##      windowrulev2 = size 30% 30%,title:VeraCrypt
-##      windowrulev2 = move onscreen 100% 60% title:VeraCrypt
+        windowrule {
+          name = windowrule-3
+          workspace = 1
+          match:class = ^firefox$
+        }
 
 
-      windowrulev2 = float,class:microfetch
-      windowrulev2 = size 40% 40%,class:microfetch
-      windowrulev2 = move 400 670, class:microfetch
+              # windowrule v2
+        windowrule {
+          name = windowrule-4
+          float = on
+          match:class = org.pulseaudio.pavucontrol
+          match:title = Volume Control
+        }
 
-      windowrulev2 = suppressevent maximize, class:.* # You'll probably like this.
-    '';
+        windowrule {
+          name = windowrule-5
+          float = on
+          size = (monitor_w*0.45) (monitor_h*0.45)
+          move = (1000) (80)
+          match:class = bluetui
+        }
+
+
+        windowrule {
+          name = windowrule-6
+          float = on
+          size = (monitor_w*0.45) (monitor_h*0.45)
+          move = (cursor_x+(min(max((monitor_w*1),0),monitor_w-window_w))) (cursor_y+(min(max((monitor_h*0.1)-,0),monitor_h-window_h)))
+          match:class = nmtui
+        }
+
+
+        windowrule {
+          name = windowrule-7
+          float = on
+          size = (monitor_w*0.25) (monitor_h*0.25)
+          move = (1000) (80)
+          match:title = Volume Control
+        }
+
+
+        windowrule {
+          name = windowrule-8
+          float = on
+          size = (monitor_w*0.25) (monitor_h*0.25)
+          move = (min(max((monitor_w*1),0),monitor_w-window_w)) (min(max((monitor_h*0.12)-,0),monitor_h-window_h))
+          match:title = Proton VPN
+        }
+
+
+        windowrule {
+          name = windowrule-9
+          float = on
+          size = (monitor_w*0.45) (monitor_h*0.45)
+          move = (980) (400)
+          match:class = yazi
+        }
+
+
+        windowrule {
+          name = windowrule-10
+          float = on
+          size = (monitor_w*0.5) (monitor_h*0.4)
+          move = (100) (100)
+          match:class = Bitwarden
+        }
+
+
+        windowrule {
+          name = windowrule-11
+          float = on
+          size = (monitor_w*0.3) (monitor_h*0.3)
+          match:title = VeraCrypt
+        }
+
+        windowrule {
+          name = windowrule-12
+          move = (min(max((monitor_w*1),0),monitor_w-window_w)) (min(max((monitor_h*0.6),0),monitor_h-window_h)) (min(max(title:VeraCrypt,0),monitor_h-window_h))
+        }
+
+
+
+        windowrule {
+          name = windowrule-13
+          float = on
+          size = (monitor_w*0.4) (monitor_h*0.4)
+          move = (400) (670)
+          match:class = microfetch
+        }
+
+
+        windowrule {
+          name = windowrule-14
+          suppress_event = maximize
+          match:class = .* # You'll probably like this.
+        }
+   '';
   };
 }
