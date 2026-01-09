@@ -40,7 +40,7 @@
       $terminal = kitty
       $EDITOR = nvim
       $fileManager = kitty --class=yazi -e 'yazi'
-      $menu = rofi  -show drun
+      $menu = wofi --show drun
 
 
       #################
@@ -51,7 +51,7 @@
       # Or execute your favorite apps at launch like this:
 
        exec-once = swaync & libnotify
-       exec-once = hyprpaper 
+       exec-once = hyprctl hyprpaper wallpaper 'eDP-1, ~/Pictures/dead.jpg' 
        exec-once = [workspace 2 silent] vesktop
        exec-once = hypridle
        exec-once = firefox
@@ -100,7 +100,7 @@
           border_size = 2
 
           # https://wiki.hyprland.org/Configuring/Variables/#variable-types for info about colors
-          col.active_border = rgb(255,20,147) rgb(255,182,193) 45deg
+          col.active_border = rgba(33ccffee) rgba(00ff99ee) 45deg
           col.inactive_border = rgba(595959aa)
 
           # Set to true enable resizing windows by clicking and dragging on borders and gaps
@@ -209,6 +209,8 @@
 
       # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
       bind = $mainMod, F, exec, hyprshot -m region
+      bind = $mainMod, W, exec, wifi-menu 
+      bind = $mainMod, T, exec, rofi-bluetooth
       bind = $mainMod, E, exec, $fileManager
       bind = $mainMod CTRL, E, togglefloating 
       bind = $mainMod, X, movewindow, mon:+1
@@ -310,95 +312,18 @@
           match:title = Volume Control
         }
 
-        windowrule {
-          name = windowrule-5
-          float = on
-          size = (monitor_w*0.45) (monitor_h*0.45)
-          move = (1000) (80)
-          match:class = bluetui
-        }
+      windowrulev2 = move 100 100, class:Bitwarden
+
+##      windowrulev2 = float,title:VeraCrypt
+##      windowrulev2 = size 30% 30%,title:VeraCrypt
+##      windowrulev2 = move onscreen 100% 60% title:VeraCrypt
 
 
-        windowrule {
-          name = windowrule-6
-          float = on
-          size = (monitor_w*0.45) (monitor_h*0.45)
-          move = (1000) (80)
-          match:class = nmtui
-        }
+      windowrulev2 = float,class:microfetch
+      windowrulev2 = size 40% 40%,class:microfetch
+      windowrulev2 = move 400 670, class:microfetch
 
-
-        windowrule {
-          name = windowrule-7
-          float = on
-          size = (monitor_w*0.25) (monitor_h*0.25)
-          move = (1000) (80)
-          match:title = Volume Control
-        }
-
-
-        windowrule {
-          name = windowrule-8
-          float = on
-          size = (monitor_w*0.25) (monitor_h*0.25)
-          move = (cursor_x-(window_w*0.5)) (cursor_y-(window_h* - 0.5))
-          match:title = Proton VPN
-        }
-
-
-        windowrule {
-          name = windowrule-9
-          float = on
-          size = (monitor_w*0.45) (monitor_h*0.45)
-          move = (980) (400)
-          match:class = yazi
-        }
-
-
-        windowrule {
-          name = windowrule-10
-          float = on
-          size = (monitor_w*0.5) (monitor_h*0.4)
-          move = (100) (100)
-          match:class = Bitwarden
-        }
-
-
-        windowrule {
-          name = windowrule-11
-          float = on
-          size = (monitor_w*0.3) (monitor_h*0.3)
-          match:title = VeraCrypt
-        }
-
-        windowrule {
-          name = windowrule-12
-          move = (min(max((monitor_w*1),0),monitor_w-window_w)) (min(max((monitor_h*0.6),0),monitor_h-window_h)) (min(max(title:VeraCrypt,0),monitor_h-window_h))
-        }
-
-
-
-        windowrule {
-          name = windowrule-13
-          float = on
-          size = (monitor_w*0.4) (monitor_h*0.4)
-          move = (400) (670)
-          match:class = microfetch
-        }
-
-
-        windowrule {
-          name = windowrule-14
-          suppress_event = maximize
-          match:class = .* # You'll probably like this.
-        }
-
-        windowrule {
-          name = windowrule-15
-          tile = true
-          match:class = steam
-
-        }
-   '';
+      windowrulev2 = suppressevent maximize, class:.* # You'll probably like this.
+    '';
   };
 }
