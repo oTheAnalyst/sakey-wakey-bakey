@@ -1,7 +1,4 @@
-{
-  pkgs,
-  ...
-}: let
+{pkgs, ...}: let
   wifi-menu = pkgs.writeShellScriptBin "wifi-menu" ''
         notify-send "Getting list of available Wi-Fi networks..."
     # Get a list of available wifi connections and morph it into a nice-looking list
@@ -48,7 +45,6 @@ in {
     ############
     (btop.override {rocmSupport = true;})
     #  agenix.packages.${pkgs.system}.default
-    shadps4
     ############
     #depedency for NH
     ############
@@ -65,6 +61,16 @@ in {
     # cli tools
     # general tools
     #####
+    unrar
+    unzip
+    unrar
+    zip
+    cava
+    lolcat
+    ani-cli
+    microfetch
+    protonup-ng
+    fzf
     ripgrep
     pastel
     tor
@@ -73,7 +79,6 @@ in {
     gallery-dl
     rmpc
     protonvpn-gui
-    bitwarden-cli
     dmidecode
     gpart
     wget
@@ -82,6 +87,7 @@ in {
     steam-run
     nix-prefetch-git
     tree
+    bat
     btop
     wine
     git
@@ -89,7 +95,7 @@ in {
     libratbag
     libreoffice
     ############
-    ## neovim deps [
+    ## neovim deps
     ############
     # custom utility
     ############
@@ -108,33 +114,6 @@ in {
     texliveTeTeX
     texstudio
     texlivePackages.enumitem
-    #####
-    # cli tools
-    # general tools
-    #####
-    ripgrep
-    pastel
-    tor
-    scdl
-    ffmpeg ## dep for scdl
-    gallery-dl
-    rmpc
-    protonvpn-gui
-    bitwarden-cli
-    dmidecode
-    gpart
-    wget
-    distrobox
-    podman
-    steam-run
-    nix-prefetch-git
-    tree
-    btop
-    wine
-    git
-    piper
-    libratbag
-    libreoffice
     ############
     ## neovim deps
     ############
@@ -147,14 +126,6 @@ in {
     neovim
     emacs
     ############
-    # ricy gui cli
-    ############
-    cava
-    lolcat
-    ani-cli
-    microfetch
-    protonup-ng
-    ############
     ## lsp clients
     ############
     nil
@@ -168,50 +139,10 @@ in {
     syncthing
     dbeaver-bin
     nix-init
-    unrar
-    unzip
-    unrar
-    zip
     ############
     #apps
     ############
-    chromium
-    rustup
-    cargo
-    gnumake #depedency for r.nvim
-    libgcc #depedency for r.nvim
-    gccgo #depedency for r.nvim
-    neovim
-    emacs
-    ############
-    # ricy gui cli
-    ############
-    cava
-    lolcat
-    ani-cli
-    microfetch
-    protonup-ng
-    ############
-    ## lsp clients
-    ############
-    nil
-    pyright
-    sqls
-    ############
-    # utility
-    ############
-    keymapp
-    ventoy-full
-    syncthing
-    dbeaver-bin
-    nix-init
-    unrar
-    unzip
-    unrar
-    zip
-    ############
-    #apps
-    ############
+    shadps4
     chromium
     # teamspeak3
     zathura

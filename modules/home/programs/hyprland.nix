@@ -292,7 +292,6 @@
         windowrule {
           name = windowrule-2
           size = (monitor_w*0.45) (monitor_h*0.45)
-          move = (101) (404)
           match:class = floatingkitty
           match:float = 0
         }
