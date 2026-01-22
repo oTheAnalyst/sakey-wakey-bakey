@@ -42,6 +42,7 @@
           ./modules/nixos/enviroment.nix
           ./modules/nixos/programs.nix
           ./modules/nixos/amdgpu.nix
+          ./modules/nixos/postgres.nix
           agenix.nixosModules.default
         ];
       };
