@@ -134,6 +134,7 @@ in {
     ############
     # utility
     ############
+    pgcli
     keymapp
     ventoy-full
     syncthing
