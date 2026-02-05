@@ -145,7 +145,6 @@ in {
     ############
     shadps4
     chromium
-    # teamspeak3
     zathura
     vesktop
     discord
