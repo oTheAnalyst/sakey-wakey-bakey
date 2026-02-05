@@ -3,7 +3,7 @@
 hardware.keyboard.zsa.enable = true;
 nixpkgs.config.permittedInsecurePackages = [
                 "qtwebengine-5.15.19"
-                  "ventoy-1.1.07"
+                  "ventoy-1.1.10"
               ];
 services = {
     cron = {
