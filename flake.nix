@@ -29,6 +29,7 @@
           ./modules/nixos/programs.nix
           ./modules/nixos/amdgpu.nix
           ./modules/nixos/postgres.nix
+          ./modules/nixos/teamspeak.nix
           agenix.nixosModules.default
         ];
       };
