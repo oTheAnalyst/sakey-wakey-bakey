@@ -134,6 +134,8 @@ in {
     ############
     # utility
     ############
+    docker-compose
+    quickemu
     pgcli
     keymapp
     ventoy-full
