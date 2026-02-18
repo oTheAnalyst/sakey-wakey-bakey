@@ -218,7 +218,6 @@
           bind = $mainMod, Q, exec, $terminal
           bind = $mainMod CTRL, Q, exec, kitty --class=floatingkitty
           bind = $mainMod CTRL, C, killactive,
-          bind = $mainMod CTRL, M, exit,
           bind = $mainMod, V, fullscreen,
           bind = $mainMod, R, exec, $menu
           bind = $mainMod, P, pseudo, # dwindle
