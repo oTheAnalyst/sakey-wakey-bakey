@@ -145,6 +145,7 @@ in {
     ############
     #apps
     ############
+    tailscale
     shadps4
     chromium
     zathura
