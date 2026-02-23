@@ -24,7 +24,7 @@
           ################
 
           # See https://wiki.hyprland.org/Configuring/Monitors/
-          monitor = eDP-1, 2256x1504@60, auto, 1.175
+          monitor = eDP-1, 2256x1504@60, auto, 1.57
           monitor = DP-1 , preferred, auto, 1
           monitor = DP-2 , preferred, auto, 1
           monitor = DP-3 , preferred, auto, 1
