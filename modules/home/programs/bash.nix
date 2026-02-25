@@ -13,6 +13,7 @@ _: {
       ga = "git pull --abort";
       chm = "journalctl --user -e";
       mynix = "cd ~/sakey-wakey-bakey/ && tree && git status";
+      vm_w11 = "cd ~/sakey-wakey-bakey/ quickemu --vm windows-10.conf";
       vpn-connect = "sudo protonvpn connect --cc US";
       disconnect-vpn = "sudo protonvpn disconnect";
     };
