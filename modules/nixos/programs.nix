@@ -1,17 +1,17 @@
- {
-
-hardware.keyboard.zsa.enable = true;
-nixpkgs.config.permittedInsecurePackages = [
-                "qtwebengine-5.15.19"
-                  "ventoy-1.1.10"
-              ];
-services = {
+{
+  hardware.keyboard.zsa.enable = true;
+  nixpkgs.config.permittedInsecurePackages = [
+    "qtwebengine-5.15.19"
+    "ventoy-1.1.10"
+  ];
+  services = {
+    tailscale.enable = true;
     cron = {
       enable = true;
       # systemCronJobs =[
       #       "*/5 * * * *   root date >> /tmp/cron.log"
       #   ];
-        };
+    };
   };
   programs = {
     firefox.enable = true;
@@ -22,8 +22,8 @@ services = {
       clean.extraArgs = "--keep-since 4d --keep 3";
     };
     git = {
-    config = [
-"
+      config = [
+        "
 [safe]
   directory = /etc/nixos
 	directory = /etc/nixos
