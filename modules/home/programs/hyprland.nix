@@ -349,8 +349,9 @@
         name = windowrule-9
         float = on
         size = (monitor_w*0.45) (monitor_h*0.45)
-        move = (980) (400)
+        move = (100) (400)
         match:class = yazi
+        animation = popin
       }
 
 
