@@ -35,7 +35,6 @@
     qemuGuest.enable = true;
     spice-vdagentd.enable = true;
     desktopManager.plasma6.enable = true;
-    teamspeak3.enable = true;
     tor = {
       enable = true;
       openFirewall = true;
