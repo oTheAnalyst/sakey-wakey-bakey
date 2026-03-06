@@ -1,4 +1,4 @@
-{pkgs, ...}: let
+{pkgs, inputs, ...}: let
   wifi-menu = pkgs.writeShellScriptBin "wifi-menu" ''
         notify-send "Getting list of available Wi-Fi networks..."
     # Get a list of available wifi connections and morph it into a nice-looking list
@@ -101,7 +101,7 @@ in {
     ############
     (btop.override {rocmSupport = true;})
     #  agenix.packages.${pkgs.system}.default
-    shadps4
+    inputs.nixos-stable.legacyPackages.${pkgs.system}.shadps4
     ############
     #depedency for NH
     ############
@@ -145,12 +145,11 @@ in {
     ############
     #apps
     ############
-    shadps4
     chromium
     zathura
     vesktop
     discord
-    signal-desktop-bin
+    signal-desktop
     wasistlos
     tor-browser
     zellij
@@ -180,7 +179,6 @@ in {
     grim
     slurp
     swappy
-    light
     gammastep
     pavucontrol
     wlogout

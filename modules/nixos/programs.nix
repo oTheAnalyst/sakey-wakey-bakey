@@ -1,9 +1,4 @@
 {
-  hardware.keyboard.zsa.enable = true;
-  nixpkgs.config.permittedInsecurePackages = [
-    "qtwebengine-5.15.19"
-    "ventoy-1.1.10"
-  ];
   services = {
     tailscale.enable = true;
     cron = {
@@ -13,6 +8,7 @@
       #   ];
     };
   };
+hardware.keyboard.zsa.enable = true;
   programs = {
     firefox.enable = true;
     hyprland.enable = true;
@@ -73,4 +69,5 @@
       ];
     };
   };
+
 }
