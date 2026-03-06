@@ -36,7 +36,6 @@
   services = {
     pulseaudio.enable = false;
     desktopManager.plasma6.enable = true;
-    teamspeak3.enable = true;
     displayManager = {
       autoLogin = {
         user = username;
