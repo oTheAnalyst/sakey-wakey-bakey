@@ -134,11 +134,13 @@ in {
     ############
     # utility
     ############
+    cups ## printer
+    gutenprint ## printer
+    hplip # printer
     docker-compose
     quickemu
     pgcli
     keymapp
-    ventoy-full
     syncthing
     dbeaver-bin
     nix-init
@@ -186,6 +188,7 @@ in {
     swaynotificationcenter
     rofi
     rofi-bluetooth
+    hypridle
     hyprpaper
     hyprlock
     swww
