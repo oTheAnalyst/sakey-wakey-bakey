@@ -1,5 +1,18 @@
-{
+{pkgs, ...}: {
   services = {
+    avahi = {
+      enable = true;
+      nssmdns4 = true;
+      openFirewall = true;
+    };
+    printing = {
+      enable = true;
+      drivers = with pkgs; [
+        cups-filters
+        cups-browsed
+      ];
+    };
+      ipp-usb.enable = true;
     tailscale.enable = true;
     cron = {
       enable = true;
@@ -8,7 +21,7 @@
       #   ];
     };
   };
-hardware.keyboard.zsa.enable = true;
+  hardware.keyboard.zsa.enable = true;
   programs = {
     firefox.enable = true;
     hyprland.enable = true;
@@ -69,5 +82,4 @@ hardware.keyboard.zsa.enable = true;
       ];
     };
   };
-
 }

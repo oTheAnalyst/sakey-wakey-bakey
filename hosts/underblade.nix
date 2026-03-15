@@ -48,7 +48,6 @@
         settings.Autologin.Session = "hyprland";
       };
     };
-    printing.enable = true;
     pipewire = {
       enable = true;
       alsa = {
