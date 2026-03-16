@@ -24,11 +24,15 @@
   environment.systemPackages = with pkgs; [
     ddcutil
   ];
+   programs.appimage = {
+     enable = true;
+     binfmt = true;
+   };
 
   services.udev.extraRules = ''
     KERNEL=="i2c-[0-9]*", GROUP="i2c", MODE="0660"
   '';
-  boot.kernelModules = ["i2c-dev"];
+  boot.kernelModules = ["i2c-dev" "ddcci-driver-linux"];
   users.groups.i2c = {};
   users.users.${username}.extraGroups = ["i2c"];
 
