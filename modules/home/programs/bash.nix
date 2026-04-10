@@ -1,8 +1,6 @@
 _: {
-  programs.bash = {
+  programs.fish = {
     enable = true; # Enable bash
-    enableCompletion = true; # Enable bash completion
-
     shellAliases = {
       # Add useful shell aliases
       PATH = "$PATH :/home/pretender/.cargo/bin/";
@@ -17,6 +15,6 @@ _: {
       vpn-connect = "sudo protonvpn connect --cc US";
       disconnect-vpn = "sudo protonvpn disconnect";
     };
-    bashrcExtra = "microfetch \n source <(fzf --bash)";
+    shellInit = "microfetch";
   };
 }
