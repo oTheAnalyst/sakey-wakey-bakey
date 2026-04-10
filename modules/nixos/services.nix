@@ -1,5 +1,18 @@
-{pkgs,username, ...}: {
+{
+  username,
+  pkgs,
+  ...
+}: {
   services = {
+    flatpak = {
+      enable = true;
+      update.auto = {
+        enable = true;
+        onCalendar = "weekly";
+      };
+      packages = [ "com.teamspeak.TeamSpeak3"
+      ];
+    };
     avahi = {
       enable = true;
       nssmdns4 = true;
@@ -12,7 +25,7 @@
         cups-browsed
       ];
     };
-      ipp-usb.enable = true;
+    ipp-usb.enable = true;
     tailscale.enable = true;
     cron = {
       enable = true;
@@ -24,10 +37,10 @@
   environment.systemPackages = with pkgs; [
     ddcutil
   ];
-   programs.appimage = {
-     enable = true;
-     binfmt = true;
-   };
+  programs.appimage = {
+    enable = true;
+    binfmt = true;
+  };
 
   services.udev.extraRules = ''
     KERNEL=="i2c-[0-9]*", GROUP="i2c", MODE="0660"

@@ -34,7 +34,7 @@
     lolcat
     ani-cli
     microfetch
-    protonup-ng
+    proton-vpn
     fzf
     ripgrep
     pastel
@@ -43,7 +43,6 @@
     ffmpeg ## dep for scdl
     gallery-dl
     rmpc
-    protonvpn-gui
     dmidecode
     gpart
     wget
@@ -152,6 +151,6 @@
     hypridle
     hyprpaper
     hyprlock
-    swww
+    awww
   ];
 }
