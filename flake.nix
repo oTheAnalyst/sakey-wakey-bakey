@@ -18,7 +18,7 @@
     username = "pretender";
   in {
     nixosConfigurations = {
-      faker = inputs.nixos-unstable.lib.nixosSystem {
+      faker = inputs.nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs agenix username;};
         system = "x86_64-linux";
         modules = [
