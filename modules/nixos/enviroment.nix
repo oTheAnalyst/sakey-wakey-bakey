@@ -39,9 +39,6 @@
     ripgrep
     pastel
     tor
-    scdl
-    ffmpeg ## dep for scdl
-    gallery-dl
     rmpc
     dmidecode
     gpart
