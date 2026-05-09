@@ -109,7 +109,6 @@
     vesktop
     discord
     signal-desktop
-    wasistlos
     tor-browser
     zellij
     mangohud
