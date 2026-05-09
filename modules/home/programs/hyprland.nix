@@ -399,7 +399,7 @@
            name = windowrule-15
            tile = true
            match:class = steam
-           workspace = 7
+           workspace = 7 silent
            }
 
 
