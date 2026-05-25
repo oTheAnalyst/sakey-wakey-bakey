@@ -3,14 +3,18 @@
   pkgs,
   ...
 }: {
+
+  networking.firewall.allowedTCPPorts = [65010];
   services = {
+    qbittorrent.enable = true;
     flatpak = {
       enable = true;
       update.auto = {
         enable = true;
         onCalendar = "weekly";
       };
-      packages = [ "com.teamspeak.TeamSpeak3"
+      packages = [
+        "com.teamspeak.TeamSpeak3"
       ];
     };
     avahi = {
