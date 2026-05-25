@@ -1,5 +1,4 @@
-{pkgs, ...}: {
-  # ...
+   {pkgs, ...}:{
   services = {
     #    cloudflared = {
     #      enable = true;
@@ -37,5 +36,5 @@
       package = pkgs.postgresql_18;
     };
   };
-  #  networking.firewall.allowedTCPPorts = [5432];
+##    networking.firewall.allowedTCPPorts = [5432 65010];
 }
