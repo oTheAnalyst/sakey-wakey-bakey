@@ -20,10 +20,6 @@
   #    "/home/pretender/.ssh/glitterknife"
   #  ];
   #
-  boot = {
-    loader.systemd-boot.enable = true;
-    loader.efi.canTouchEfiVariables = true;
-  };
 
 
   networking = {
@@ -84,9 +80,11 @@
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
 
   boot = {
+    loader.systemd-boot.enable = true;
+    loader.efi.canTouchEfiVariables = true;
     initrd.availableKernelModules = ["nvme" "xhci_pci" "thunderbolt" "usb_storage" "sd_mod"];
-    initrd.kernelModules = [];
     kernelModules = ["kvm-amd"];
+    kernelPackages = pkgs.linuxPackages_zen;
     extraModulePackages = [];
   };
 
