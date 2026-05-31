@@ -11,10 +11,6 @@
   age.secrets.secret1.file = ../secret/secret1.age;
   age.identityPaths = ["/home/pretender/.ssh/id_ed25519"];
 
-  boot = {
-    loader.systemd-boot.enable = true;
-    loader.efi.canTouchEfiVariables = true;
-  };
 
   networking = {
     hostName = "faker";
@@ -86,9 +82,12 @@
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
 
   boot = {
+    loader.systemd-boot.enable = true;
+    loader.efi.canTouchEfiVariables = true;
     initrd.availableKernelModules = ["nvme" "xhci_pci" "ahci" "usbhid"];
     initrd.kernelModules = [];
     kernelModules = ["kvm-amd"];
+    kernelPackages = pkgs.linuxPackages_zen;
     extraModulePackages = [];
   };
 

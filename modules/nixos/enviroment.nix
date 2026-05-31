@@ -28,6 +28,7 @@
     #####
       inputs.nixos-stable.legacyPackages.${pkgs.system}.qbittorrent # BitTorrent stable version client with CLI and GUI
       (pkgs.callPackage ./shadps4Practice.nix {}) # Custom PS4 emulator package
+      grc #Generic text colouriser used with fish hm plugin
       unzip # Extract ZIP archives
       unrar # Extract RAR archives
       zip # Create ZIP archives

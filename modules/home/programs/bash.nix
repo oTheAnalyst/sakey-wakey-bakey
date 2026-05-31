@@ -1,6 +1,13 @@
-_: {
+{pkgs, ...}: {
   programs.fish = {
     enable = true; # Enable bash
+    interactiveShellInit = ''
+    set fish_greeting
+    '';
+    plugins = [
+    {name = "grc"; src = pkgs.fishPlugins.grc.src;}
+
+    ];
     shellAliases = {
       # Add useful shell aliases
       PATH = "$PATH :/home/pretender/.cargo/bin/";
