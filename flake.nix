@@ -1,6 +1,7 @@
-{
+  {
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    nvf.url = "github:notashelf/nvf";
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
     agenix.url = "github:ryantm/agenix";
     nixos-stable.url = "github:nixos/nixpkgs/nixos-25.11";
@@ -14,7 +15,7 @@
     };
   };
 
-  outputs = {agenix, nix-flatpak, ...} @ inputs: let
+  outputs = {agenix, nvf, nix-flatpak, ...} @ inputs: let
     username = "pretender";
   in {
     nixosConfigurations = {
@@ -44,6 +45,8 @@
           ./modules/nixos/enviroment.nix
           ./modules/nixos/services.nix
           ./modules/nixos/amdgpu.nix
+          nvf.nixosModules.default
+          ./modules/nixos/nvf.nix
           agenix.nixosModules.default
         ];
       };
