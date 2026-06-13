@@ -24,14 +24,16 @@
         system = "x86_64-linux";
         modules = [
           nix-flatpak.nixosModules.nix-flatpak
+          agenix.nixosModules.default
+          nvf.nixosModules.default
           ./modules/home
           ./hosts/faker.nix # host file, hardware, unique stuff
           ./modules/nixos/system.nix # shared system (nixos) module
           ./modules/nixos/enviroment.nix
           ./modules/nixos/services.nix
           ./modules/nixos/amdgpu.nix
+          ./modules/nixos/nvf.nix
           ./modules/nixos/postgres.nix
-          agenix.nixosModules.default
         ];
       };
       underblade = inputs.nixos-unstable.lib.nixosSystem {
@@ -39,15 +41,15 @@
         system = "x86_64-linux";
         modules = [
           nix-flatpak.nixosModules.nix-flatpak
+          nvf.nixosModules.default
+          agenix.nixosModules.default
           ./modules/home
           ./hosts/underblade.nix # host file, hardware, unique stuff
           ./modules/nixos/system.nix # shared system (nixos) module
           ./modules/nixos/enviroment.nix
           ./modules/nixos/services.nix
           ./modules/nixos/amdgpu.nix
-          nvf.nixosModules.default
           ./modules/nixos/nvf.nix
-          agenix.nixosModules.default
         ];
       };
     };
