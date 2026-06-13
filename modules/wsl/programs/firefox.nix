@@ -1,0 +1,41 @@
+_: {
+  programs = {
+    firefox.enable = false;
+    chromium = {
+    enable = false;
+    extensions = [
+      { id = "cjpalhdlnbpafiamejdnhcphjbkeiagm"; } # ublock origin
+      ];
+    commandLineArgs = [
+      "--disable-features=WebRtcAllowInputVolumeAdjustment"
+    ];
+  };
+};
+ 
+  programs.firefox.profiles.default.userChrome = ''
+    #tabbrowser-tabs {
+      visibility: collapse !important;
+    }
+
+    #titlebar {
+      appearance: none !important;
+      height: 0px;
+    }
+
+    #titlebar > #toolbar-menubar {
+      margin-top: 0px;
+    }
+
+    #TabsToolbar {
+      min-width: 0 !important;
+      min-height: 0 !important;
+    }
+
+    #TabsToolbar > .titlebar-buttonbox-container {
+      display: block;
+      position: absolute;
+      top: 12px;
+      left: 0px;
+    }
+  '';
+}

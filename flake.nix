@@ -1,4 +1,4 @@
-  {
+{
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nvf.url = "github:notashelf/nvf";
@@ -15,7 +15,12 @@
     };
   };
 
-  outputs = {agenix, nvf, nix-flatpak, ...} @ inputs: let
+  outputs = {
+    agenix,
+    nvf,
+    nix-flatpak,
+    ...
+  } @ inputs: let
     username = "pretender";
   in {
     nixosConfigurations = {
@@ -49,6 +54,19 @@
           ./modules/nixos/enviroment.nix
           ./modules/nixos/services.nix
           ./modules/nixos/amdgpu.nix
+          ./modules/nixos/nvf.nix
+        ];
+      };
+
+      research = inputs.nixos-unstable.lib.nixosSystem {
+        specialArgs = {inherit inputs username;};
+        system = "x86_64-linux";
+        modules = [
+          nvf.nixosModules.default
+          ./modules/wsl
+          ./hosts/research.nix
+          ./modules/nixos/system.nix
+          ./modules/nixos/services.nix
           ./modules/nixos/nvf.nix
         ];
       };
