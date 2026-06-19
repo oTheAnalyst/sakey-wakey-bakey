@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   programs.nvf = {
     enableManpages = true;
-    enable = true;
+    enable = false;
     # Your settings need to go into the settings attribute set
     # most settings are documented in the appendix
 
