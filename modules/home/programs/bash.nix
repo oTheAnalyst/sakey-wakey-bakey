@@ -2,11 +2,13 @@
   programs.fish = {
     enable = true; # Enable bash
     interactiveShellInit = ''
-    set fish_greeting
+      set fish_greeting
     '';
     plugins = [
-    {name = "grc"; src = pkgs.fishPlugins.grc.src;}
-
+      {
+        name = "grc";
+        src = pkgs.fishPlugins.grc.src;
+      }
     ];
     shellAliases = {
       # Add useful shell aliases
@@ -17,6 +19,7 @@
       gp = "git pull --rebase";
       ga = "git pull --abort";
       chm = "journalctl --user -e";
+      nvf = "nix run github:oTheAnalyst/bakey-wakey";
       mynix = "cd ~/sakey-wakey-bakey/ && tree && git status";
       vm_w11 = "cd ~/sakey-wakey-bakey/ && quickemu --vm windows-10.conf";
       vpn-connect = "sudo protonvpn connect --cc US";

@@ -39,7 +39,7 @@
 
            # Set programs that you use
            $terminal = kitty
-           $EDITOR = nvim
+           $EDITOR = nvf
            $fileManager = kitty --class=yazi -e 'yazi'
            $menu = rofi -show drun
 
