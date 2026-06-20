@@ -18,10 +18,10 @@
     ############
     # latex dependencies
     ############
-    texliveFull # Complete LaTeX distribution
-    texliveTeTeX # Legacy TeTeX distribution (obsolete)
-    texstudio # Feature-rich LaTeX editor
-    texlivePackages.enumitem # LaTeX package for customizing lists
+    # texliveFull # Complete LaTeX distribution
+    # texliveTeTeX # Legacy TeTeX distribution (obsolete)
+    # texstudio # Feature-rich LaTeX editor
+    # texlivePackages.enumitem # LaTeX package for customizing lists
 
     #####
     # cli tools & general tools
@@ -41,15 +41,16 @@
     ripgrep # Fast line-oriented search tool
     pastel # Color manipulation and conversion tool
     tor # Anonymity network software
-    rmpc # Remote Music Player Client (MPD client)
-    dmidecode # Hardware information reporting tool
-    gpart # Guess PC disk partition table
+    #rmpc # Remote Music Player Client (MPD client)
+    #dmidecode # Hardware information reporting tool
+    #gpart # Guess PC disk partition table
     wget # Network downloader
     distrobox # Run any Linux distro in a container
     podman # Daemonless container engine
     steam-run # Run Steam games with dependencies
     nix-prefetch-git # Prefetch git repositories for Nix
     tree # Display directory structure
+    nix-tree #app for trouble shooting dependency issue
     bat # Cat clone with syntax highlighting
     btop # System resource monitor
     wine # Run Windows applications on Linux
@@ -83,7 +84,7 @@
     docker-compose # Multi-container Docker applications
     quickemu # Quick VM creation and management
     pgcli # Postgres CLI with autocompletion
-    keymapp # Keyboard mapping tool
+    #    keymapp # Keyboard mapping tool
     syncthing # Continuous file synchronization
     dbeaver-bin # Universal database client
     nix-init # Generate Nix packages from URLs
@@ -103,9 +104,9 @@
     obsidian # Markdown knowledge base
     obs-studio # Video recording and streaming
     vlc # Media player
-    shotcut # Video editor
+    #shotcut # Video editor
     input-remapper # Remap input devices
-    bitwarden-desktop # Password manager
+    #bitwarden-desktop # Password manager
 
     ############
     # hyprland apps
