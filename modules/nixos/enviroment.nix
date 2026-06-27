@@ -18,9 +18,9 @@
     ############
     # latex dependencies
     ############
-    # texliveFull # Complete LaTeX distribution
+    texliveFull # Complete LaTeX distribution
     # texliveTeTeX # Legacy TeTeX distribution (obsolete)
-    # texstudio # Feature-rich LaTeX editor
+    texstudio # Feature-rich LaTeX editor
     # texlivePackages.enumitem # LaTeX package for customizing lists
 
     #####
@@ -111,6 +111,7 @@
     ############
     # hyprland apps
     ############
+    waybar
     kdePackages.gwenview # KDE image viewer
     xdg-desktop-portal-gtk # Portal interface for GTK
     walker # Application launcher
