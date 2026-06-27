@@ -3,7 +3,6 @@
   pkgs,
   ...
 }: {
-
   networking.firewall.allowedTCPPorts = [65010];
   services = {
     qbittorrent.enable = true;
@@ -56,19 +55,19 @@
   hardware.keyboard.zsa.enable = true;
   programs = {
     bash = {
-          interactiveShellInit = ''
-            # "check if parent process is not fish" && "make nested shells work properly"
-            if grep -qv fish /proc/$PPID/comm && [[ $SHLVL == [12] ]]; then
-                # set $SHELL for better integration with programs like nix shell, tmux, etc.
-                SHELL=${pkgs.fish}/bin/fish exec fish
-            fi '';
-                        };
-            firefox.enable = true;
-            hyprland.enable = true;
-            nh = {
-              enable = true;
-              clean.enable = true;
-              clean.extraArgs = "--keep-since 4d --keep 3";
+      interactiveShellInit = ''
+        # "check if parent process is not fish" && "make nested shells work properly"
+        if grep -qv fish /proc/$PPID/comm && [[ $SHLVL == [12] ]]; then
+            # set $SHELL for better integration with programs like nix shell, tmux, etc.
+            SHELL=${pkgs.fish}/bin/fish exec fish
+        fi '';
+    };
+    firefox.enable = true;
+    hyprland.enable = true;
+    nh = {
+      enable = true;
+      clean.enable = true;
+      clean.extraArgs = "--keep-since 4d --keep 3";
     };
     git = {
       config = [
@@ -90,7 +89,7 @@
     };
     openvpn3.enable = false;
     virt-manager.enable = true;
-    waybar.enable = true;
+    waybar.enable = false;
     starship = {
       enable = true;
       settings = {

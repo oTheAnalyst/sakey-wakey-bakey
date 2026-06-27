@@ -19,8 +19,8 @@
       gp = "git pull --rebase";
       ga = "git pull --abort";
       chm = "journalctl --user -e";
-      nvf = "nix run github:oTheAnalyst/bakey-wakey";
-      mynix = "cd ~/sakey-wakey-bakey/ && tree && git status";
+      nvf = "nix run /home/pretender/Public/bakey-wakey";
+      mynix = "cd ~/sakey-wakey-bakey/ && tree -dtC && git status";
       vm_w11 = "cd ~/sakey-wakey-bakey/ && quickemu --vm windows-10.conf";
       vpn-connect = "sudo protonvpn connect --cc US";
       disconnect-vpn = "sudo protonvpn disconnect";
