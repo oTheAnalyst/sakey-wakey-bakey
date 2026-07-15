@@ -4,13 +4,13 @@
   config,
   modulesPath,
   username,
+  sub,
   ...
 }: {
   imports = [(modulesPath + "/installer/scan/not-detected.nix")];
 
   age.secrets.secret1.file = ../secret/secret1.age;
   age.identityPaths = ["/home/pretender/.ssh/id_ed25519"];
-
 
   networking = {
     hostName = "faker";
@@ -36,13 +36,12 @@
       openFirewall = true;
     };
     displayManager = {
-      autoLogin.user = username;
+      autoLogin.user = sub;
       autoLogin.enable = true;
       sddm = {
         enable = true;
         wayland.enable = true;
         theme = "breeze";
-        settings.Autologin.Session = "hyprland";
       };
     };
     pipewire = {
@@ -63,6 +62,13 @@
   users.users.${username} = {
     isNormalUser = true;
     description = username;
+    extraGroups = ["networkmanager" "libvirtd" "wheel" "docker"];
+  };
+
+  users.users.${sub} = {
+    initialPassword = "hello";
+    isNormalUser = true;
+    description = sub;
     extraGroups = ["networkmanager" "libvirtd" "wheel" "docker"];
   };
 

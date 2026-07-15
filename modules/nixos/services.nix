@@ -1,5 +1,6 @@
 {
   username,
+  sub,
   pkgs,
   ...
 }: {
@@ -51,6 +52,7 @@
   boot.kernelModules = ["i2c-dev" "ddcci-driver-linux"];
   users.groups.i2c = {};
   users.users.${username}.extraGroups = ["i2c"];
+  users.users.${sub}.extraGroups = ["i2c"];
 
   hardware.keyboard.zsa.enable = true;
   programs = {
