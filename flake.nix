@@ -22,10 +22,11 @@
     ...
   } @ inputs: let
     username = "pretender";
+    sub = "atlas";
   in {
     nixosConfigurations = {
       faker = inputs.nixos-unstable.lib.nixosSystem {
-        specialArgs = {inherit inputs agenix username;};
+        specialArgs = {inherit inputs agenix username sub;};
         system = "x86_64-linux";
         modules = [
           nix-flatpak.nixosModules.nix-flatpak
@@ -42,7 +43,7 @@
         ];
       };
       underblade = inputs.nixos-unstable.lib.nixosSystem {
-        specialArgs = {inherit inputs username;};
+        specialArgs = {inherit inputs username sub;};
         system = "x86_64-linux";
         modules = [
           nix-flatpak.nixosModules.nix-flatpak
