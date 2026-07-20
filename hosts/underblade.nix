@@ -21,7 +21,6 @@
   #  ];
   #
 
-
   networking = {
     hostName = "underblade";
     networkmanager.enable = true;
@@ -59,21 +58,9 @@
 
   security.rtkit.enable = true;
 
-  users.users.${username} = {
-    isNormalUser = true;
-    description = username;
-    extraGroups = ["networkmanager" "wheel"];
-  };
-
   environment.sessionVariables = {
     NH_FLAKE = "/home/pretender/sakey-wakey-bakey/";
   };
-
-  fonts.packages = with pkgs; [
-    nerd-fonts.fira-code
-    fira-code-symbols
-    nerd-fonts.droid-sans-mono
-  ];
 
   # hardware-configuration.nix
   networking.useDHCP = lib.mkDefault true;
