@@ -3,7 +3,6 @@
   lib,
   config,
   modulesPath,
-  username,
   sub,
   ...
 }: {
@@ -59,29 +58,9 @@
 
   security.rtkit.enable = true;
 
-  users.users.${username} = {
-    isNormalUser = true;
-    description = username;
-    extraGroups = ["networkmanager" "libvirtd" "wheel" "docker"];
-  };
-
-  users.users.${sub} = {
-    initialPassword = "hello";
-    isNormalUser = true;
-    description = sub;
-    extraGroups = ["networkmanager" "libvirtd" "wheel" "docker"];
-  };
-
   environment.sessionVariables = {
     NH_FLAKE = "/home/pretender/sakey-wakey-bakey/";
   };
-
-  # List packages installed in system profile
-  fonts.packages = with pkgs; [
-    nerd-fonts.fira-code
-    fira-code-symbols
-    nerd-fonts.droid-sans-mono
-  ];
 
   # hardware-configuration.nix
   networking.useDHCP = lib.mkDefault true;
