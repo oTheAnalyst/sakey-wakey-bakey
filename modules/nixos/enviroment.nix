@@ -32,6 +32,7 @@
     unzip # Extract ZIP archives
     unrar # Extract RAR archives
     zip # Create ZIP archives
+    trash-cli # cli tool for trashcan
     cava # Console-based audio visualizer
     lolcat # Rainbow coloring for text output
     ani-cli # CLI tool to browse and watch anime
