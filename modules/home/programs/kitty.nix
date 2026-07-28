@@ -3,7 +3,7 @@
     kitty = {
       enable = true;
       font.name = "nerd-fonts-fira-code";
-      font.size = 16;
+      font.size = 14;
       settings.shell = "fish";
       extraConfig = ''
                 cremember_window_size  no
