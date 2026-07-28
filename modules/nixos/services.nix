@@ -129,16 +129,24 @@
     gamemode.enable = true;
   };
 
-  xdg.menus.enable = true;
-  xdg.mime = {
-    enable = true;
-    defaultApplications = {
-      "application/pdf" = ["zathura.desktop"];
-      "directory" = ["gwenview.desktop"];
-      "image/png" = [
-        "sxiv.desktop"
-        "gimp.desktop"
-      ];
+  xdg = {
+    menus = {
+      enable = true;
+    };
+                #    config.files = {
+                #      "waybar/config.jsonc".source = ./config.jsonc;
+                #      "waybar/style.css".source = ./style.css;
+    };
+    mime = {
+      enable = true;
+      defaultApplications = {
+        "application/pdf" = ["zathura.desktop"];
+        "directory" = ["gwenview.desktop"];
+        "image/png" = [
+          "sxiv.desktop"
+          "gimp.desktop"
+        ];
+      };
     };
   };
 }

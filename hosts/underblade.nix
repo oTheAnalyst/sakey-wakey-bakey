@@ -44,6 +44,11 @@
       };
     };
     pipewire = {
+      wireplumber.extraConfig.no-ucm = {
+        "monitor.alsa.properties" = {
+          "alsa.use-ucm" = false;
+        };
+      };
       enable = true;
       alsa = {
         enable = true;
