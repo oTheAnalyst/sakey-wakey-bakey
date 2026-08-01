@@ -133,10 +133,9 @@
     menus = {
       enable = true;
     };
-                #    config.files = {
-                #      "waybar/config.jsonc".source = ./config.jsonc;
-                #      "waybar/style.css".source = ./style.css;
-    };
+    #    config.files = {
+    #      "waybar/config.jsonc".source = ./config.jsonc;
+    #      "waybar/style.css".source = ./style.css;
     mime = {
       enable = true;
       defaultApplications = {
