@@ -10,6 +10,13 @@
     (btop.override {rocmSupport = true;}) # Resource monitor with GPU support
 
     ############
+    # Nix tools Expanded
+    ############
+    nix-prefetch-git # Prefetch git repositories for Nix
+    nix-tree #app for trouble shooting dependency issue
+    nix-init # Generate Nix packages from URLs
+
+    ############
     # dependency for NH
     ############
     nix-output-monitor # Monitor Nix builds with progress bars
@@ -20,7 +27,6 @@
     ############
     texliveFull # Complete LaTeX distribution
     # texliveTeTeX # Legacy TeTeX distribution (obsolete)
-    texstudio # Feature-rich LaTeX editor
     # texlivePackages.enumitem # LaTeX package for customizing lists
 
     #####
@@ -46,12 +52,9 @@
     #dmidecode # Hardware information reporting tool
     #gpart # Guess PC disk partition table
     wget # Network downloader
-    distrobox # Run any Linux distro in a container
     podman # Daemonless container engine
     steam-run # Run Steam games with dependencies
-    nix-prefetch-git # Prefetch git repositories for Nix
     tree # Display directory structure
-    nix-tree #app for trouble shooting dependency issue
     bat # Cat clone with syntax highlighting
     btop # System resource monitor
     wine # Run Windows applications on Linux
@@ -85,10 +88,8 @@
     docker-compose # Multi-container Docker applications
     quickemu # Quick VM creation and management
     pgcli # Postgres CLI with autocompletion
-    #    keymapp # Keyboard mapping tool
     syncthing # Continuous file synchronization
     dbeaver-bin # Universal database client
-    nix-init # Generate Nix packages from URLs
 
     ############
     # apps
