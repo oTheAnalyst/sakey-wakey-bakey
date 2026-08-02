@@ -55,20 +55,19 @@
     podman # Daemonless container engine
     steam-run # Run Steam games with dependencies
     tree # Display directory structure
+    lazygit #simple terminal UI for git commands
     bat # Cat clone with syntax highlighting
     btop # System resource monitor
     wine # Run Windows applications on Linux
     git # Distributed version control system
     piper # GUI for configuring gaming mice
     libratbag # Driver for gaming mice configuration
-    libreoffice # Office productivity suite
+    #libreoffice # Office productivity suite
 
     ############
     ## neovim deps
     ############
     (import ./wifi-menu.nix {inherit pkgs;}) # Custom WiFi network menu
-    rustup # Rust toolchain installer
-    cargo # Rust package manager
     inputs.nvf.packages.${pkgs.stdenv.hostPlatform.system}.default
     neovim # Hyperextensible Vim-based text editor
 
