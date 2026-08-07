@@ -3,7 +3,7 @@
   lib,
   config,
   modulesPath,
-  sub,
+  username,
   ...
 }: {
   imports = [(modulesPath + "/installer/scan/not-detected.nix")];
@@ -35,12 +35,13 @@
       openFirewall = true;
     };
     displayManager = {
-      autoLogin.user = sub;
+      autoLogin.user = username;
       autoLogin.enable = true;
       sddm = {
         enable = true;
         wayland.enable = true;
         theme = "breeze";
+        settings.Autologin.Session = "hyprland";
       };
     };
     pipewire = {
