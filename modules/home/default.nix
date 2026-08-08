@@ -10,6 +10,8 @@
 
   home-manager = {
     useGlobalPkgs = true;
+    backupFileExtension = "backup";
+    overwriteBackup = true;
     useUserPackages = true;
     extraSpecialArgs = {inherit inputs username;};
     users.${username} =
@@ -22,7 +24,7 @@
           ./programs/starship.nix
           ./programs/gtk.nix
           ./programs/hyprland.nix
-         # ./programs/yazi.nix
+          ./programs/yazi.nix
         ];
         home = {
           inherit username;

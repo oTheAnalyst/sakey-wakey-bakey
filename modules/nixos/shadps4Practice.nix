@@ -6,15 +6,13 @@
   ...
 }: let
   pname = "shadPS4QtLauncher";
-  rev = "88b34250839113dfdab1d3b8f1a7bfa559ea95e4";
-  version = "2026-08-07-88b3425";
+  rev = "a12b988ef35d98f2222a614c05498b27fef87121";
+  version = "2026-08-08-a12b988";
 
-  zipSrc =
-    fetchurl {
-      url = "https://github.com/shadps4-emu/shadps4-qtlauncher/releases/download/shadPS4QtLauncher-2026-08-07-${rev}/shadPS4QtLauncher-linux-qt-${version}.zip";
-      hash = "sha256-hbLWhTbQN0fSIWo/Ykxs+AQnWmNvyCbDNzrFFt8evUQ=
-";
-    };
+  zipSrc = fetchurl {
+    url = "https://github.com/shadps4-emu/shadps4-qtlauncher/releases/download/shadPS4QtLauncher-2026-08-08-${rev}/shadPS4QtLauncher-linux-qt-${version}.zip";
+    hash = "sha256-P8r0mhAJSfrcwVmr4wKzaoz7sw2m/2zquKfUAOvX10g=";
+  };
 
   appimageSrc =
     runCommand "${pname}-qt.AppImage"

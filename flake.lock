@@ -108,6 +108,27 @@
         "url": "https://git.lix.systems/lix-project/flake-compat.git"
       }
     },
+    "fuzzy-search-yazi": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "systems": "systems_2"
+      },
+      "locked": {
+        "lastModified": 1779745726,
+        "narHash": "sha256-vW6o5vbYXr++cFAcyvl7E2tYHQMV5lGK2rEOG5iiRPg=",
+        "owner": "onelocked",
+        "repo": "fuzzy-search.yazi",
+        "rev": "7be2437b45be1da9b3be0ed2f244709c9b9be242",
+        "type": "github"
+      },
+      "original": {
+        "owner": "onelocked",
+        "repo": "fuzzy-search.yazi",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -221,7 +242,7 @@
           "nixpkgs"
         ],
         "pre-commit-hooks": "pre-commit-hooks",
-        "systems": "systems_2",
+        "systems": "systems_3",
         "xdph": "xdph"
       },
       "locked": {
@@ -638,6 +659,7 @@
     "root": {
       "inputs": {
         "agenix": "agenix",
+        "fuzzy-search-yazi": "fuzzy-search-yazi",
         "home-manager": "home-manager_2",
         "hyprland": "hyprland",
         "nix-flatpak": "nix-flatpak",
@@ -663,6 +685,21 @@
       }
     },
     "systems_2": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
+      }
+    },
+    "systems_3": {
       "locked": {
         "lastModified": 1689347949,
         "narHash": "sha256-12tWmuL2zgBgZkdoB6qXZsgJEH9LR3oUgpaQq2RbI80=",

@@ -15,6 +15,7 @@
     nix-prefetch-git # Prefetch git repositories for Nix
     nix-tree #app for trouble shooting dependency issue
     nix-init # Generate Nix packages from URLs
+    devenv #declaritve deployment
 
     ############
     # dependency for NH
@@ -32,7 +33,7 @@
     #####
     # cli tools & general tools
     #####
-    inputs.nixos-stable.legacyPackages.${pkgs.system}.qbittorrent # BitTorrent stable version client with CLI and GUI
+    inputs.nixos-stable.legacyPackages.${pkgs.stdenv.hostPlatform.system}.qbittorrent # BitTorrent stable version client with CLI and GUI
     (pkgs.callPackage ./shadps4Practice.nix {}) # Custom PS4 emulator package
     grc #Generic text colouriser used with fish hm plugin
     unzip # Extract ZIP archives
@@ -118,7 +119,6 @@
     walker # Application launcher
     rainfrog # Database GUI (note: not in nixpkgs)
     wttrbar # Weather widget for Wayland bars
-    yazi # Blazing fast terminal file manager
     ueberzugpp # Image previewer for terminal
     brightnessctl # Control backlight brightness
     hyprshot # Screenshot tool for Hyprland

@@ -2,6 +2,10 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nvf.url = "github:notashelf/nvf";
+    fuzzy-search-yazi = {
+      url = "github:onelocked/fuzzy-search.yazi";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
     agenix.url = "github:ryantm/agenix";
     nixos-stable.url = "github:nixos/nixpkgs/nixos-25.11";
@@ -39,7 +43,7 @@
           ./modules/nixos/services.nix
           ./modules/nixos/amdgpu.nix
           ./modules/nixos/nvf.nix
-          ./modules/nixos/postgres.nix
+          # ./modules/nixos/postgres.nix
         ];
       };
       underblade = inputs.nixos-unstable.lib.nixosSystem {
