@@ -25,7 +25,7 @@
     ############
     # latex dependencies
     ############
-    texliveFull # Complete LaTeX distribution
+    #texliveFull # Complete LaTeX distribution
     # texliveTeTeX # Legacy TeTeX distribution (obsolete)
     # texlivePackages.enumitem # LaTeX package for customizing lists
 

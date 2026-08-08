@@ -35,14 +35,7 @@
       openFirewall = true;
     };
     displayManager = {
-      autoLogin.user = username;
-      autoLogin.enable = true;
-      sddm = {
-        enable = true;
-        wayland.enable = true;
-        theme = "breeze";
-        settings.Autologin.Session = "hyprland";
-      };
+      enable = true;
     };
     pipewire = {
       enable = true;
