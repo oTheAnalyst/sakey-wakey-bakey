@@ -15,11 +15,10 @@
       PATH = "$PATH :/home/pretender/.cargo/bin/";
       vflake = "nix run --no-write-lock-file github:oTheAnalyst/neovim-flake";
       ovim = "nix run github:Nobbz/nobbz-vim";
-      gst = builtins.trace "hello world" "git status";
       gp = "git pull --rebase";
       ga = "git pull --abort";
       chm = "journalctl --user -e";
-      nvf = "nix run /home/pretender/Public/bakey-wakey";
+      nvf = "nvim";
       mynix = "cd ~/sakey-wakey-bakey/ && tree -dtC && git status";
       vm_w11 = "cd ~/sakey-wakey-bakey/ && quickemu --vm windows-10.conf";
       vpn-connect = "sudo protonvpn connect --cc US";

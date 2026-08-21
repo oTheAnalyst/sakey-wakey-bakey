@@ -62,11 +62,11 @@
         "rnvim": "rnvim"
       },
       "locked": {
-        "lastModified": 1785987523,
-        "narHash": "sha256-ga7Torao/8WMvre3cbtQrgfi58QDopiB0c14hyRxtr4=",
+        "lastModified": 1787369672,
+        "narHash": "sha256-z4QaZTT5iOQyDtGoWoyJUBv1UcNySBTztYCJx2a0J7o=",
         "owner": "oTheAnalyst",
         "repo": "bakey-wakey",
-        "rev": "ffe5b7e0c27854e3bec503e582c0cab13e6f6507",
+        "rev": "c797765dc19a6459ae387463dba13bb15791aa27",
         "type": "github"
       },
       "original": {
