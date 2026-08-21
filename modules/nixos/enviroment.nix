@@ -69,8 +69,7 @@
     ## neovim deps
     ############
     (import ./wifi-menu.nix {inherit pkgs;}) # Custom WiFi network menu
-    inputs.nvf.packages.${pkgs.stdenv.hostPlatform.system}.default
-    neovim # Hyperextensible Vim-based text editor
+    inputs.bakey-wakey.packages.${pkgs.stdenv.hostPlatform.system}.default
 
     ############
     ## lsp clients

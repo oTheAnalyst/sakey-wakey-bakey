@@ -1,12 +1,12 @@
 {
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
-    nvf.url = "github:notashelf/nvf";
     fuzzy-search-yazi = {
       url = "github:onelocked/fuzzy-search.yazi";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
+    bakey-wakey.url = "github:oTheAnalyst/bakey-wakey";
     agenix.url = "github:ryantm/agenix";
     nixos-stable.url = "github:nixos/nixpkgs/nixos-25.11";
     nixos-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -21,7 +21,6 @@
 
   outputs = {
     agenix,
-    nvf,
     nix-flatpak,
     ...
   } @ inputs: let
@@ -35,15 +34,13 @@
         modules = [
           nix-flatpak.nixosModules.nix-flatpak
           agenix.nixosModules.default
-          nvf.nixosModules.default
           ./modules/home
           ./hosts/faker.nix # host file, hardware, unique stuff
           ./modules/nixos/system.nix # shared system (nixos) module
           ./modules/nixos/enviroment.nix
           ./modules/nixos/services.nix
           ./modules/nixos/amdgpu.nix
-          ./modules/nixos/nvf.nix
-          # ./modules/nixos/postgres.nix
+          ./modules/nixos/postgres.nix
         ];
       };
       underblade = inputs.nixos-unstable.lib.nixosSystem {
@@ -51,7 +48,6 @@
         system = "x86_64-linux";
         modules = [
           nix-flatpak.nixosModules.nix-flatpak
-          nvf.nixosModules.default
           agenix.nixosModules.default
           ./modules/home
           ./hosts/underblade.nix # host file, hardware, unique stuff
@@ -59,7 +55,6 @@
           ./modules/nixos/enviroment.nix
           ./modules/nixos/services.nix
           ./modules/nixos/amdgpu.nix
-          ./modules/nixos/nvf.nix
         ];
       };
     };
