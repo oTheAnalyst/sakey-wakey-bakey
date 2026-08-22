@@ -107,7 +107,7 @@
     vlc # Media player
     #shotcut # Video editor
     input-remapper # Remap input devices
-    #bitwarden-desktop # Password manager
+    bitwarden-desktop # Password manager
 
     ############
     # hyprland apps
