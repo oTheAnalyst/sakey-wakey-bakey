@@ -42,7 +42,20 @@
     trash-cli # cli tool for trashcan
     cava # Console-based audio visualizer
     lolcat # Rainbow coloring for text output
-    ani-cli # CLI tool to browse and watch anime
+    (ani-cli.overrideAttrs (old: rec {
+      pname = "ani-cli";
+      version = "5.0";
+      __structuredAttrs = true;
+      strictDeps = true;
+
+      src = fetchFromGitHub {
+        owner = "pystardust";
+        repo = "ani-cli";
+        tag = "v5.0";
+        hash = "sha256-rRQESi0Skoyf1jy/dRRK6ooKRPQhkak107kk5ulwZYI=";
+      };
+    }))
+
     microfetch # System information fetch tool
     proton-vpn # ProtonVPN client
     fzf # Fuzzy finder for command-line
