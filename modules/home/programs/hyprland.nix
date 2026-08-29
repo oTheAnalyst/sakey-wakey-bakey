@@ -309,6 +309,7 @@
             hl.bind(mainMod .. " + CTRL + Q", hl.dsp.exec_cmd(terminal .. " --class=floatingkitty"))
             hl.bind(mainMod .. " + CTRL + C", hl.dsp.window.close())
             hl.bind("CTRL + Z", hl.dsp.window.fullscreen({mode = "maximized", action = "toggle"}))
+            hl.bind("SUPER + M", hl.dsp.window.fullscreen())
             hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
             hl.bind("F1", hl.dsp.pass({ window = "class:^(TeamSpeak 3)$" }))
             hl.bind("F4", hl.dsp.pass({ window = "class:^(vesktop)$" }))

@@ -94,6 +94,7 @@
     ############
     # utility
     ############
+    wl-clipboard #copy paste utility
     cups # Printing system
     gutenprint # High-quality printer drivers
     hplip # HP printer drivers
@@ -109,7 +110,7 @@
     chromium # Web browser
     zathura # Lightweight PDF viewer
     vesktop # Custom Discord client
-    discord # Voice and text chat app
+    equibop # another performat discord client
     signal-desktop # Encrypted messaging app
     tor-browser # Privacy-focused browser
     zellij # Terminal multiplexer
