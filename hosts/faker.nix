@@ -3,10 +3,23 @@
   lib,
   config,
   modulesPath,
+  sub,
   username,
   ...
 }: {
   imports = [(modulesPath + "/installer/scan/not-detected.nix")];
+
+  users.users.${sub} = {
+    isNormalUser = true;
+    description = sub;
+    extraGroups = ["networkmanager" "i2c" "wheel"];
+  };
+
+  users.users.${username} = {
+    isNormalUser = true;
+    description = username;
+    extraGroups = ["networkmanager" "i2c" "wheel"];
+  };
 
   age.secrets.secret1.file = ../secret/secret1.age;
   age.identityPaths = ["/home/pretender/.ssh/id_ed25519"];
