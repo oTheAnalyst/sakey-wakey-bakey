@@ -1,5 +1,6 @@
 {
   username,
+  user3,
   sub,
   pkgs,
   ...
@@ -56,6 +57,12 @@
   users.users.${sub} = {
     isNormalUser = true;
     description = sub;
+    extraGroups = ["networkmanager" "i2c" "wheel"];
+  };
+
+  users.users.${user3} = {
+    isNormalUser = true;
+    description = user3;
     extraGroups = ["networkmanager" "i2c" "wheel"];
   };
 

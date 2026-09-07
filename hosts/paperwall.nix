@@ -3,7 +3,7 @@
   lib,
   config,
   modulesPath,
-  username,
+  user3,
   ...
 }: {
   imports = [(modulesPath + "/installer/scan/not-detected.nix")];
@@ -21,33 +21,22 @@
   #  ];
   #
 
+  users.users.${user3} = {
+    isNormalUser = true;
+    description = user3;
+    extraGroups = ["networkmanager" "i2c" "wheel"];
+  };
   networking = {
-    hostName = "underblade";
+    hostName = "evilbunny";
     networkmanager.enable = true;
   };
 
-  users.users.${username} = {
-    isNormalUser = true;
-    description = username;
-    extraGroups = ["networkmanager" "i2c" "wheel"];
-  };
   virtualisation.libvirtd.enable = true;
 
   services = {
     pulseaudio.enable = false;
-    desktopManager.plasma6.enable = true;
-    displayManager = {
-      autoLogin = {
-        user = username;
-        enable = true;
-      };
-      sddm = {
-        enable = true;
-        wayland.enable = true;
-        theme = "breeze";
-        settings.Autologin.Session = "hyprland";
-      };
-    };
+    desktopManager.cosmic.enable = true;
+    desktopManager.cosmic-greeter.enable = true;
     pipewire = {
       wireplumber.extraConfig.no-ucm = {
         "monitor.alsa.properties" = {
@@ -69,7 +58,7 @@
   security.rtkit.enable = true;
 
   environment.sessionVariables = {
-    NH_FLAKE = "/home/pretender/sakey-wakey-bakey/";
+    NH_FLAKE = "/home/${user3}/sakey-wakey-bakey/";
   };
 
   # hardware-configuration.nix
