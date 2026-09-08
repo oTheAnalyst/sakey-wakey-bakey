@@ -66,11 +66,13 @@
         modules = [
           nix-flatpak.nixosModules.nix-flatpak
           agenix.nixosModules.default
-          ./modules/home/bunny_home.nix
           ./hosts/paperwall.nix # host file, hardware, unique stuff
           ./modules/nixos/system.nix # shared system (nixos) module
+          ./modules/home/bunny_home.nix
           ./modules/nixos/enviroment.nix
+          ./modules/nixos/fang.nix
           ./modules/nixos/services.nix
+          ./modules/nixos/intune.nix
           ./modules/nixos/amdgpu.nix
         ];
       };

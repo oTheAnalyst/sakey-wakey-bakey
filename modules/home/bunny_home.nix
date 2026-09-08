@@ -20,9 +20,9 @@
         imports = [
           ./programs/bash.nix
           ./programs/yazi.nix
+          ./programs/kitty.nix
         ];
         home = {
-          inherit user3;
           homeDirectory = "/home/${user3}";
           stateVersion = lib.mkDefault config.system.stateVersion;
           packages = with pkgs; [cowsay];

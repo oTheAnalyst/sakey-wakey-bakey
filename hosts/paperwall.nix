@@ -31,12 +31,12 @@
     networkmanager.enable = true;
   };
 
+  security.intune-portal.enable = true;
   virtualisation.libvirtd.enable = true;
-
+  services.displayManager.cosmic-greeter.enable = true;
   services = {
     pulseaudio.enable = false;
     desktopManager.cosmic.enable = true;
-    desktopManager.cosmic-greeter.enable = true;
     pipewire = {
       wireplumber.extraConfig.no-ucm = {
         "monitor.alsa.properties" = {
@@ -62,30 +62,29 @@
   };
 
   # hardware-configuration.nix
-  networking.useDHCP = lib.mkDefault true;
-  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.grub.enable = false;
+  boot.initrd.availableKernelModules = ["nvme" "xhci_pci" "ahci"];
+  boot.initrd.kernelModules = [];
+  boot.kernelModules = ["kvm-amd"];
+  boot.extraModulePackages = [];
 
-  boot = {
-    loader.systemd-boot.enable = true;
-    loader.efi.canTouchEfiVariables = true;
-    initrd.availableKernelModules = ["nvme" "xhci_pci" "thunderbolt" "usb_storage" "sd_mod"];
-    kernelModules = ["kvm-amd"];
-    kernelPackages = pkgs.linuxPackages_zen;
-    extraModulePackages = [];
+  fileSystems."/" = {
+    device = "/dev/mapper/luks-b12d9eb9-5923-4977-b8b4-2cbf96524278";
+    fsType = "ext4";
   };
 
-  fileSystems = {
-    "/" = {
-      device = "dev/disk/by-uuid/c2b7867b-e20f-421d-9039-c02947dd2f88";
-      fsType = "ext4";
-    };
-    "/boot" = {
-      device = "/dev/disk/by-uuid/115A-DACB";
-      fsType = "vfat";
-      options = ["fmask=0077" "dmask=0077"];
-    };
+  boot.initrd.luks.devices."luks-b12d9eb9-5923-4977-b8b4-2cbf96524278".device = "/dev/disk/by-uuid/b12d9eb9-5923-4977-b8b4-2cbf96524278";
+
+  fileSystems."/boot" = {
+    device = "/dev/disk/by-uuid/1AA6-358D";
+    fsType = "vfat";
+    options = ["fmask=0077" "dmask=0077"];
   };
+
   swapDevices = [];
 
+  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
