@@ -113,7 +113,6 @@
     equibop # another performat discord client
     signal-desktop # Encrypted messaging app
     tor-browser # Privacy-focused browser
-    zellij # Terminal multiplexer
     mangohud # Vulkan/OpenGL overlay for FPS
     veracrypt # Disk encryption software
     obsidian # Markdown knowledge base

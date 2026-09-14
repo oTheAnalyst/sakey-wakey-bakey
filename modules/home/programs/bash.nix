@@ -1,5 +1,11 @@
 {pkgs, ...}: {
   programs = {
+    zellij = {
+      enable = true;
+      settings = {
+        default_shell = "fish";
+      };
+    };
     nix-your-shell = {
       enable = true;
 
