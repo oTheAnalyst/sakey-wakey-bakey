@@ -1,5 +1,11 @@
 {pkgs, ...}: {
   programs = {
+    zellij = {
+      enable = true;
+      settings = {
+        default_shell = "fish";
+      };
+    };
     nix-your-shell = {
       enable = true;
 
@@ -9,7 +15,7 @@
       enableZshIntegration = true;
 
       # Optional: Whether to pipe the build output through nix-output-monitor. Default: false.
-      nix-output-monitor.enable = true;
+      nix-output-monitor.enable = false;
     };
     fish = {
       enable = true; # Enable bash

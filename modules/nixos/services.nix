@@ -81,6 +81,7 @@
 
   hardware.keyboard.zsa.enable = true;
   programs = {
+    neovim.defaultEditor = true;
     firefox.enable = true;
     hyprland.enable = true;
     nh = {

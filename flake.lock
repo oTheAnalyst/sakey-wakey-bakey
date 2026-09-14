@@ -59,14 +59,15 @@
         "flake-parts": "flake-parts",
         "nixpkgs": "nixpkgs_2",
         "nvf": "nvf",
-        "rnvim": "rnvim"
+        "rnvim": "rnvim",
+        "wrappers": "wrappers"
       },
       "locked": {
-        "lastModified": 1788109971,
-        "narHash": "sha256-2GyA0sqIitG7mW3QFOPK95msjzWIaE6gQPp0D0y2mBw=",
+        "lastModified": 1789695017,
+        "narHash": "sha256-Z2xDHDGhE7F0mYXBw7mQUbrcnUPaB+hd8tmcRS/SEcU=",
         "owner": "oTheAnalyst",
         "repo": "bakey-wakey",
-        "rev": "33bea5a283c589f2125accd010265a494dea8ba3",
+        "rev": "4f810e3606284e23c0c013dc923d7c37554e3a3d",
         "type": "github"
       },
       "original": {
@@ -231,7 +232,7 @@
     },
     "home-manager_2": {
       "inputs": {
-        "nixpkgs": "nixpkgs_4"
+        "nixpkgs": "nixpkgs_5"
       },
       "locked": {
         "lastModified": 1785531816,
@@ -697,6 +698,22 @@
     },
     "nixpkgs_4": {
       "locked": {
+        "lastModified": 1787498568,
+        "narHash": "sha256-9i/VTdusq/+NM/tz+J1Re+ojkMB8MBf0QshnYfzHz30=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "56c02bc00adcf003215cc4bd996d6efaf4cff188",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_5": {
+      "locked": {
         "lastModified": 1785141334,
         "narHash": "sha256-kh35kIx7el4Jk8Ki3BH9/Pn1eZYSYLJ6LMALos0zOy0=",
         "owner": "NixOS",
@@ -711,7 +728,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_5": {
+    "nixpkgs_6": {
       "locked": {
         "lastModified": 1785602060,
         "narHash": "sha256-z7D96eESRM4CPV/XtwpwFn8IDdfLAmxz6lVWrGYXvR4=",
@@ -803,7 +820,7 @@
         "nix-flatpak": "nix-flatpak",
         "nixos-stable": "nixos-stable",
         "nixos-unstable": "nixos-unstable",
-        "nixpkgs": "nixpkgs_5"
+        "nixpkgs": "nixpkgs_6"
       }
     },
     "systems": {
@@ -878,6 +895,24 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default-linux",
+        "type": "github"
+      }
+    },
+    "wrappers": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_4"
+      },
+      "locked": {
+        "lastModified": 1788251466,
+        "narHash": "sha256-98KFRidLeJ+EIWYs++LJgB7VT+/hxyKGaYP85BCEFJ0=",
+        "owner": "lassulus",
+        "repo": "wrappers",
+        "rev": "b870d84b4fbe38a5a1e38cd2dae8503805bec900",
+        "type": "github"
+      },
+      "original": {
+        "owner": "lassulus",
+        "repo": "wrappers",
         "type": "github"
       }
     },

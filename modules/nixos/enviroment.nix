@@ -44,15 +44,15 @@
     lolcat # Rainbow coloring for text output
     (ani-cli.overrideAttrs (old: rec {
       pname = "ani-cli";
-      version = "5.0";
+      version = "5.1";
       __structuredAttrs = true;
       strictDeps = true;
 
       src = fetchFromGitHub {
         owner = "pystardust";
         repo = "ani-cli";
-        tag = "v5.0";
-        hash = "sha256-rRQESi0Skoyf1jy/dRRK6ooKRPQhkak107kk5ulwZYI=";
+        tag = "v5.1";
+        hash = "sha256-lPQA3iO3F/9NS2IziQccsJ3aai6WMQy6YObdB3mDCZA=";
       };
     }))
 
@@ -113,7 +113,6 @@
     equibop # another performat discord client
     signal-desktop # Encrypted messaging app
     tor-browser # Privacy-focused browser
-    zellij # Terminal multiplexer
     mangohud # Vulkan/OpenGL overlay for FPS
     veracrypt # Disk encryption software
     obsidian # Markdown knowledge base
