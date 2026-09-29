@@ -6,13 +6,13 @@
   ...
 }: let
   pname = "shadPS4QtLauncher";
-  rev = "ded9bb828331067cba3865a355b08859c324bc4c";
-  version = "2026-09-23-ded9bb8";
-  date = "2026-09-23";
+  rev = "4c4e1090ea53dc1ec956fa9954acbf143d104b2e";
+  version = "2026-10-02-4c4e109";
+  date = "2026-10-02";
 
   zipSrc = fetchurl {
     url = "https://github.com/shadps4-emu/shadps4-qtlauncher/releases/download/shadPS4QtLauncher-${date}-${rev}/shadPS4QtLauncher-linux-qt-${version}.zip";
-    hash = "sha256-e4Fa3UP3sWorORw4BF3sxhQOvk7CMBFT2B2lFhiiia4=";
+    hash = "sha256-P3zF7P7116VF8f3T/oQ1rIw6hzSkF2eg2q5oaOu5hgE=";
   };
 
   appimageSrc =

@@ -29,9 +29,17 @@
   users.users.${username} = {
     isNormalUser = true;
     description = username;
-    extraGroups = ["networkmanager" "i2c" "wheel"];
+    extraGroups = ["networkmanager" "i2c" "podman" "wheel"];
   };
   virtualisation.libvirtd.enable = true;
+  # Arion works with Docker, but for NixOS-based containers, you need Podman
+  # since NixOS 21.05.
+  virtualisation.docker.enable = false;
+  virtualisation.podman.enable = true;
+  virtualisation.podman.dockerSocket.enable = true;
+  ##  virtualisation.podman.defaultNetwork.dnsname.enable = true;
+
+  # Use your username instead of `myuser`
 
   services = {
     pulseaudio.enable = false;
@@ -68,8 +76,15 @@
 
   security.rtkit.enable = true;
 
-  environment.sessionVariables = {
-    NH_FLAKE = "/home/pretender/sakey-wakey-bakey/";
+  environment = {
+    sessionVariables = {
+      NH_FLAKE = "/home/pretender/sakey-wakey-bakey/";
+    };
+
+    variables = {
+      EDITOR = "nvim";
+      VISUAL = "nvim";
+    };
   };
 
   # hardware-configuration.nix

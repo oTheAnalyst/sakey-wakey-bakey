@@ -98,11 +98,12 @@
     cups # Printing system
     gutenprint # High-quality printer drivers
     hplip # HP printer drivers
-    docker-compose # Multi-container Docker applications
     quickemu # Quick VM creation and management
     pgcli # Postgres CLI with autocompletion
     syncthing # Continuous file synchronization
     dbeaver-bin # Universal database client
+    arion
+    docker-client
 
     ############
     # apps

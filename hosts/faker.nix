@@ -21,9 +21,6 @@
     extraGroups = ["networkmanager" "i2c" "wheel"];
   };
 
-  age.secrets.secret1.file = ../secret/secret1.age;
-  age.identityPaths = ["/home/pretender/.ssh/id_ed25519"];
-
   networking = {
     hostName = "faker";
     networkmanager.enable = true;
@@ -65,8 +62,15 @@
 
   security.rtkit.enable = true;
 
-  environment.sessionVariables = {
-    NH_FLAKE = "/home/pretender/sakey-wakey-bakey/";
+  environment = {
+    sessionVariables = {
+      NH_FLAKE = "/home/pretender/sakey-wakey-bakey/";
+    };
+
+    variables = {
+      EDITOR = "nvim";
+      VISUAL = "nvim";
+    };
   };
 
   # hardware-configuration.nix
