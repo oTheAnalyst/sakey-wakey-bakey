@@ -34,7 +34,6 @@
     # cli tools & general tools
     #####
     inputs.nixos-stable.legacyPackages.${pkgs.stdenv.hostPlatform.system}.qbittorrent # BitTorrent stable version client with CLI and GUI
-    (pkgs.callPackage ./shadps4Practice.nix {}) # Custom PS4 emulator package
     grc #Generic text colouriser used with fish hm plugin
     unzip # Extract ZIP archives
     unrar # Extract RAR archives
@@ -108,6 +107,7 @@
     ############
     # apps
     ############
+    shadps4-qtlauncher # emulator for gay station 4
     chromium # Web browser
     zathura # Lightweight PDF viewer
     vesktop # Custom Discord client
