@@ -28,12 +28,12 @@
           #: Cursor colors
 
           cursor #d14781
-          cursor_text_color #1e202f
+          cursor_text_color #483d8b
 
 
           #: URL underline color when hovering with mouse
 
-          url_color #d2d8fe
+          url_color #dda0dd
                   
 
           #: layouts
@@ -121,11 +121,11 @@
 
           #: Colors for marks (marked text in the terminal)
 
-          mark1_foreground #1e202f
+          mark1_foreground #d14781
           mark1_background #6375ee
-          mark2_foreground #1e202f
+          mark2_foreground #d14781
           mark2_background #8d8186
-          mark3_foreground #1e202f
+          mark3_foreground #d14781
           mark3_background #e44e8c
 
 

@@ -42,11 +42,11 @@
         "wrappers": "wrappers"
       },
       "locked": {
-        "lastModified": 1791256688,
-        "narHash": "sha256-v/+VnABO1/0k5uIbZC7e/BzaEeLyBOr8I34fRsgvLNY=",
+        "lastModified": 1792875252,
+        "narHash": "sha256-MQqoxZZpSCHHjVTA2H8w75j8Coys/LPnL5BPCpsUphE=",
         "owner": "oTheAnalyst",
         "repo": "bakey-wakey",
-        "rev": "a62a29a0c07db44f62b62e2c30bff7a531ea2399",
+        "rev": "ffe957bcd9125076111f7c61dacbb516ddaf1415",
         "type": "github"
       },
       "original": {
