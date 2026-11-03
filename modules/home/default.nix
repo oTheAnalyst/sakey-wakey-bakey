@@ -5,15 +5,16 @@
   lib,
   config,
   ...
-}: {
-  imports = [inputs.home-manager.nixosModules.default];
+}:
+{
+  imports = [ inputs.home-manager.nixosModules.default ];
 
   home-manager = {
     useGlobalPkgs = true;
     backupFileExtension = "backup";
     overwriteBackup = true;
     useUserPackages = true;
-    extraSpecialArgs = {inherit inputs username;};
+    extraSpecialArgs = { inherit inputs username; };
     users.${username} =
       # only for one user
       {
@@ -25,12 +26,13 @@
           ./programs/gtk.nix
           ./programs/hyprland.nix
           ./programs/yazi.nix
+          ./programs/rofi.nix
         ];
         home = {
           inherit username;
           homeDirectory = "/home/${username}";
           stateVersion = lib.mkDefault config.system.stateVersion;
-          packages = with pkgs; [cowsay];
+          packages = with pkgs; [ cowsay ];
         };
         programs.home-manager.enable = true;
         services.ssh-agent.enable = true;

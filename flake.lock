@@ -674,6 +674,22 @@
         "type": "github"
       }
     },
+    "rofi": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1794452588,
+        "narHash": "sha256-BzDZpjS2+bMBPlKcGwDDiImFcSw6xHGX/7Q9jF0F49s=",
+        "owner": "oTheAnalyst",
+        "repo": "rofi_templates",
+        "rev": "28f671459096a4c1dd0472f235de0bb3a453fcca",
+        "type": "github"
+      },
+      "original": {
+        "owner": "oTheAnalyst",
+        "repo": "rofi_templates",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "bakey-wakey": "bakey-wakey",
@@ -683,7 +699,8 @@
         "nix-flatpak": "nix-flatpak",
         "nixos-stable": "nixos-stable",
         "nixos-unstable": "nixos-unstable",
-        "nixpkgs": "nixpkgs_4"
+        "nixpkgs": "nixpkgs_4",
+        "rofi": "rofi"
       }
     },
     "systems": {

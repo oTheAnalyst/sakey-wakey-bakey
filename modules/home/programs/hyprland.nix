@@ -1,4 +1,119 @@
 {
+  services.hypridle = {
+    enable = true;
+    settings = {
+      general = {
+        lock_cmd = "pidof hyprlock || hyprlock"; # avoid starting multiple hyprlock instances.
+        before_sleep_cmd = "loginctl lock-session"; # lock before suspend.
+        after_sleep_cmd = "hyprctl dispatch dpms on"; # to avoid having to press a key twice to turn on the display.
+      };
+
+      listener = [
+        {
+          timeout = "150"; # 2.5min.
+          on-timeout = "brightnessctl -s set 10"; # set monitor backlight to minimum, avoid 0 on OLED monitor.
+          on-resume = "brightnessctl -r"; # monitor backlight restore.
+        }
+        {
+          timeout = "150"; # 2.5min.
+          on-timeout = "brightnessctl -sd rgb:kbd_backlight set 0"; # turn off keyboard backlight.
+          on-resume = "brightnessctl -rd rgb:kbd_backlight"; # turn on keyboard backlight.
+        }
+        {
+          timeout = "300"; # 5min
+          on-timeout = "hyprlock"; # lock screen when timeout has passed
+        }
+        {
+          timeout = "330"; # 5.5min
+          on-timeout = "hyprctl dispatch dpms off"; # screen off when timeout has passed
+          on-resume = "hyprctl dispatch dpms on && brightnessctl -r"; # screen on when activity is detected after timeout has fired.
+        }
+        {
+          timeout = "1800";
+          on-timeout = "systemctl suspend";
+        }
+      ];
+
+    };
+  };
+  programs.hyprlock = {
+    enable = true;
+    settings = {
+      background = {
+        #path = screenshot
+        path = "/home/pretender/Pictures/atari.png";
+        #color = $background
+        blur_passes = "1";
+        contrast = "1";
+        brightness = "0.5";
+        vibrancy = "0.2";
+        vibrancy_darkness = "0.2";
+      };
+
+      # GENERAL
+      general = {
+        no_fade_in = true;
+        no_fade_out = true;
+        hide_cursor = false;
+        grace = "0";
+        disable_loading_bar = true;
+      };
+
+      input-field = {
+        size = "250, 60";
+        outline_thickness = "2";
+        dots_size = "0.2"; # Scale of input-field height, 0.2 - 0.8
+        dots_spacing = "0.35"; # Scale of dots' absolute size, 0.0 - 1.0
+        dots_center = true;
+        outer_color = "rgba(0, 0, 0, 0)";
+        inner_color = "rgba(0, 0, 0, 0.2)";
+        font_color = "$foreground";
+        fade_on_empty = false;
+        rounding = "-1";
+        check_color = "rgb(204, 136, 34)";
+        placeholder_text = ''<i><span foreground="##ffffff">Input Password...</span></i>'';
+        hide_input = false;
+        position = "0, -50";
+        halign = "center";
+        valign = "center";
+      };
+
+      # TIME
+      label = [
+        {
+          text = ''cmd[update:1000] echo "$(date +"%A, %B %d")"'';
+          color = "rgba(242, 243, 244, 0.75)";
+          font_size = "22";
+          font_family = "JetBrains Mono";
+          position = "0, 120";
+          halign = "center";
+          valign = "center";
+        }
+        {
+          text = ''cmd[update:1000] echo "$(date +"%-I:%M")"'';
+          color = "rgba(242, 243, 244, 0.75)";
+          font_size = "95";
+          font_family = "JetBrains Mono Extrabold";
+          position = "0, 200";
+          halign = "center";
+          valign = "center";
+        }
+      ];
+
+      # Desktop Environment
+      image = {
+        path = "/home/pretender/Pictures/sony.svg";
+        size = "75";
+        border_size = "2";
+        border_color = "$foreground";
+        position = "-50, 50";
+        halign = "right";
+        valign = "bottom";
+      };
+
+    };
+  };
+
   wayland.windowManager.hyprland = {
     enable = true;
     configType = "lua";
