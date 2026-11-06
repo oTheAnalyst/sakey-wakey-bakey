@@ -5,8 +5,9 @@
   modulesPath,
   user3,
   ...
-}: {
-  imports = [(modulesPath + "/installer/scan/not-detected.nix")];
+}:
+{
+  imports = [ (modulesPath + "/installer/scan/not-detected.nix") ];
 
   #  age.secrets = {
   #    secret1.file = ../secret/secret1.age;
@@ -24,7 +25,11 @@
   users.users.${user3} = {
     isNormalUser = true;
     description = user3;
-    extraGroups = ["networkmanager" "i2c" "wheel"];
+    extraGroups = [
+      "networkmanager"
+      "i2c"
+      "wheel"
+    ];
   };
   networking = {
     hostName = "evilbunny";
@@ -36,7 +41,7 @@
   services.displayManager.cosmic-greeter.enable = true;
   services = {
     pulseaudio.enable = false;
-    desktopManager.cosmic.enable = true;
+    desktopManager.plasma6.enable = true;
     pipewire = {
       wireplumber.extraConfig.no-ucm = {
         "monitor.alsa.properties" = {
@@ -65,25 +70,33 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.grub.enable = false;
-  boot.initrd.availableKernelModules = ["nvme" "xhci_pci" "ahci"];
-  boot.initrd.kernelModules = [];
-  boot.kernelModules = ["kvm-amd"];
-  boot.extraModulePackages = [];
+  boot.initrd.availableKernelModules = [
+    "nvme"
+    "xhci_pci"
+    "ahci"
+  ];
+  boot.initrd.kernelModules = [ ];
+  boot.kernelModules = [ "kvm-amd" ];
+  boot.extraModulePackages = [ ];
 
   fileSystems."/" = {
     device = "/dev/mapper/luks-b12d9eb9-5923-4977-b8b4-2cbf96524278";
     fsType = "ext4";
   };
 
-  boot.initrd.luks.devices."luks-b12d9eb9-5923-4977-b8b4-2cbf96524278".device = "/dev/disk/by-uuid/b12d9eb9-5923-4977-b8b4-2cbf96524278";
+  boot.initrd.luks.devices."luks-b12d9eb9-5923-4977-b8b4-2cbf96524278".device =
+    "/dev/disk/by-uuid/b12d9eb9-5923-4977-b8b4-2cbf96524278";
 
   fileSystems."/boot" = {
     device = "/dev/disk/by-uuid/1AA6-358D";
     fsType = "vfat";
-    options = ["fmask=0077" "dmask=0077"];
+    options = [
+      "fmask=0077"
+      "dmask=0077"
+    ];
   };
 
-  swapDevices = [];
+  swapDevices = [ ];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
