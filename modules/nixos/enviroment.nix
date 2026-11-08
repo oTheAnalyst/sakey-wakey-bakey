@@ -2,20 +2,21 @@
   pkgs,
   inputs,
   ...
-}: {
+}:
+{
   environment.systemPackages = with pkgs; [
     ############
     # custom utility
     ############
-    (btop.override {rocmSupport = true;}) # Resource monitor with GPU support
+    (btop.override { rocmSupport = true; }) # Resource monitor with GPU support
 
     ############
     # Nix tools Expanded
     ############
     nix-prefetch-git # Prefetch git repositories for Nix
-    nix-tree #app for trouble shooting dependency issue
+    nix-tree # app for trouble shooting dependency issue
     nix-init # Generate Nix packages from URLs
-    devenv #declaritve deployment
+    devenv # declaritve deployment
 
     ############
     # dependency for NH
@@ -34,7 +35,7 @@
     # cli tools & general tools
     #####
     inputs.nixos-stable.legacyPackages.${pkgs.stdenv.hostPlatform.system}.qbittorrent # BitTorrent stable version client with CLI and GUI
-    grc #Generic text colouriser used with fish hm plugin
+    grc # Generic text colouriser used with fish hm plugin
     unzip # Extract ZIP archives
     unrar # Extract RAR archives
     zip # Create ZIP archives
@@ -68,7 +69,7 @@
     podman # Daemonless container engine
     steam-run # Run Steam games with dependencies
     tree # Display directory structure
-    lazygit #simple terminal UI for git commands
+    lazygit # simple terminal UI for git commands
     bat # Cat clone with syntax highlighting
     btop # System resource monitor
     wine # Run Windows applications on Linux
@@ -80,8 +81,8 @@
     ############
     ## neovim deps
     ############
-    (import ./wifi-menu.nix {inherit pkgs;}) # Custom WiFi network menu
-    inputs.bakey-wakey.packages.${pkgs.stdenv.hostPlatform.system}.default
+    (import ./wifi-menu.nix { inherit pkgs; }) # Custom WiFi network menu
+    inputs.bakey-wakey.packages.${pkgs.stdenv.hostPlatform.system}.nvf_raf
 
     ############
     ## lsp clients
@@ -93,7 +94,7 @@
     ############
     # utility
     ############
-    wl-clipboard #copy paste utility
+    wl-clipboard # copy paste utility
     cups # Printing system
     gutenprint # High-quality printer drivers
     hplip # HP printer drivers
