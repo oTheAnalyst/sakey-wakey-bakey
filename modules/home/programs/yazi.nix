@@ -2,13 +2,37 @@
   inputs,
   pkgs,
   ...
-}: {
-  imports = [inputs.fuzzy-search-yazi.homeManagerModules.default];
+}:
+{
+  imports = [ inputs.fuzzy-search-yazi.homeManagerModules.default ];
   programs.yazi = {
     enable = true;
     enableBashIntegration = true;
     enableFishIntegration = true;
     shellWrapperName = "y";
+    keymap = {
+
+      input.prepend_keymap = [
+        {
+          on = [
+            "g"
+            "p"
+          ];
+          run = [ "cd ~/Public" ];
+          desc = "cd to ~/Public";
+        }
+      ];
+      mgr.prepend_keymap = [
+        {
+          on = [
+            "g"
+            "p"
+          ];
+          run = [ "cd ~/Public" ];
+          desc = "cd to ~/Public";
+        }
+      ];
+    };
     plugins = {
       duckdb = {
         setup = true;
@@ -35,4 +59,5 @@
       };
     };
   };
+
 }
