@@ -5,8 +5,9 @@
   modulesPath,
   username,
   ...
-}: {
-  imports = [(modulesPath + "/installer/scan/not-detected.nix")];
+}:
+{
+  imports = [ (modulesPath + "/installer/scan/not-detected.nix") ];
 
   #  age.secrets = {
   #    secret1.file = ../secret/secret1.age;
@@ -29,7 +30,12 @@
   users.users.${username} = {
     isNormalUser = true;
     description = username;
-    extraGroups = ["networkmanager" "i2c" "podman" "wheel"];
+    extraGroups = [
+      "networkmanager"
+      "i2c"
+      "podman"
+      "wheel"
+    ];
   };
   virtualisation.libvirtd.enable = true;
   # Arion works with Docker, but for NixOS-based containers, you need Podman
@@ -94,10 +100,16 @@
   boot = {
     loader.systemd-boot.enable = true;
     loader.efi.canTouchEfiVariables = true;
-    initrd.availableKernelModules = ["nvme" "xhci_pci" "thunderbolt" "usb_storage" "sd_mod"];
-    kernelModules = ["kvm-amd"];
-    kernelPackages = pkgs.linuxPackages_zen;
-    extraModulePackages = [];
+    initrd.availableKernelModules = [
+      "nvme"
+      "xhci_pci"
+      "thunderbolt"
+      "usb_storage"
+      "sd_mod"
+    ];
+    kernelModules = [ "kvm-amd" ];
+    kernelPackages = pkgs.linuxPackages_latest;
+    extraModulePackages = [ ];
   };
 
   fileSystems = {
@@ -108,10 +120,13 @@
     "/boot" = {
       device = "/dev/disk/by-uuid/115A-DACB";
       fsType = "vfat";
-      options = ["fmask=0077" "dmask=0077"];
+      options = [
+        "fmask=0077"
+        "dmask=0077"
+      ];
     };
   };
-  swapDevices = [];
+  swapDevices = [ ];
 
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
