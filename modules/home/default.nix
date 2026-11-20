@@ -21,8 +21,7 @@
         imports = [
           ./programs/kitty.nix
           ./programs/firefox.nix
-          ./programs/bash.nix
-          ./programs/starship.nix
+          ./programs/fishStarshipZellij.nix
           ./programs/gtk.nix
           ./programs/hyprland.nix
           ./programs/yazi.nix

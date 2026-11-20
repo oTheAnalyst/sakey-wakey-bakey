@@ -1,4 +1,4 @@
-   {pkgs, ...}:{
+{ pkgs, ... }: {
   services = {
     #    cloudflared = {
     #      enable = true;
@@ -13,8 +13,8 @@
     #      };
     #    };
     postgresql = {
-      enable = true;
-      ensureDatabases = ["mydatabase"];
+      enable = false;
+      ensureDatabases = [ "mydatabase" ];
       enableTCPIP = true;
       settings.port = 5432;
       authentication = pkgs.lib.mkOverride 10 ''
@@ -27,7 +27,11 @@
         # ipv6
         host  all      all     ::1/128        trust
       '';
-      extensions = ps: with ps; [postgis pg_repack];
+      extensions =
+        ps: with ps; [
+          postgis
+          pg_repack
+        ];
       initialScript = pkgs.writeText "backend-initScript" ''
         CREATE ROLE nixcloud WITH LOGIN PASSWORD 'nixcloud' CREATEDB;
         CREATE DATABASE nixcloud;
@@ -36,5 +40,5 @@
       package = pkgs.postgresql_18;
     };
   };
-##    networking.firewall.allowedTCPPorts = [5432 65010];
+  ##    networking.firewall.allowedTCPPorts = [5432 65010];
 }

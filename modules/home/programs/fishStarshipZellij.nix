@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{ pkgs, ... }: {
   xdg.configFile."zellij/layouts/default.kdl".text = ''
     layout {
         swap_tiled_layout name="vertical" {
@@ -243,7 +243,6 @@
         }
       ];
       shellAliases = {
-        # Add useful shell aliases
         PATH = "$PATH :/home/pretender/.cargo/bin/";
         vflake = "nix run --no-write-lock-file github:oTheAnalyst/neovim-flake";
         ovim = "nix run github:Nobbz/nobbz-vim";
