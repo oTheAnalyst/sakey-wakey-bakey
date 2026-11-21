@@ -94,6 +94,7 @@
     ############
     # utility
     ############
+    gh # github cli
     wl-clipboard # copy paste utility
     cups # Printing system
     gutenprint # High-quality printer drivers
