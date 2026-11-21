@@ -4,8 +4,9 @@
   sub,
   pkgs,
   ...
-}: {
-  networking.firewall.allowedTCPPorts = [65010];
+}:
+{
+  networking.firewall.allowedTCPPorts = [ 65010 ];
   services = {
     qbittorrent.enable = true;
     flatpak = {
@@ -50,26 +51,41 @@
   services.udev.extraRules = ''
     KERNEL=="i2c-[0-9]*", GROUP="i2c", MODE="0660"
   '';
-  boot.kernelModules = ["i2c-dev" "ddcci-driver-linux"];
+  boot.kernelModules = [
+    "i2c-dev"
+    "ddcci-driver-linux"
+  ];
 
-  users.groups.i2c = {};
+  users.groups.i2c = { };
 
   users.users.${sub} = {
     isNormalUser = true;
     description = sub;
-    extraGroups = ["networkmanager" "i2c" "wheel"];
+    extraGroups = [
+      "networkmanager"
+      "i2c"
+      "wheel"
+    ];
   };
 
   users.users.${user3} = {
     isNormalUser = true;
     description = user3;
-    extraGroups = ["networkmanager" "i2c" "wheel"];
+    extraGroups = [
+      "networkmanager"
+      "i2c"
+      "wheel"
+    ];
   };
 
   users.users.${username} = {
     isNormalUser = true;
     description = username;
-    extraGroups = ["networkmanager" "i2c" "wheel"];
+    extraGroups = [
+      "networkmanager"
+      "i2c"
+      "wheel"
+    ];
   };
 
   fonts.packages = with pkgs; [
@@ -97,8 +113,8 @@
 [init]
 	defaultBranch = main
 [user]
-	email = michaelvcumbo21@proton.me
-	name = VtheRtech
+	email = oTheAnalyst21@proton.me 
+	name = oTheAnalyst
 [maintenance]
 	repo = /home/pretender/Public/nixpkgs
 [core]
@@ -138,8 +154,8 @@
     mime = {
       enable = true;
       defaultApplications = {
-        "application/pdf" = ["zathura.desktop"];
-        "directory" = ["gwenview.desktop"];
+        "application/pdf" = [ "zathura.desktop" ];
+        "directory" = [ "gwenview.desktop" ];
         "image/png" = [
           "sxiv.desktop"
           "gimp.desktop"
